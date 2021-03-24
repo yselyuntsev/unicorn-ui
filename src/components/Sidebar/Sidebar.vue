@@ -19,7 +19,6 @@
         class="unicorn-sidebar__collapse"
       >
         <Icon icon="mdi-menu" />
-        x
       </div>
     </aside>
   </div>
