@@ -37,6 +37,18 @@ export default {
     };
   },
 
+  watch: {
+    active: {
+      handler(newValue) {
+        if (newValue) {
+          window.addEventListener("scroll", this.close);
+        } else {
+          window.removeEventListener("scroll", this.close);
+        }
+      },
+    },
+  },
+
   methods: {
     toggle() {
       this.active = !this.active;
