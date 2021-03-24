@@ -5,8 +5,8 @@
     v-bind="$attrs"
     v-on="$listeners"
   >
-    <Icon v-if="icon" class="unicorn-sidebar-item__icon" :icon="icon" />
-    <div class="unicorn-sidebar-item__content">
+    <Icon v-if="icon" :icon="icon" />
+    <div class="unicorn-sidebar-item__content" :class="{ icon }">
       <slot></slot>
     </div>
   </div>
@@ -43,6 +43,10 @@ export default {
 
   &__content {
     @apply flex items-center ml-8;
+
+    &.icon {
+      @apply ml-2;
+    }
   }
 
   // Active
