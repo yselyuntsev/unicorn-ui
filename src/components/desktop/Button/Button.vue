@@ -29,6 +29,7 @@ export default {
   // Default
   min-width: 6rem;
   @apply inline-flex px-4 h-10 items-center justify-center rounded-md;
+  @apply whitespace-nowrap;
 
   // Utils
   @apply outline-none transition-all relative;
