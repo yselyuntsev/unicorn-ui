@@ -25,7 +25,7 @@ export default {
   },
 
   created() {
-    this.throttledResizeHandler = throttle(this.handleResize, 50);
+    this.throttledResizeHandler = throttle(this.handleResize, 20);
   },
 
   mounted() {
@@ -39,6 +39,7 @@ export default {
 
   methods: {
     handleResize() {
+      console.log(37842379);
       const screenWidth = window.innerWidth;
       const point = this.breakpoints[this.breakpoint];
       this.show = screenWidth >= point;
