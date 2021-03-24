@@ -30,6 +30,7 @@ export default {
 .unicorn-sidebar-item {
   @apply h-10 flex items-center px-4 rounded-md my-2;
   @apply transition-all origin-left text-gray-500 font-medium;
+  @apply whitespace-nowrap;
 
   @include hover {
     &:hover {

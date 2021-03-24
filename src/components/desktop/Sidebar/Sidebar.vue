@@ -76,7 +76,11 @@ export default {
       }
 
       .unicorn-sidebar__collapse {
-        @apply translate-x-12;
+        @apply -translate-x-3;
+      }
+
+      .unicorn-sidebar__header {
+        @apply mt-12;
       }
 
       .unicorn-sidebar__icon {
@@ -86,7 +90,7 @@ export default {
   }
 
   &__header {
-    @apply flex py-4 mb-8 overflow-hidden;
+    @apply flex py-4 mb-8 overflow-hidden transition-all;
   }
 
   &__body {
