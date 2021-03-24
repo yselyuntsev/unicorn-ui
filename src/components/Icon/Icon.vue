@@ -3,6 +3,8 @@
     v-if="filled"
     class="unicorn-icon unicorn-icon--filled"
     :class="[background, color]"
+    v-bind="$attrs"
+    v-on="$listeners"
   >
     <span class="mdi" :class="icon" />
   </div>
