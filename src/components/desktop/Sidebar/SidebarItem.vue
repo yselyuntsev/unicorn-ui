@@ -42,10 +42,10 @@ export default {
   }
 
   &__content {
-    @apply flex items-center ml-8;
+    @apply flex items-center ml-10;
 
     &.icon {
-      @apply ml-2;
+      @apply ml-4;
     }
   }
 

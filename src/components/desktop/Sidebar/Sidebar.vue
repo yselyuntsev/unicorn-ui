@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Icon from "@/components/desktop/Icon/Icon";
+import Icon from "@/components/desktop/Icon";
 
 export default {
   name: "Sidebar",
@@ -80,7 +80,7 @@ export default {
       }
 
       .unicorn-sidebar-item {
-        @apply origin-center;
+        @apply origin-center px-2;
       }
 
       .unicorn-sidebar__collapse {
