@@ -27,6 +27,7 @@
 
 <script>
 import Icon from "@/components/Icon/Icon";
+
 export default {
   name: "Sidebar",
   components: { Icon },
