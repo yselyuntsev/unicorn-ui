@@ -49,7 +49,7 @@
   },
 
   "lint-staged": {
-    "*.{js,jsx,vue}": [
+    "src/**/s*.{js,jsx,vue}": [
       "vue-cli-service lint",
       "git add"
     ]
