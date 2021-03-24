@@ -18,7 +18,7 @@
         @click="toggleCollapse"
         class="unicorn-sidebar__collapse"
       >
-        <Icon icon="mdi-menu" />
+        <Icon class="unicorn-sidebar__icon" icon="mdi-chevron-left" />
       </div>
     </aside>
   </div>
@@ -86,6 +86,10 @@ export default {
       .unicorn-sidebar__collapse {
         @apply translate-x-12;
       }
+
+      .unicorn-sidebar__icon {
+        @apply transform-gpu rotate-180;
+      }
     }
   }
 
@@ -99,6 +103,10 @@ export default {
 
   &__footer {
     @apply flex p-5 mt-8 overflow-hidden;
+  }
+
+  &__icon {
+    @apply transition-all duration-1000;
   }
 
   &__collapse {
