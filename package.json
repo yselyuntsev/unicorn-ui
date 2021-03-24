@@ -2,16 +2,26 @@
   "name": "unicorn-ui",
   "version": "0.1.2",
   "private": true,
+
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name unicorn-ui src/lib.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
+
+  "main": "dist/unicorn-ui.umd.min.js",
+
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
+
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.4",
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -33,9 +43,11 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4",
     "vue-template-compiler": "^2.6.11"
   },
+
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
+
   "lint-staged": {
     "*.{js,jsx,vue}": [
       "vue-cli-service lint",
