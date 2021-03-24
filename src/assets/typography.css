@@ -1,0 +1,23 @@
+h1, .unicorn-h1 {
+  @apply text-5xl font-bold mb-10;
+}
+
+h2, .unicorn-h2 {
+  @apply text-4xl font-bold mb-8;
+}
+
+h3, .unicorn-h3 {
+  @apply text-3xl font-bold mb-6;
+}
+
+h4, .unicorn-h4 {
+  @apply text-2xl font-medium mb-5;
+}
+
+h5, .unicorn-h5 {
+  @apply text-xl font-medium mb-4;
+}
+
+h6, .unicorn-h6 {
+  @apply text-lg font-medium mb-2;
+}
