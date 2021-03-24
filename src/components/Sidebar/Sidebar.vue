@@ -67,6 +67,14 @@ export default {
         @apply w-14 px-2;
       }
 
+      .unicorn-sidebar__header {
+        @apply px-2;
+      }
+
+      .unicorn-sidebar__footer {
+        @apply px-2;
+      }
+
       .unicorn-sidebar-subtitle {
         @apply invisible;
       }
