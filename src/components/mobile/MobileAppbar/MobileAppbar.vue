@@ -50,7 +50,7 @@ export default {
 <style lang="scss" scoped>
 .unicorn-m-app-bar {
   @apply h-14 w-full flex items-start;
-  @apply bg-purple-600 duration-1000;
+  @apply bg-purple-600;
   @apply sticky top-0 transition-shadow;
 
   &__left {
