@@ -67,14 +67,6 @@ export default {
         @apply w-14 px-2;
       }
 
-      .unicorn-sidebar__header {
-        @apply px-2;
-      }
-
-      .unicorn-sidebar__footer {
-        @apply px-2;
-      }
-
       .unicorn-sidebar-subtitle {
         @apply invisible;
       }
@@ -94,7 +86,7 @@ export default {
   }
 
   &__header {
-    @apply flex p-4 mb-8 overflow-hidden;
+    @apply flex py-4 mb-8 overflow-hidden;
   }
 
   &__body {
@@ -102,11 +94,11 @@ export default {
   }
 
   &__footer {
-    @apply flex p-5 mt-8 overflow-hidden;
+    @apply flex py-4 mt-8 overflow-hidden;
   }
 
   &__icon {
-    @apply transition-all duration-1000;
+    @apply transition-all;
   }
 
   &__collapse {
