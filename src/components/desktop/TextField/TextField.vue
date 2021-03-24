@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/mixins";
+@import "../../../assets/mixins";
 
 .unicorn-text-field {
   @apply w-full;

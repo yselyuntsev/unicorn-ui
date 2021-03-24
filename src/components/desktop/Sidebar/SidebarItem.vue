@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/desktop/Icon/Icon";
 export default {
   name: "SidebarItem",
   components: { Icon },
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/mixins";
+@import "../../../assets/mixins";
 
 .unicorn-sidebar-item {
   @apply h-10 flex items-center px-4 rounded-md my-1;

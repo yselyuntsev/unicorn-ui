@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/desktop/Icon/Icon";
 
 export default {
   name: "Alert",
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/mixins";
+@import "../../../assets/mixins";
 
 .unicorn-alert {
   @apply rounded-md p-4 flex;

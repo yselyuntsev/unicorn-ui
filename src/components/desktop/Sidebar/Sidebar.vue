@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/desktop/Icon/Icon";
 
 export default {
   name: "Sidebar",
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/mixins";
+@import "../../../assets/mixins";
 
 .unicorn-sidebar {
   @apply flex flex-col w-64 fixed left-0 top-0 bottom-0;

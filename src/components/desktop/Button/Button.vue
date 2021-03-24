@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/mixins.scss";
+@import "../../../assets/mixins";
 
 .unicorn-btn {
   // Default
