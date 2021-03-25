@@ -35,6 +35,7 @@ export default {
     min-width: 2.5rem;
     min-height: 2.5rem;
 
+    @apply flex items-center justify-center;
     @apply rounded-md transition-all;
     @apply text-gray-500;
   }
