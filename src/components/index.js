@@ -17,3 +17,5 @@ export { default as UShowAr } from "./UShowAt";
 export { USidebar, USidebarSubtitle, USidebarItem } from "./USidebar";
 export { default as USpacer } from "./USpacer";
 export { default as UTextField } from "./UTextField";
+
+export { default as UApp } from "./UApp";
