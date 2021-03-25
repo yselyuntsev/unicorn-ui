@@ -105,6 +105,10 @@ export default {
       @apply text-purple-500;
     }
 
+    .unicorn-alert__icon {
+      @apply text-purple-500;
+    }
+
     .unicorn-alert__close {
       @apply bg-purple-100 text-purple-700;
 
@@ -127,6 +131,10 @@ export default {
       @apply text-gray-300;
     }
 
+    .unicorn-alert__icon {
+      @apply text-white;
+    }
+
     .unicorn-alert__close {
       @apply bg-gray-700 text-white;
 
@@ -146,6 +154,10 @@ export default {
     }
 
     .unicorn-alert__body {
+      @apply text-green-500;
+    }
+
+    .unicorn-alert__icon {
       @apply text-green-500;
     }
 
@@ -171,6 +183,10 @@ export default {
       @apply text-red-500;
     }
 
+    .unicorn-alert__icon {
+      @apply text-red-500;
+    }
+
     .unicorn-alert__close {
       @apply bg-red-100 text-red-700;
 
@@ -190,6 +206,10 @@ export default {
     }
 
     .unicorn-alert__body {
+      @apply text-yellow-500;
+    }
+
+    .unicorn-alert__icon {
       @apply text-yellow-500;
     }
 
@@ -213,6 +233,10 @@ export default {
 
     .unicorn-alert__body {
       @apply text-blue-500;
+    }
+
+    .unicorn-alert__icon {
+      @apply text-info-500;
     }
 
     .unicorn-alert__close {
