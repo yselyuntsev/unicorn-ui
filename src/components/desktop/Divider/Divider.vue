@@ -1,5 +1,5 @@
 <template>
-  <div class="unicorn-divider">
+  <div class="unicorn-divider" :class="{ dense }">
     <span v-if="$slots.default" class="unicorn-divider__text">
       <slot></slot>
     </span>
@@ -9,6 +9,10 @@
 <script>
 export default {
   name: "Divider",
+
+  props: {
+    dense: { type: Boolean },
+  },
 };
 </script>
 
@@ -22,6 +26,10 @@ export default {
     @apply left-1/2 transform-gpu -translate-x-1/2;
     @apply leading-none;
     @apply top-1/2 -translate-y-1/2;
+  }
+
+  &.dense {
+    @apply my-0;
   }
 }
 </style>
