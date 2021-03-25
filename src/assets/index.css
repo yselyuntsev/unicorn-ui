@@ -7,3 +7,12 @@
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* FIX FOR JUMPING SCROLL BAR */
+@media screen and (min-width: 768px) {
+  html {
+    overflow: auto;
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
+}
