@@ -25,7 +25,7 @@ export default {
   },
 
   created() {
-    this.throttledResizeHandler = throttle(this.handleResize, 200);
+    this.throttledResizeHandler = throttle(this.handleResize, 20);
   },
 
   mounted() {
