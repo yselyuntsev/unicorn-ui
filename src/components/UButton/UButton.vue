@@ -78,6 +78,10 @@ export default {
           @apply bg-purple-100;
         }
       }
+
+      &:active {
+        @apply bg-purple-100;
+      }
     }
   }
 
@@ -98,6 +102,10 @@ export default {
         &:hover {
           @apply bg-gray-100;
         }
+      }
+
+      &:active {
+        @apply bg-gray-100;
       }
     }
   }
@@ -120,6 +128,10 @@ export default {
           @apply bg-green-100;
         }
       }
+
+      &:active {
+        @apply bg-green-100;
+      }
     }
   }
 
@@ -140,6 +152,10 @@ export default {
         &:hover {
           @apply bg-red-100;
         }
+      }
+
+      &:active {
+        @apply bg-red-100;
       }
     }
   }
@@ -162,6 +178,10 @@ export default {
           @apply bg-yellow-100;
         }
       }
+
+      &:active {
+        @apply bg-yellow-100;
+      }
     }
   }
 
@@ -182,6 +202,10 @@ export default {
         &:hover {
           @apply bg-blue-100;
         }
+      }
+
+      &:active {
+        @apply bg-blue-100;
       }
     }
   }
