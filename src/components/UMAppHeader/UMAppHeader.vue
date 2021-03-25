@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-m-app-header {
-  @apply p-4 pb-16;
+  @apply p-4 pb-16 -mb-12;
   @apply bg-purple-600;
 }
 </style>
