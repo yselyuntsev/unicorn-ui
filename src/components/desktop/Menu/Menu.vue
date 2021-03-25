@@ -26,7 +26,7 @@ export default {
   },
 
   props: {
-    width: { type: [String, Number] },
+    width: { type: [String, Number], default: 196 },
     left: { type: Boolean },
     right: { type: Boolean },
   },
