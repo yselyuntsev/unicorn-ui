@@ -56,10 +56,6 @@ export default {
   // Active
   &.active {
     @apply bg-purple-500 text-white shadow-lg;
-
-    &:hover {
-      @apply bg-purple-400;
-    }
   }
 }
 </style>
