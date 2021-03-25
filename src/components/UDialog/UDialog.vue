@@ -51,7 +51,7 @@ export default {
 
   &__body {
     @apply flex p-4 justify-center items-center;
-    @apply fixed z-30 inset-0;
+    @apply fixed z-50 inset-0;
     @apply bg-black bg-opacity-60;
   }
 
