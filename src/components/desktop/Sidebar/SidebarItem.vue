@@ -43,7 +43,7 @@ export default {
   }
 
   &__content {
-    @apply flex items-center ml-10;
+    @apply flex items-center whitespace-nowrap ml-10;
 
     &.icon {
       @apply ml-4;
@@ -53,6 +53,10 @@ export default {
   // Active
   &.active {
     @apply bg-purple-500 text-white shadow-lg;
+
+    &:hover {
+      @apply bg-purple-400;
+    }
   }
 }
 </style>
