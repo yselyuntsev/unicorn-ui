@@ -236,7 +236,7 @@ export default {
     }
 
     .unicorn-alert__icon {
-      @apply text-info-500;
+      @apply text-blue-500;
     }
 
     .unicorn-alert__close {
