@@ -25,7 +25,7 @@ export default {
   }
 
   &__title {
-    @apply mt-4 mb-8 md:mt-8 md:mb-16;
+    @apply mt-4 mb-8 md:mt-8 md:mb-16 text-gray-700;
   }
 }
 </style>
