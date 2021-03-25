@@ -39,7 +39,6 @@ export default {
 
   methods: {
     handleResize() {
-      console.log(37842379);
       const screenWidth = window.innerWidth;
       const point = this.breakpoints[this.breakpoint];
       this.show = screenWidth >= point;
