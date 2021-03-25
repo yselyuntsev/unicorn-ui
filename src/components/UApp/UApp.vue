@@ -12,6 +12,6 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-app {
-  @apply flex;
+  @apply flex md:flex-col;
 }
 </style>
