@@ -36,10 +36,12 @@ export default {
   methods: {
     open() {
       this.show = true;
+      document.body.style.overflow = "hidden";
     },
 
     close() {
       this.showContent = false;
+      document.body.style.overflow = "auto";
     },
   },
 };
