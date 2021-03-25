@@ -19,3 +19,4 @@ export { default as USpacer } from "./USpacer";
 export { default as UTextField } from "./UTextField";
 
 export { default as UApp } from "./UApp";
+export { default as UAppHeader } from "./UAppHeader";
