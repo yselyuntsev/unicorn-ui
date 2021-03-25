@@ -14,4 +14,5 @@ export { UMBottomNav, UMBottomNavItem } from "./UMBottomNav";
 export { default as UMenu } from "./UMenu";
 // export {} from "./" UMHeader
 export { USidebar, USidebarSubtitle, USidebarItem } from "./USidebar";
+export { default as USpacer } from "./USpacer";
 export { default as UTextField } from "./UTextField";
