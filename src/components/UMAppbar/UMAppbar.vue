@@ -51,7 +51,7 @@ export default {
 .unicorn-m-app-bar {
   @apply h-14 w-full flex items-start;
   @apply bg-purple-600;
-  @apply sticky top-0 transition-shadow;
+  @apply sticky top-0 z-20 transition-shadow;
 
   &__left {
     @apply absolute flex items-center h-full left-0 px-4;
