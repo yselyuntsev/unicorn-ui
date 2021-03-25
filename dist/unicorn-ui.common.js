@@ -3367,6 +3367,7 @@ __webpack_require__.d(components_namespaceObject, "UMAppHeader", function() { re
 __webpack_require__.d(components_namespaceObject, "UMBottomNav", function() { return UMBottomNav; });
 __webpack_require__.d(components_namespaceObject, "UMBottomNavItem", function() { return UMBottomNavItem; });
 __webpack_require__.d(components_namespaceObject, "UMenu", function() { return components_UMenu; });
+__webpack_require__.d(components_namespaceObject, "UShowAr", function() { return components_UShowAt; });
 __webpack_require__.d(components_namespaceObject, "USidebar", function() { return USidebar; });
 __webpack_require__.d(components_namespaceObject, "USidebarSubtitle", function() { return USidebarSubtitle; });
 __webpack_require__.d(components_namespaceObject, "USidebarItem", function() { return USidebarItem; });
@@ -4870,6 +4871,82 @@ var UMenu_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/UMenu/index.js
 
 /* harmony default export */ var components_UMenu = (UMenu);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UShowAt/UShowAt.vue?vue&type=script&lang=js&
+
+/* harmony default export */ var UShowAtvue_type_script_lang_js_ = ({
+  name: "UShowAt",
+  props: {
+    breakpoints: {
+      type: Object,
+      default: function _default() {
+        return {
+          sm: 640,
+          md: 768,
+          lg: 1024,
+          xl: 1280
+        };
+      }
+    },
+    breakpoint: {
+      type: String,
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      show: true
+    };
+  },
+  created: function created() {
+    this.throttledResizeHandler = throttle(this.handleResize, 20);
+  },
+  mounted: function mounted() {
+    this.handleResize();
+    window.addEventListener("resize", this.throttledResizeHandler);
+  },
+  beforeDestroy: function beforeDestroy() {
+    window.removeEventListener("resize", this.throttledResizeHandler);
+  },
+  methods: {
+    handleResize: function handleResize() {
+      var screenWidth = window.innerWidth;
+      var point = this.breakpoints[this.breakpoint];
+      this.show = screenWidth >= point;
+    }
+  },
+  render: function render() {
+    if (this.show) {
+      return this.$slots.default ? this.$slots.default[0] : null;
+    }
+
+    return null;
+  }
+});
+// CONCATENATED MODULE: ./src/components/UShowAt/UShowAt.vue?vue&type=script&lang=js&
+ /* harmony default export */ var UShowAt_UShowAtvue_type_script_lang_js_ = (UShowAtvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/UShowAt/UShowAt.vue
+var UShowAt_render, UShowAt_staticRenderFns
+
+
+
+
+/* normalize component */
+
+var UShowAt_component = normalizeComponent(
+  UShowAt_UShowAtvue_type_script_lang_js_,
+  UShowAt_render,
+  UShowAt_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var UShowAt = (UShowAt_component.exports);
+// CONCATENATED MODULE: ./src/components/UShowAt/index.js
+
+/* harmony default export */ var components_UShowAt = (UShowAt);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"43f77086-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/USidebar/USidebar.vue?vue&type=template&id=004b0a46&scoped=true&
 var USidebarvue_type_template_id_004b0a46_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"unicorn-sidebar-container",class:{ collapse: _vm.collapse }},[_c('aside',{staticClass:"unicorn-sidebar"},[_c('div',{staticClass:"unicorn-sidebar__header"},[_vm._t("header",null,{"isCollapse":_vm.collapse})],2),_c('div',{staticClass:"unicorn-sidebar__body"},[_vm._t("default")],2),_c('div',{staticClass:"unicorn-sidebar__footer"},[_vm._t("footer",null,{"isCollapse":_vm.collapse})],2),(_vm.collapsible)?_c('div',{staticClass:"unicorn-sidebar__collapse",on:{"click":_vm.toggleCollapse}},[_c('u-icon',{staticClass:"unicorn-sidebar__icon",attrs:{"icon":"mdi-chevron-left"}})],1):_vm._e()])])}
 var USidebarvue_type_template_id_004b0a46_scoped_true_staticRenderFns = []
@@ -5202,6 +5279,7 @@ var UTextField_component = normalizeComponent(
 
 
  // export {} from "./" UMHeader
+
 
 
 
