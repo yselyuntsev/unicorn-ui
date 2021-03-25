@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-dialog {
-  @apply relative;
+  @apply relative w-full;
 
   &__body {
     @apply flex p-4 justify-center items-center;
