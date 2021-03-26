@@ -19,8 +19,8 @@ export default {
 @import "../../assets/mixins";
 
 .unicorn-list-item {
-  @apply flex w-full relative items-center py-2 px-4 rounded-md;
-  @apply transition-all origin-left;
+  @apply flex w-full relative items-center py-2 my-0.5 px-4 rounded-md;
+  @apply transition-all origin-left text-gray-700;
 
   @include hover {
     &:hover {
