@@ -19,7 +19,7 @@ export default {
 
   &.bordered {
     .unicorn-list-item {
-      @apply mt-1 mb-2;
+      @apply mt-0 mb-2;
 
       &:after {
         content: "";
