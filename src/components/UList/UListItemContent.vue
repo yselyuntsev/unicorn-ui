@@ -12,6 +12,6 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-list-item-content {
-  @apply block;
+  @apply block w-full;
 }
 </style>

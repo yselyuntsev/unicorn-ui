@@ -22,13 +22,13 @@ export default {
   @apply flex w-full relative items-center py-2 my-0.5 px-4 rounded-md;
   @apply transition-all origin-left text-gray-700;
 
-  @include hover {
-    &:hover {
-      @apply bg-gray-50 cursor-pointer;
-    }
-  }
-
   &.clickable {
+    @include hover {
+      &:hover {
+        @apply bg-gray-50 cursor-pointer;
+      }
+    }
+
     &:active {
       @apply bg-gray-100 transform-gpu scale-90;
     }

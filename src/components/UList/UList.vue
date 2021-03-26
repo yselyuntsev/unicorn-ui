@@ -15,7 +15,7 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-list {
-  @apply flex flex-col w-full p-2;
+  @apply flex flex-col p-2;
 
   &.bordered {
     .unicorn-list-item {
