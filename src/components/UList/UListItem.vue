@@ -20,7 +20,7 @@ export default {
 
 .unicorn-list-item {
   @apply flex w-full relative items-center py-2 my-0.5 px-4 rounded-md;
-  @apply transition-all origin-left text-gray-700;
+  @apply transition-all text-sm font-medium origin-left text-gray-700;
 
   &.clickable {
     @include hover {

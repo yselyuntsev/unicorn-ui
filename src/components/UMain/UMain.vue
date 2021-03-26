@@ -12,6 +12,6 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-main {
-  @apply container mx-auto px-4 md:px-8;
+  @apply container mx-auto px-4 md:px-8 pb-16 mb:pb-0;
 }
 </style>
