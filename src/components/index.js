@@ -7,16 +7,16 @@ export { default as UDivider } from "./UDivider";
 export { default as UFragment } from "./UFragment";
 export { default as UHideAt } from "./UHideAt";
 export { default as UIcon } from "./UIcon";
+export { UList, UListItem } from "./UList";
 export { default as UMain } from "./UMain";
 export { default as UMAppbar } from "./UMAppbar";
 export { default as UMAppHeader } from "./UMAppHeader";
 export { UMBottomNav, UMBottomNavItem } from "./UMBottomNav";
 export { default as UMenu } from "./UMenu";
-// export {} from "./" UMHeader
 export { default as UShowAr } from "./UShowAt";
 export { USidebar, USidebarSubtitle, USidebarItem } from "./USidebar";
 export { default as USpacer } from "./USpacer";
+export { UTab, UTabs, UTabsItem, UTabsItems } from "./UTabs";
 export { default as UTextField } from "./UTextField";
-
 export { default as UApp } from "./UApp";
 export { default as UAppHeader } from "./UAppHeader";
