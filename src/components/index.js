@@ -7,7 +7,7 @@ export { default as UDivider } from "./UDivider";
 export { default as UFragment } from "./UFragment";
 export { default as UHideAt } from "./UHideAt";
 export { default as UIcon } from "./UIcon";
-export { UList, UListItem } from "./UList";
+export { UList, UListItem, UListItemIcon, UListItemContent } from "./UList";
 export { default as UMain } from "./UMain";
 export { default as UMAppbar } from "./UMAppbar";
 export { default as UMAppHeader } from "./UMAppHeader";
