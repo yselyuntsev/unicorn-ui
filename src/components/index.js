@@ -15,6 +15,7 @@ export { UMBottomNav, UMBottomNavItem } from "./UMBottomNav";
 export { default as UMenu } from "./UMenu";
 export { default as UShowAr } from "./UShowAt";
 export { USidebar, USidebarSubtitle, USidebarItem } from "./USidebar";
+export { default as USimpleTable } from "./USimpleTable";
 export { default as USpacer } from "./USpacer";
 export { UTab, UTabs, UTabsItem, UTabsItems } from "./UTabs";
 export { default as UTextField } from "./UTextField";
