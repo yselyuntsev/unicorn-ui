@@ -60,11 +60,11 @@ export default {
   }
 
   &__body {
-    @apply flex-1 text-gray-500 text-sm md:text-base;
+    @apply flex-1 text-gray-500 text-sm;
   }
 
   &__title {
-    @apply text-base md:text-lg;
+    @apply text-base;
     @apply text-gray-700 font-bold;
   }
 
