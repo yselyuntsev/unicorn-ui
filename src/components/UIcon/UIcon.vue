@@ -19,8 +19,8 @@ export default {
   props: {
     filled: { type: Boolean },
     icon: { type: String },
-    background: { type: String },
-    color: { type: String },
+    background: { type: String, default: "bg-gray-200" },
+    color: { type: String, default: "text-gray-700" },
     left: { type: Boolean },
     right: { type: Boolean },
   },
@@ -34,7 +34,7 @@ export default {
   &--filled {
     min-width: 2.5rem;
     min-height: 2.5rem;
-    @apply rounded-md bg-gray-200 text-gray-700;
+    @apply rounded-md flex items-center justify-center;
   }
 
   &.left {
