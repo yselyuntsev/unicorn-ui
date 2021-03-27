@@ -30,11 +30,11 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-collapse {
-  @apply py-2 border-gray-100;
+  @apply border-gray-100;
   @apply transition-all;
 
   &__header {
-    @apply pl-8 cursor-pointer;
+    @apply cursor-pointer;
   }
 
   &__body {
