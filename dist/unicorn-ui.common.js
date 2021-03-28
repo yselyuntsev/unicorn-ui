@@ -6038,12 +6038,12 @@ var UAppHeader_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/UAppHeader/index.js
 
 /* harmony default export */ var components_UAppHeader = (UAppHeader);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"43f77086-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UWidget/UWidget.vue?vue&type=template&id=a964ce4a&
-var UWidgetvue_type_template_id_a964ce4a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('u-card',[_c('u-card-title',[_c('u-icon',{attrs:{"filled":"","icon":_vm.icon,"background":_vm.background,"color":_vm.color}}),_vm._t("top")],2),_c('u-card-body',[_vm._t("default")],2)],1)}
-var UWidgetvue_type_template_id_a964ce4a_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"43f77086-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UWidget/UWidget.vue?vue&type=template&id=0cec3809&
+var UWidgetvue_type_template_id_0cec3809_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('u-card',[_c('u-card-title',[_c('u-icon',{attrs:{"filled":"","icon":_vm.icon,"background":_vm.background,"color":_vm.color}}),_vm._t("top")],2),_c('u-card-body',[_vm._t("default")],2)],1)}
+var UWidgetvue_type_template_id_0cec3809_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/UWidget/UWidget.vue?vue&type=template&id=a964ce4a&
+// CONCATENATED MODULE: ./src/components/UWidget/UWidget.vue?vue&type=template&id=0cec3809&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UWidget/UWidget.vue?vue&type=script&lang=js&
 //
@@ -6063,6 +6063,7 @@ var UWidgetvue_type_template_id_a964ce4a_staticRenderFns = []
 
 
 /* harmony default export */ var UWidgetvue_type_script_lang_js_ = ({
+  name: "UWidget",
   components: {
     UCard: UCard,
     UCardTitle: UCardTitle,
@@ -6086,8 +6087,8 @@ var UWidgetvue_type_template_id_a964ce4a_staticRenderFns = []
 
 var UWidget_component = normalizeComponent(
   UWidget_UWidgetvue_type_script_lang_js_,
-  UWidgetvue_type_template_id_a964ce4a_render,
-  UWidgetvue_type_template_id_a964ce4a_staticRenderFns,
+  UWidgetvue_type_template_id_0cec3809_render,
+  UWidgetvue_type_template_id_0cec3809_staticRenderFns,
   false,
   null,
   null,
