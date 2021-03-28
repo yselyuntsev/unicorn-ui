@@ -21,3 +21,4 @@ export { UTab, UTabs, UTabsItem, UTabsItems } from "./UTabs";
 export { default as UTextField } from "./UTextField";
 export { default as UApp } from "./UApp";
 export { default as UAppHeader } from "./UAppHeader";
+export { default as UWidget } from "./UWidget";
