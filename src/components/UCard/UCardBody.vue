@@ -12,6 +12,6 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-card-body {
-  @apply p-4 text-gray-700;
+  @apply px-4 py-2 text-gray-700;
 }
 </style>

@@ -12,6 +12,6 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-card {
-  @apply bg-white shadow-xl rounded-md border-gray-100 border;
+  @apply bg-white py-2 shadow-xl rounded-md border-gray-100 border;
 }
 </style>
