@@ -17,6 +17,8 @@ import UCardTitle from "../UCard/UCardTitle.vue";
 import UIcon from "../UIcon/UIcon.vue";
 
 export default {
+  name: "UWidget",
+
   components: { UCard, UCardTitle, UIcon },
 
   props: {
