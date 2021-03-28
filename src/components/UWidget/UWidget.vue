@@ -1,6 +1,6 @@
 <template>
   <u-card>
-    <u-card-title>
+    <u-card-title class="flex justify-between">
       <u-icon filled :icon="icon" :background="background" :color="color" />
       <slot name="top"></slot>
     </u-card-title>
