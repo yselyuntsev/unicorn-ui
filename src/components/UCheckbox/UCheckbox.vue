@@ -9,7 +9,7 @@
     />
 
     <span class="unicorn-checkbox__checkmark">
-      <u-icon small :icon="isChecked && icon" />
+      <u-icon small :icon="isChecked ? icon : ''" />
     </span>
 
     <slot>
