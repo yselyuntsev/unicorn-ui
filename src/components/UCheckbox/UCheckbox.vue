@@ -31,7 +31,7 @@ export default {
   props: {
     value: { type: String },
     modelValue: { default: "" },
-    label: { type: String, required: true },
+    label: { type: String },
     trueValue: { default: true },
     falseValue: { default: false },
     variant: { type: String },
