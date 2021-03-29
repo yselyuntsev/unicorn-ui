@@ -1,15 +1,18 @@
 <template>
-  <label class="unicorn-switch" :class="isChecked ? 'checked' : 'unchecked'">
+  <label class="unicorn-switch" :class="isChecked ? 'checked' : ''">
     <input
       class="unicorn-switch__checkbox"
       type="checkbox"
+      :value="value"
       :checked="isChecked"
       @change="updateInput"
     />
 
     <div class="unicorn-switch__switch">
-      <u-icon class="unicorn-switch__icon" v-if="icon" :icon="icon" />
+      <u-icon class="unicorn-switch__icon" :icon="isChecked ? icon : ''" />
     </div>
+
+    <span>{{ isChecked }}</span>
 
     <!--    <span-->
     <!--      v-show="trueFalseLabels[0] || trueFalseLabels[1]"-->
@@ -26,7 +29,7 @@ export default {
   name: "USwitch",
   components: { UIcon },
   model: {
-    prop: "value",
+    prop: "modelValue",
     event: "change",
   },
 
