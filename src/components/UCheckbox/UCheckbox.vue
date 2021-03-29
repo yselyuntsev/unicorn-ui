@@ -21,6 +21,7 @@
 <script>
 import UIcon from "@/components/UIcon/UIcon";
 export default {
+  name: "UCheckbox",
   components: { UIcon },
   model: {
     prop: "modelValue",
