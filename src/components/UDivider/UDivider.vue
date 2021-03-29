@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 .unicorn-divider {
   @apply w-full h-px bg-gray-100;
-  @apply my-4 md:my-8 relative;
+  @apply my-4 relative;
 
   &__text {
     @apply bg-white px-4 absolute text-sm font-medium text-gray-500;
