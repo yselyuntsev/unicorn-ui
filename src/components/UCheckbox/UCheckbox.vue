@@ -75,7 +75,7 @@ export default {
 
 .unicorn-checkbox {
   @apply inline-flex items-center relative cursor-pointer;
-  @apply text-gray-700 transition-all text-sm;
+  @apply text-gray-700 transition-all text-sm leading-tight;
 
   &__input {
     @apply absolute opacity-0 h-0 w-0;
