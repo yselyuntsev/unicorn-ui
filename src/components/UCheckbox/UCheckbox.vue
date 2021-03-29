@@ -1,11 +1,12 @@
 <template>
-  <label class="unicorn-checkbox" :class="[variant, { bordered }]">
+  <label class="unicorn-checkbox" :class="[variant, { bordered, disabled }]">
     <input
       class="unicorn-checkbox__input"
       type="checkbox"
       :checked="isChecked"
       :value="value"
       @change="updateInput"
+      :disabled="disabled"
     />
 
     <span class="unicorn-checkbox__checkmark">
@@ -36,6 +37,7 @@ export default {
     falseValue: { default: false },
     variant: { type: String },
     bordered: { type: Boolean },
+    disabled: { type: Boolean },
     icon: { type: String, default: "mdi-check" },
   },
 
@@ -216,6 +218,10 @@ export default {
     & input:checked ~ .unicorn-checkbox__checkmark {
       @apply border-blue-400 bg-blue-400;
     }
+  }
+
+  &.disabled {
+    @apply opacity-80 cursor-not-allowed;
   }
 }
 </style>
