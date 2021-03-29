@@ -2,14 +2,18 @@
   <div
     v-if="filled"
     class="unicorn-icon unicorn-icon--filled"
-    :class="[background, color]"
+    :class="[background, color, { small }]"
     v-bind="$attrs"
     v-on="$listeners"
   >
     <span class="mdi" :class="icon" />
   </div>
 
-  <span v-else class="unicorn-icon mdi" :class="[icon, { left, right }]" />
+  <span
+    v-else
+    class="unicorn-icon mdi"
+    :class="[icon, { left, right, small }]"
+  />
 </template>
 
 <script>
@@ -22,6 +26,7 @@ export default {
     background: { type: String, default: "bg-gray-200" },
     color: { type: String, default: "text-gray-700" },
     left: { type: Boolean },
+    small: { type: Boolean },
     right: { type: Boolean },
   },
 };
@@ -43,6 +48,10 @@ export default {
 
   &.right {
     @apply -mr-2 ml-2;
+  }
+
+  &.small {
+    @apply text-base;
   }
 }
 </style>
