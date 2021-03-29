@@ -9,7 +9,7 @@
     />
 
     <span class="unicorn-checkbox__checkmark">
-      <u-icon :icon="isChecked && icon" />
+      <u-icon small :icon="isChecked && icon" />
     </span>
 
     <slot>
@@ -74,8 +74,8 @@ export default {
 @import "../../assets/mixins";
 
 .unicorn-checkbox {
-  @apply inline-flex items-center relative pl-10 cursor-pointer;
-  @apply text-gray-700 transition-all;
+  @apply inline-flex items-center relative cursor-pointer;
+  @apply text-gray-700 transition-all text-sm;
 
   &__input {
     @apply absolute opacity-0 h-0 w-0;
@@ -94,7 +94,7 @@ export default {
     max-height: 1.5rem;
     @apply border-2 mr-4 rounded-md;
     @apply flex items-center justify-center;
-    @apply transition-all relative text-white text-base;
+    @apply transition-all relative text-white;
 
     //&:after {
     //  content: "";
