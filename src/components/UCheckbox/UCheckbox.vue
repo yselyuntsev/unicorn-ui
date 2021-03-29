@@ -1,5 +1,5 @@
 <template>
-  <label class="unicorn-checkbox">
+  <label class="unicorn-checkbox" :class="[variant, { bordered }]">
     <input
       class="unicorn-checkbox__input"
       type="checkbox"
@@ -8,7 +8,9 @@
       @change="updateInput"
     />
 
-    <span class="unicorn-checkbox__checkmark"></span>
+    <span class="unicorn-checkbox__checkmark">
+      <u-icon :icon="isChecked && icon" />
+    </span>
 
     <slot>
       {{ label }}
@@ -17,7 +19,9 @@
 </template>
 
 <script>
+import UIcon from "@/components/UIcon/UIcon";
 export default {
+  components: { UIcon },
   model: {
     prop: "modelValue",
     event: "change",
@@ -29,6 +33,9 @@ export default {
     label: { type: String, required: true },
     trueValue: { default: true },
     falseValue: { default: false },
+    variant: { type: String },
+    bordered: { type: Boolean },
+    icon: { type: String, default: "mdi-check" },
   },
 
   computed: {
@@ -66,17 +73,17 @@ export default {
 @import "../../assets/mixins";
 
 .unicorn-checkbox {
-  @apply flex items-center relative pl-10 cursor-pointer;
+  @apply inline-flex items-center relative pl-10 cursor-pointer;
   @apply text-gray-700 transition-all;
-
-  @include hover {
-    &:hover {
-      @apply text-purple-500;
-    }
-  }
 
   &__input {
     @apply absolute opacity-0 h-0 w-0;
+  }
+
+  &:active {
+    .unicorn-checkbox__checkmark {
+      @apply transform-gpu scale-90;
+    }
   }
 
   &__checkmark {
@@ -85,29 +92,129 @@ export default {
     min-height: 1.5rem;
     max-height: 1.5rem;
     @apply border-2 mr-4 rounded-md;
+    @apply flex items-center justify-center;
     @apply transition-all relative;
 
-    &:after {
-      content: "";
-      border-width: 0 3px 3px 0;
+    //&:after {
+    //  content: "";
+    //  border-width: 0 3px 3px 0;
+    //
+    //  @apply invisible absolute left-1.5 top-0;
+    //  @apply w-0 h-0 border-white;
+    //  @apply transform-gpu rotate-45;
+    //  @apply transition-all;
+    //}
+  }
 
-      @apply invisible absolute left-1.5 top-0;
-      @apply w-0 h-0 border-white;
-      @apply transform-gpu rotate-45;
-      @apply transition-all;
+  @include hover {
+    &:hover input ~ .unicorn-checkbox__checkmark {
+      @apply bg-gray-100;
     }
   }
 
-  &:hover input ~ .unicorn-checkbox__checkmark {
-    @apply bg-gray-100;
-  }
-
   & input:checked ~ .unicorn-checkbox__checkmark {
-    @apply border-purple-500 bg-purple-500;
+    @apply border-gray-400 bg-gray-400;
   }
 
   & input:checked ~ .unicorn-checkbox__checkmark:after {
     @apply visible w-2 h-4;
+  }
+
+  &.bordered {
+    @apply p-2 rounded-md bg-white border border-gray-100;
+  }
+
+  // Variants
+  &.primary {
+    @include hover {
+      &:hover {
+        @apply text-purple-500;
+      }
+
+      &:hover input ~ .unicorn-checkbox__checkmark {
+        @apply bg-purple-100 border-purple-200;
+      }
+    }
+
+    & input:checked ~ .unicorn-checkbox__checkmark {
+      @apply border-purple-500 bg-purple-500;
+    }
+  }
+
+  &.secondary {
+    @include hover {
+      &:hover {
+        @apply text-gray-900;
+      }
+    }
+
+    & input:checked ~ .unicorn-checkbox__checkmark {
+      @apply border-gray-700 bg-gray-700;
+    }
+  }
+
+  &.danger {
+    @include hover {
+      &:hover {
+        @apply text-red-500;
+      }
+
+      &:hover input ~ .unicorn-checkbox__checkmark {
+        @apply bg-red-100 border-red-200;
+      }
+    }
+
+    & input:checked ~ .unicorn-checkbox__checkmark {
+      @apply border-red-500 bg-red-500;
+    }
+  }
+
+  &.success {
+    @include hover {
+      &:hover {
+        @apply text-green-500;
+      }
+
+      &:hover input ~ .unicorn-checkbox__checkmark {
+        @apply bg-green-100 border-green-200;
+      }
+    }
+
+    & input:checked ~ .unicorn-checkbox__checkmark {
+      @apply border-green-500 bg-green-500;
+    }
+  }
+
+  &.warning {
+    @include hover {
+      &:hover {
+        @apply text-yellow-500;
+      }
+
+      &:hover input ~ .unicorn-checkbox__checkmark {
+        @apply bg-yellow-100 border-yellow-200;
+      }
+    }
+
+    & input:checked ~ .unicorn-checkbox__checkmark {
+      @apply border-yellow-500 bg-yellow-500;
+    }
+  }
+
+  &.info {
+    @include hover {
+      &:hover {
+        @apply text-blue-500;
+      }
+
+      &:hover input ~ .unicorn-checkbox__checkmark {
+        @apply bg-blue-100 border-blue-200;
+      }
+    }
+
+    & input:checked ~ .unicorn-checkbox__checkmark {
+      @apply border-blue-500 bg-blue-500;
+    }
   }
 }
 </style>
