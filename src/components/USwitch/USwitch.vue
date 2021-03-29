@@ -1,22 +1,22 @@
 <template>
-  <label class="unicorn-switch" :class="checked ? 'checked' : 'unchecked'">
+  <label class="unicorn-switch" :class="isChecked ? 'checked' : 'unchecked'">
     <input
       class="unicorn-switch__checkbox"
       type="checkbox"
-      :checked="checked"
-      @change="$emit('change', $event.target.checked)"
+      :checked="isChecked"
+      @change="updateInput"
     />
 
     <div class="unicorn-switch__switch">
       <u-icon class="unicorn-switch__icon" v-if="icon" :icon="icon" />
     </div>
 
-    <span
-      v-show="trueFalseLabels[0] || trueFalseLabels[1]"
-      class="unicorn-switch__label"
-    >
-      {{ checked ? trueFalseLabels[1] : trueFalseLabels[0] }}
-    </span>
+    <!--    <span-->
+    <!--      v-show="trueFalseLabels[0] || trueFalseLabels[1]"-->
+    <!--      class="unicorn-switch__label"-->
+    <!--    >-->
+    <!--      {{ checked ? trueFalseLabels[1] : trueFalseLabels[0] }}-->
+    <!--    </span>-->
   </label>
 </template>
 
@@ -26,14 +26,45 @@ export default {
   name: "USwitch",
   components: { UIcon },
   model: {
-    prop: "checked",
+    prop: "value",
     event: "change",
   },
 
   props: {
     icon: { type: String },
-    checked: { default: false },
-    trueFalseLabels: { type: Array, default: () => ["", ""] },
+    value: { default: false },
+    modelValue: { default: "" },
+    trueValue: { default: true },
+    falseValue: { default: false },
+  },
+
+  computed: {
+    isChecked() {
+      if (Array.isArray(this.modelValue)) {
+        return this.modelValue.includes(this.value);
+      }
+      // Note that `true-value` and `false-value` are camelCase in the JS
+      return this.modelValue === this.trueValue;
+    },
+  },
+
+  methods: {
+    updateInput(event) {
+      let isChecked = event.target.checked;
+
+      if (Array.isArray(this.modelValue)) {
+        let newValue = [...this.modelValue];
+
+        if (isChecked) {
+          newValue.push(this.value);
+        } else {
+          newValue.splice(newValue.indexOf(this.value), 1);
+        }
+        this.$emit("change", newValue);
+      } else {
+        this.$emit("change", isChecked ? this.trueValue : this.falseValue);
+      }
+    },
   },
 };
 </script>
