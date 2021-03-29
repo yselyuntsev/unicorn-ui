@@ -94,7 +94,7 @@ export default {
     max-height: 1.5rem;
     @apply border-2 mr-4 rounded-md;
     @apply flex items-center justify-center;
-    @apply transition-all relative text-white;
+    @apply transition-all relative text-white text-base;
 
     //&:after {
     //  content: "";
