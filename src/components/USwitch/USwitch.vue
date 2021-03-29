@@ -1,5 +1,5 @@
 <template>
-  <label class="unicorn-switch" :class="isChecked ? 'checked' : ''">
+  <label class="unicorn-switch" :class="[isChecked ? 'checked' : '', variant]">
     <input
       class="unicorn-switch__checkbox"
       type="checkbox"
@@ -9,17 +9,18 @@
     />
 
     <div class="unicorn-switch__switch">
-      <u-icon class="unicorn-switch__icon" :icon="isChecked ? icon : ''" />
+      <u-icon
+        small
+        class="unicorn-switch__icon"
+        :icon="isChecked ? icon : ''"
+      />
     </div>
 
-    <span>{{ isChecked }}</span>
-
-    <!--    <span-->
-    <!--      v-show="trueFalseLabels[0] || trueFalseLabels[1]"-->
-    <!--      class="unicorn-switch__label"-->
-    <!--    >-->
-    <!--      {{ checked ? trueFalseLabels[1] : trueFalseLabels[0] }}-->
-    <!--    </span>-->
+    <span class="unicorn-switch__label">
+      <slot>
+        {{ label }}
+      </slot>
+    </span>
   </label>
 </template>
 
@@ -37,8 +38,10 @@ export default {
     icon: { type: String },
     value: { default: false },
     modelValue: { default: "" },
+    label: { type: String },
     trueValue: { default: true },
     falseValue: { default: false },
+    variant: { type: String },
   },
 
   computed: {
@@ -74,7 +77,7 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-switch {
-  @apply cursor-pointer flex items-center;
+  @apply cursor-pointer inline-flex items-center;
 
   &__checkbox {
     @apply absolute invisible;
@@ -83,22 +86,112 @@ export default {
   &__switch {
     @apply rounded-full inline-flex items-center w-16 h-8;
     @apply relative align-middle transition-all;
-    @apply bg-gray-100;
+    @apply bg-gray-100 text-gray-500;
 
     &:before {
       content: "";
       @apply inline-block absolute left-1;
-      @apply w-6 h-6 bg-purple-600 rounded-full;
+      @apply w-6 h-6 bg-gray-500 rounded-full;
       @apply transition-all shadow;
     }
   }
 
   &__label {
-    @apply ml-2 relative text-sm invisible;
+    @apply ml-2 relative text-sm;
   }
 
   &__icon {
     @apply z-10 absolute left-1 transition-all;
+  }
+
+  &.primary {
+    .unicorn-switch__switch {
+      @apply bg-purple-100;
+      &:before {
+        @apply bg-purple-500;
+      }
+    }
+
+    &.checked {
+      .unicorn-switch__switch {
+        @apply bg-purple-500 text-purple-500;
+      }
+    }
+  }
+
+  &.secondary {
+    .unicorn-switch__switch {
+      @apply bg-gray-100;
+      &:before {
+        @apply bg-gray-700;
+      }
+    }
+
+    &.checked {
+      .unicorn-switch__switch {
+        @apply bg-gray-700 text-gray-700;
+      }
+    }
+  }
+
+  &.danger {
+    .unicorn-switch__switch {
+      @apply bg-red-100;
+      &:before {
+        @apply bg-red-500;
+      }
+    }
+
+    &.checked {
+      .unicorn-switch__switch {
+        @apply bg-red-500 text-red-500;
+      }
+    }
+  }
+
+  &.success {
+    .unicorn-switch__switch {
+      @apply bg-green-100;
+      &:before {
+        @apply bg-green-500;
+      }
+    }
+
+    &.checked {
+      .unicorn-switch__switch {
+        @apply bg-green-500 text-green-500;
+      }
+    }
+  }
+
+  &.warning {
+    .unicorn-switch__switch {
+      @apply bg-yellow-100;
+      &:before {
+        @apply bg-yellow-500;
+      }
+    }
+
+    &.checked {
+      .unicorn-switch__switch {
+        @apply bg-yellow-500 text-yellow-500;
+      }
+    }
+  }
+
+  &.info {
+    .unicorn-switch__switch {
+      @apply bg-blue-100;
+      &:before {
+        @apply bg-blue-500;
+      }
+    }
+
+    &.checked {
+      .unicorn-switch__switch {
+        @apply bg-blue-500 text-blue-500;
+      }
+    }
   }
 
   &.checked {
@@ -107,7 +200,7 @@ export default {
     }
 
     .unicorn-switch__switch {
-      @apply bg-purple-600;
+      @apply bg-gray-500;
 
       &:before {
         @apply transform-gpu translate-x-8 bg-white;
