@@ -94,7 +94,7 @@ export default {
     max-height: 1.5rem;
     @apply border-2 mr-4 rounded-md;
     @apply flex items-center justify-center;
-    @apply transition-all relative;
+    @apply transition-all relative text-white;
 
     //&:after {
     //  content: "";
@@ -129,7 +129,7 @@ export default {
   &.primary {
     @include hover {
       &:hover {
-        @apply text-purple-500;
+        @apply text-purple-400;
       }
 
       &:hover input ~ .unicorn-checkbox__checkmark {
@@ -138,7 +138,7 @@ export default {
     }
 
     & input:checked ~ .unicorn-checkbox__checkmark {
-      @apply border-purple-500 bg-purple-500;
+      @apply border-purple-400 bg-purple-400;
     }
   }
 
@@ -157,7 +157,7 @@ export default {
   &.danger {
     @include hover {
       &:hover {
-        @apply text-red-500;
+        @apply text-red-400;
       }
 
       &:hover input ~ .unicorn-checkbox__checkmark {
@@ -166,14 +166,14 @@ export default {
     }
 
     & input:checked ~ .unicorn-checkbox__checkmark {
-      @apply border-red-500 bg-red-500;
+      @apply border-red-400 bg-red-400;
     }
   }
 
   &.success {
     @include hover {
       &:hover {
-        @apply text-green-500;
+        @apply text-green-400;
       }
 
       &:hover input ~ .unicorn-checkbox__checkmark {
@@ -182,14 +182,14 @@ export default {
     }
 
     & input:checked ~ .unicorn-checkbox__checkmark {
-      @apply border-green-500 bg-green-500;
+      @apply border-green-400 bg-green-400;
     }
   }
 
   &.warning {
     @include hover {
       &:hover {
-        @apply text-yellow-500;
+        @apply text-yellow-400;
       }
 
       &:hover input ~ .unicorn-checkbox__checkmark {
@@ -198,14 +198,14 @@ export default {
     }
 
     & input:checked ~ .unicorn-checkbox__checkmark {
-      @apply border-yellow-500 bg-yellow-500;
+      @apply border-yellow-400 bg-yellow-400;
     }
   }
 
   &.info {
     @include hover {
       &:hover {
-        @apply text-blue-500;
+        @apply text-blue-400;
       }
 
       &:hover input ~ .unicorn-checkbox__checkmark {
@@ -214,7 +214,7 @@ export default {
     }
 
     & input:checked ~ .unicorn-checkbox__checkmark {
-      @apply border-blue-500 bg-blue-500;
+      @apply border-blue-400 bg-blue-400;
     }
   }
 }
