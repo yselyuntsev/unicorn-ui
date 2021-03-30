@@ -30,7 +30,7 @@ export default {
     }
 
     &:active {
-      @apply bg-gray-100 transform-gpu scale-90;
+      @apply bg-gray-100 shadow-inner;
     }
   }
 }
