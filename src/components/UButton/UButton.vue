@@ -1,23 +1,31 @@
 <template>
   <button
     class="unicorn-btn"
-    :class="[variant, { text, block, icon }]"
+    :class="[variant, { text, block, icon, loading }]"
     v-on="$listeners"
     v-bind="$attrs"
   >
-    <slot></slot>
+    <span class="unicorn-btn__inner">
+      <slot></slot>
+    </span>
+
+    <span class="unicorn-btn__loader" v-if="loading">
+      <u-icon class="mdi-loading mdi-spin" />
+    </span>
   </button>
 </template>
 
 <script>
+import UIcon from "../UIcon/UIcon";
 export default {
   name: "UButton",
-
+  components: { UIcon },
   props: {
     variant: { type: String },
     text: { type: Boolean },
     block: { type: Boolean },
     icon: { type: Boolean },
+    loading: { type: Boolean },
   },
 };
 </script>
@@ -53,10 +61,6 @@ export default {
 
   &:active {
     @apply transform-gpu scale-90 shadow-inner;
-  }
-
-  &[disabled] {
-    @apply opacity-30 cursor-not-allowed;
   }
 
   // Variants
@@ -231,6 +235,20 @@ export default {
     min-width: 2.5rem;
     min-height: 2.5rem;
     @apply w-10 h-10 p-0 items-center justify-center;
+  }
+
+  &.loading {
+    .unicorn-btn__inner {
+      @apply invisible;
+    }
+  }
+
+  &__loader {
+    @apply absolute flex items-center justify-center inset-0 rounded-md;
+  }
+
+  &[disabled] {
+    @apply opacity-40 pointer-events-none;
   }
 }
 </style>
