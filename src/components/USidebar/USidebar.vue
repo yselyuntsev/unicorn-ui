@@ -25,25 +25,88 @@
 </template>
 
 <script>
+import { throttle } from "../../utils/throttle";
 import UIcon from "@/components/UIcon";
 
 export default {
   name: "USidebar",
   components: { UIcon },
 
+  model: {
+    prop: "value",
+    event: "update",
+  },
+
   props: {
     collapsible: { type: Boolean },
+    adaptive: { type: Boolean },
+    value: { type: Boolean, default: null },
   },
 
   data() {
     return {
-      collapse: false,
+      collapsed: false,
     };
+  },
+
+  computed: {
+    collapse() {
+      return this.value || this.collapsed;
+    },
+
+    collapseModel: {
+      get() {
+        if (this.value === null) {
+          return this.collapsed;
+        } else {
+          return this.value;
+        }
+      },
+
+      set(newValue) {
+        if (this.value === null) {
+          this.collapsed = newValue;
+        } else {
+          this.$emit("update", newValue);
+        }
+      },
+    },
+  },
+
+  watch: {
+    adaptive: {
+      handler(newValue) {
+        newValue
+          ? window.addEventListener("resize", this.throttledResizeHandler)
+          : window.removeEventListener("resize", this.throttledResizeHandler);
+      },
+      immediate: true,
+    },
+  },
+
+  created() {
+    this.throttledResizeHandler = throttle(this.handleResize, 20);
+  },
+
+  beforeDestroy() {
+    if (this.adaptive) {
+      window.removeEventListener("resize", this.throttledResizeHandler);
+    }
   },
 
   methods: {
     toggleCollapse() {
-      this.collapse = !this.collapse;
+      this.collapseModel = !this.collapseModel;
+    },
+
+    handleResize() {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth < 1024) {
+        this.collapseModel = true;
+      } else {
+        this.collapseModel = false;
+      }
     },
   },
 };
