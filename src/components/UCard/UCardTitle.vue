@@ -13,6 +13,6 @@ export default {
 <style lang="scss" scoped>
 .unicorn-card-title {
   @apply px-4 py-2;
-  @apply text-xl font-bold text-gray-700;
+  @apply text-xl font-medium;
 }
 </style>

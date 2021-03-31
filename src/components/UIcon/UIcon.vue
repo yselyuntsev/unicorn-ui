@@ -39,7 +39,7 @@ export default {
   &--filled {
     min-width: 2.5rem;
     min-height: 2.5rem;
-    @apply rounded-md flex items-center justify-center;
+    @apply rounded-lg flex items-center justify-center;
   }
 
   &.left {

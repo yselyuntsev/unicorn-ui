@@ -1,6 +1,8 @@
 <template>
   <div v-click-outside="close" class="unicorn-menu">
-    <slot name="activator" :toggle="toggle"></slot>
+    <div class="d">
+      <slot name="activator" :toggle="toggle"></slot>
+    </div>
 
     <transition name="menu">
       <div
@@ -66,7 +68,7 @@ export default {
   @apply relative inline-flex;
 
   &__body {
-    @apply absolute top-0 z-30;
+    @apply top-12 absolute z-30;
   }
 }
 

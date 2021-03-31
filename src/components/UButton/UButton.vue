@@ -36,7 +36,7 @@ export default {
 .unicorn-btn {
   // Default
   min-width: 6rem;
-  @apply inline-flex px-4 h-10 items-center justify-center rounded-md;
+  @apply inline-flex px-4 h-10 items-center justify-center rounded-lg;
   @apply whitespace-nowrap;
 
   // Utils

@@ -31,22 +31,18 @@ export default {
 @import "../../assets/mixins";
 
 .unicorn-sidebar-item {
-  @apply h-10 flex items-center px-4 rounded-md my-2;
+  @apply h-12 flex items-center px-4 text-sm rounded-lg my-2;
   @apply transition-all origin-left text-gray-500 font-medium;
   @apply whitespace-nowrap;
 
   @include hover {
     &:hover {
-      @apply bg-purple-100 cursor-pointer text-purple-700;
+      @apply cursor-pointer text-purple-600;
     }
   }
 
-  &:active {
-    @apply transform-gpu scale-90;
-  }
-
   &__content {
-    @apply flex items-center whitespace-nowrap ml-10;
+    @apply flex items-center whitespace-nowrap ml-12;
 
     &.icon {
       @apply ml-4;
@@ -55,7 +51,7 @@ export default {
 
   // Active
   &.active {
-    @apply bg-purple-500 text-white shadow-lg;
+    @apply bg-purple-50 text-purple-600;
   }
 }
 </style>

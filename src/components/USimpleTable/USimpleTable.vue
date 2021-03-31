@@ -11,6 +11,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/mixins";
+
 .unicorn-simple-table {
   @apply table w-full;
 
@@ -24,11 +26,17 @@ export default {
   }
 
   tr {
-    @apply border-t border-gray-100;
+    @apply border-t border-gray-100 transition-all;
+
+    @include hover {
+      &:hover {
+        @apply bg-purple-50;
+      }
+    }
   }
 
   td {
-    @apply px-4 py-2 text-gray-700;
+    @apply px-4 py-4 text-gray-700;
   }
 }
 </style>

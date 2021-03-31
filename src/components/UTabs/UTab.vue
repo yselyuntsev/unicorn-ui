@@ -23,34 +23,22 @@ export default {
 @import "../../assets/mixins";
 
 .unicorn-tab {
-  @apply inline-flex h-12 relative items-center px-4;
-  @apply text-gray-500 font-medium uppercase;
-  @apply transition-all;
+  @apply inline-flex h-10 text-sm relative items-center px-4;
+  @apply text-gray-500 rounded-lg font-medium;
+  @apply transition-all mr-2;
 
-  &:after {
-    content: "";
-    @apply absolute h-0.5 bg-purple-600 left-0 right-0 bottom-0;
-    @apply transform-gpu scale-x-0 transition-all;
+  &:last-child {
+    @apply mr-0;
   }
 
   @include hover {
     &:hover {
-      @apply bg-gray-50 cursor-pointer;
+      @apply text-black cursor-pointer;
     }
   }
 
   &.active {
-    @apply text-purple-600;
-
-    @include hover {
-      &:hover {
-        @apply bg-purple-100;
-      }
-    }
-
-    &:after {
-      @apply scale-x-100;
-    }
+    @apply text-purple-600 bg-gray-50;
   }
 }
 </style>

@@ -1,26 +1,28 @@
 <template>
-  <div class="unicorn-sidebar-container" :class="{ collapse }">
-    <aside class="unicorn-sidebar">
-      <div class="unicorn-sidebar__header">
-        <slot name="header" :is-collapse="collapse"></slot>
-      </div>
+  <div>
+    <div class="unicorn-sidebar-container" :class="{ collapse }">
+      <aside class="unicorn-sidebar">
+        <div class="unicorn-sidebar__header">
+          <slot name="header" :is-collapse="collapse"></slot>
+        </div>
 
-      <div class="unicorn-sidebar__body">
-        <slot></slot>
-      </div>
+        <div class="unicorn-sidebar__body">
+          <slot></slot>
+        </div>
 
-      <div class="unicorn-sidebar__footer">
-        <slot name="footer" :is-collapse="collapse"></slot>
-      </div>
+        <div class="unicorn-sidebar__footer">
+          <slot name="footer" :is-collapse="collapse"></slot>
+        </div>
 
-      <div
-        v-if="collapsible"
-        @click="toggleCollapse"
-        class="unicorn-sidebar__collapse"
-      >
-        <u-icon class="unicorn-sidebar__icon" icon="mdi-chevron-left" />
-      </div>
-    </aside>
+        <div
+          v-if="collapsible"
+          @click="toggleCollapse"
+          class="unicorn-sidebar__collapse"
+        >
+          <u-icon class="unicorn-sidebar__icon" icon="mdi-chevron-left" />
+        </div>
+      </aside>
+    </div>
   </div>
 </template>
 
@@ -117,17 +119,17 @@ export default {
 
 .unicorn-sidebar {
   @apply flex flex-col w-64 fixed left-0 top-0 bottom-0;
-  @apply border-r px-4 border-gray-100;
+  @apply border-r px-4;
   @apply transition-all;
 
   &-container {
     @apply w-64 h-screen relative transition-all;
 
     &.collapse {
-      @apply w-14;
+      @apply w-16;
 
       .unicorn-sidebar {
-        @apply w-14 px-2;
+        @apply w-16 px-2;
       }
 
       .unicorn-sidebar-subtitle {
@@ -135,15 +137,15 @@ export default {
       }
 
       .unicorn-sidebar-item {
-        @apply origin-center px-2;
+        @apply origin-center px-3;
       }
 
       .unicorn-sidebar__collapse {
-        @apply -translate-x-3;
+        @apply -translate-x-4;
       }
 
       .unicorn-sidebar__header {
-        @apply mt-12;
+        @apply mt-12 px-1;
       }
 
       .unicorn-sidebar__icon {
@@ -153,7 +155,7 @@ export default {
   }
 
   &__header {
-    @apply flex py-4 mb-8 overflow-hidden transition-all;
+    @apply flex px-4 py-4 mb-8 overflow-hidden transition-all;
   }
 
   &__body {
@@ -174,10 +176,10 @@ export default {
     min-height: 2rem;
     max-height: 2rem;
 
-    @apply rounded-md border absolute right-0 bg-white;
+    @apply rounded-full border absolute right-0 bg-white;
     @apply flex items-center justify-center;
     @apply transform-gpu translate-x-4 translate-y-4;
-    @apply transition-all text-gray-700 border-gray-100;
+    @apply transition-all text-gray-500;
 
     @include hover {
       &:hover {

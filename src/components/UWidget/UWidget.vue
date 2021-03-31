@@ -5,9 +5,7 @@
       <slot name="top"></slot>
     </u-card-title>
 
-    <u-card-body>
-      <slot></slot>
-    </u-card-body>
+    <slot></slot>
   </u-card>
 </template>
 

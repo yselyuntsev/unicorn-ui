@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss" scoped>
 .unicorn-card {
-  @apply bg-white py-2 shadow-xl rounded-md border-gray-100 border;
+  @apply bg-white py-2 rounded-lg;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 </style>
