@@ -250,5 +250,9 @@ export default {
   &[disabled] {
     @apply opacity-40 pointer-events-none;
   }
+
+  &__inner {
+    @apply flex items-center;
+  }
 }
 </style>
