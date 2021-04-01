@@ -104,6 +104,12 @@
       <h4 class="unicorn-h4 mt-4">Unity Exchange</h4>
       <h1 class="unicorn-h1">Promotions</h1>
 
+      <div class="my-8 max-w-sm">
+        <u-text-field label="jkfksdj" />
+      </div>
+
+      <u-progressbar class="my-8" :value="14" />
+
       <u-tabs class="mb-16 mt-8">
         <u-tab>All</u-tab>
         <u-tab>Withdraw</u-tab>
@@ -114,6 +120,13 @@
       <h3 class="unicorn-h3 mb-8">Search by token name, symbol, or address</h3>
 
       <u-simple-table>
+        <thead>
+          <th>Type</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>ADDRESS / TRANSACTION ID</th>
+        </thead>
+
         <tbody>
           <tr>
             <td>djkfskl</td>
@@ -195,10 +208,14 @@ import UBadge from "@/components/UBadge/UBadge";
 import UTabs from "@/components/UTabs/UTabs";
 import UTab from "@/components/UTabs/UTab";
 import USimpleTable from "@/components/USimpleTable/USimpleTable";
+import UProgressbar from "@/components/UProgressbar/UProgressbar";
+import UTextField from "@/components/UTextField/UTextField";
 
 export default {
   name: "App",
   components: {
+    UTextField,
+    UProgressbar,
     USimpleTable,
     UTab,
     UTabs,

@@ -14,29 +14,33 @@ export default {
 @import "../../assets/mixins";
 
 .unicorn-simple-table {
-  @apply table w-full;
+  @apply table w-full text-sm;
 
   thead {
-    @apply border-b border-gray-100;
+    @apply bg-gray-100;
   }
 
   th {
-    @apply pb-4 px-4 text-left font-medium text-sm;
-    @apply text-gray-500;
+    @apply py-3 px-4 text-left font-medium text-xs uppercase;
+    @apply text-gray-400;
   }
 
   tr {
-    @apply border-t border-gray-100 transition-all;
+    @apply transition-all;
+
+    &:nth-child(2n) {
+      @apply bg-gray-50;
+    }
 
     @include hover {
       &:hover {
-        @apply bg-purple-50;
+        @apply bg-white;
       }
     }
   }
 
   td {
-    @apply px-4 py-4 text-gray-700;
+    @apply px-4 py-4;
   }
 }
 </style>

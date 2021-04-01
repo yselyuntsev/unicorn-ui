@@ -95,7 +95,7 @@ export default {
 
   // Variants
   &.primary {
-    @apply bg-purple-100;
+    @apply bg-purple-50;
 
     .unicorn-alert__title {
       @apply text-purple-700;
@@ -147,7 +147,7 @@ export default {
   }
 
   &.success {
-    @apply bg-green-100;
+    @apply bg-green-50;
 
     .unicorn-alert__title {
       @apply text-green-700;
@@ -173,7 +173,7 @@ export default {
   }
 
   &.danger {
-    @apply bg-red-100;
+    @apply bg-red-50;
 
     .unicorn-alert__title {
       @apply text-red-700;
@@ -199,7 +199,7 @@ export default {
   }
 
   &.warning {
-    @apply bg-yellow-100;
+    @apply bg-yellow-50;
 
     .unicorn-alert__title {
       @apply text-yellow-700;
@@ -225,7 +225,7 @@ export default {
   }
 
   &.info {
-    @apply bg-blue-100;
+    @apply bg-blue-50;
 
     .unicorn-alert__title {
       @apply text-blue-700;

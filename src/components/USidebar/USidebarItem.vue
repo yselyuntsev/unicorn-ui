@@ -51,7 +51,7 @@ export default {
 
   // Active
   &.active {
-    @apply bg-purple-50 text-purple-600;
+    @apply bg-gray-100 text-purple-600;
   }
 }
 </style>

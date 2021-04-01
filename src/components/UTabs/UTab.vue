@@ -38,7 +38,7 @@ export default {
   }
 
   &.active {
-    @apply text-purple-600 bg-gray-50;
+    @apply text-purple-600 bg-gray-100;
   }
 }
 </style>

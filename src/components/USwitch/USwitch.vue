@@ -91,7 +91,7 @@ export default {
     &:before {
       content: "";
       @apply inline-block absolute left-1;
-      @apply w-6 h-6 bg-gray-500 rounded-full;
+      @apply w-6 h-6 bg-white rounded-full;
       @apply transition-all shadow;
     }
   }
@@ -101,32 +101,18 @@ export default {
   }
 
   &__icon {
-    @apply z-10 absolute left-1 transition-all;
+    @apply z-10 absolute left-2 transition-all;
   }
 
   &.primary {
-    .unicorn-switch__switch {
-      @apply bg-purple-100;
-      &:before {
-        @apply bg-purple-500;
-      }
-    }
-
     &.checked {
       .unicorn-switch__switch {
-        @apply bg-purple-500 text-purple-500;
+        @apply bg-purple-400 text-purple-400;
       }
     }
   }
 
   &.secondary {
-    .unicorn-switch__switch {
-      @apply bg-gray-100;
-      &:before {
-        @apply bg-gray-700;
-      }
-    }
-
     &.checked {
       .unicorn-switch__switch {
         @apply bg-gray-700 text-gray-700;
@@ -135,61 +121,33 @@ export default {
   }
 
   &.danger {
-    .unicorn-switch__switch {
-      @apply bg-red-100;
-      &:before {
-        @apply bg-red-500;
-      }
-    }
-
     &.checked {
       .unicorn-switch__switch {
-        @apply bg-red-500 text-red-500;
+        @apply bg-red-400 text-red-400;
       }
     }
   }
 
   &.success {
-    .unicorn-switch__switch {
-      @apply bg-green-100;
-      &:before {
-        @apply bg-green-500;
-      }
-    }
-
     &.checked {
       .unicorn-switch__switch {
-        @apply bg-green-500 text-green-500;
+        @apply bg-green-400 text-green-400;
       }
     }
   }
 
   &.warning {
-    .unicorn-switch__switch {
-      @apply bg-yellow-100;
-      &:before {
-        @apply bg-yellow-500;
-      }
-    }
-
     &.checked {
       .unicorn-switch__switch {
-        @apply bg-yellow-500 text-yellow-500;
+        @apply bg-yellow-400 text-yellow-400;
       }
     }
   }
 
   &.info {
-    .unicorn-switch__switch {
-      @apply bg-blue-100;
-      &:before {
-        @apply bg-blue-500;
-      }
-    }
-
     &.checked {
       .unicorn-switch__switch {
-        @apply bg-blue-500 text-blue-500;
+        @apply bg-blue-400 text-blue-400;
       }
     }
   }
@@ -200,7 +158,7 @@ export default {
     }
 
     .unicorn-switch__switch {
-      @apply bg-gray-500;
+      @apply bg-gray-400;
 
       &:before {
         @apply transform-gpu translate-x-8 bg-white;
