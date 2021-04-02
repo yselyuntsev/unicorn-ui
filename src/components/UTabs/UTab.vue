@@ -24,7 +24,7 @@ export default {
 
 .unicorn-tab {
   @apply inline-flex h-10 text-sm relative items-center px-4;
-  @apply text-gray-500 rounded-lg font-medium;
+  @apply text-gray-500 rounded-lg font-bold;
   @apply transition-all mr-2;
 
   &:last-child {

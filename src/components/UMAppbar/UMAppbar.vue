@@ -63,7 +63,7 @@ export default {
 
   &__page-title {
     @apply flex-1 flex justify-center h-full items-center px-4;
-    @apply text-white text-lg font-medium;
+    @apply text-lg font-medium;
   }
 }
 </style>
