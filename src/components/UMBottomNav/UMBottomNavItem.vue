@@ -7,8 +7,8 @@
   >
     <div class="unicorn-m-bottom-nav-item__inner">
       <u-icon class="unicorn-m-bottom-nav-item__inner-icon" :icon="icon" />
+      <slot></slot>
     </div>
-    <slot></slot>
   </div>
 </template>
 
