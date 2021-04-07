@@ -1,2 +1,4 @@
 import UAlert from "./UAlert.vue";
-export default UAlert;
+import UAlertTitle from "@/components/UAlert/UAlertTitle";
+
+export { UAlert, UAlertTitle };

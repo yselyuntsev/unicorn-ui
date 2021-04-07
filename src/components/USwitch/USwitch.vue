@@ -113,14 +113,6 @@ export default {
     }
   }
 
-  &.secondary {
-    &.checked {
-      .unicorn-switch__switch {
-        @apply bg-gray-700 text-gray-700;
-      }
-    }
-  }
-
   &.danger {
     &.checked {
       .unicorn-switch__switch {

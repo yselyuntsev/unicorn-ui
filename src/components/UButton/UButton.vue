@@ -89,31 +89,6 @@ export default {
     }
   }
 
-  &.secondary {
-    @apply bg-gray-700 text-white;
-
-    @include hover {
-      &:hover {
-        @apply bg-gray-600;
-      }
-    }
-
-    // Text
-    &.text {
-      @apply text-gray-700 bg-transparent;
-
-      @include hover {
-        &:hover {
-          @apply bg-gray-100;
-        }
-      }
-
-      &:active {
-        @apply bg-gray-100;
-      }
-    }
-  }
-
   &.success {
     @apply bg-green-400 text-white;
 

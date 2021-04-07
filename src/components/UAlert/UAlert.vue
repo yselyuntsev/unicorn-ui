@@ -120,32 +120,6 @@ export default {
     }
   }
 
-  &.secondary {
-    @apply bg-gray-700;
-
-    .unicorn-alert__title {
-      @apply text-white;
-    }
-
-    .unicorn-alert__body {
-      @apply text-gray-300;
-    }
-
-    .unicorn-alert__icon {
-      @apply text-white;
-    }
-
-    .unicorn-alert__close {
-      @apply bg-gray-700 text-white;
-
-      @include hover {
-        &:hover {
-          @apply bg-gray-600;
-        }
-      }
-    }
-  }
-
   &.success {
     @apply bg-green-50;
 

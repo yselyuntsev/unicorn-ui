@@ -144,18 +144,6 @@ export default {
     }
   }
 
-  &.secondary {
-    @include hover {
-      &:hover {
-        @apply text-gray-900;
-      }
-    }
-
-    & input:checked ~ .unicorn-checkbox__checkmark {
-      @apply border-gray-700 bg-gray-700;
-    }
-  }
-
   &.danger {
     @include hover {
       &:hover {

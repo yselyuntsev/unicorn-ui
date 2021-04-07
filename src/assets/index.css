@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 
 @import "typography.css";
+@import "colors.css";
 
 * {
   -webkit-tap-highlight-color: transparent;
