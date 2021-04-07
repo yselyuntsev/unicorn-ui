@@ -1,2 +1,2 @@
-import UHideAt from "./UHideAt.vue";
+import UHideAt from "./UHideAt";
 export default UHideAt;

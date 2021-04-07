@@ -1,4 +1,3 @@
-<script>
 import { throttle } from "../../utils/throttle";
 
 export default {
@@ -53,4 +52,3 @@ export default {
     return null;
   },
 };
-</script>
