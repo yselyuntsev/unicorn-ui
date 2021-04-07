@@ -1,4 +1,4 @@
-export { UAlertTitle, UAlert } from "./UAlert";
+export { default as UAlert } from "./UAlert";
 export { default as UButton } from "./UButton";
 export { UCard, UCardActions, UCardBody, UCardTitle } from "./UCard";
 export { default as UCheckbox } from "./UCheckbox";
