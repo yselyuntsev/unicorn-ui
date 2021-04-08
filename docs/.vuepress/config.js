@@ -1,5 +1,3 @@
-const path = require("path");
-
 module.exports = {
   title: "Unicorn UI",
   description: "Библиотека компонентов для продуктов \"Пионер\"",
@@ -21,6 +19,9 @@ module.exports = {
         children: [
           "/components/alerts",
           "/components/application",
+          "/components/avatars",
+          "/components/badges",
+          "/components/buttons",
         ]
       },
 

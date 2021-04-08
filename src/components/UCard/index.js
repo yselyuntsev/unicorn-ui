@@ -1,6 +1,8 @@
-import UCard from "./UCard.vue";
-import UCardTitle from "./UCardTitle.vue";
-import UCardBody from "./UCardBody.vue";
-import UCardActions from "./UCardActions.vue";
+import UCard from "./UCard";
+import { createFunctionalComponent } from "@/utils/createFunctionalComponent";
+
+const UCardTitle = createFunctionalComponent("u-card__title");
+const UCardBody = createFunctionalComponent("u-card__body");
+const UCardActions = createFunctionalComponent("u-card__actions");
 
 export { UCard, UCardTitle, UCardBody, UCardActions };
