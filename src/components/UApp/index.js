@@ -1,2 +1,2 @@
-import UApp from "./UApp.vue";
+import UApp from "./UApp";
 export default UApp;

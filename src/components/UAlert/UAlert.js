@@ -1,7 +1,7 @@
 import "./UAlert.scss";
 
 import UIcon from "@/components/UIcon/UIcon";
-import UButton from "@/components/UButton/UButton";
+import UButton from "@/components/UBtn/UBtn";
 
 export default {
   name: "u-alert",

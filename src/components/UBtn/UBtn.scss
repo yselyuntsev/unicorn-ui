@@ -1,0 +1,245 @@
+@import "../../assets/mixins";
+
+.u-btn {
+  min-width: 5rem;
+  @apply inline-flex px-4 h-10 rounded-lg;
+  @apply outline-none transition-all relative;
+  @apply font-medium border border-transparent;
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:active {
+    @apply transform-gpu scale-95;
+  }
+
+  &__content {
+    @apply m-auto;
+  }
+
+  &__loader {
+    background: inherit;
+    @apply absolute flex inset-0 items-center justify-center rounded-lg
+  }
+
+  &--block {
+    @apply w-full
+  }
+
+  &--icon {
+    min-width: 2.5rem;
+    max-width: 2.5rem;
+    min-height: 2.5rem;
+    max-height: 2.5rem;
+    @apply p-0;
+  }
+
+  &--small {
+    min-width: 3rem;
+    @apply text-sm h-8 px-2;
+
+    &.u-btn--icon {
+      min-width: 2rem;
+      max-width: 2rem;
+      min-height: 2rem;
+      max-height: 2rem;
+    }
+  }
+
+  &--default {
+    @apply bg-gray-100 text-gray-700;
+
+    @include hover {
+      &:hover {
+        @apply bg-gray-50;
+      }
+    }
+
+    &.u-btn--outlined {
+      @apply border-gray-300 bg-transparent;
+
+      @include hover {
+        &:hover {
+          @apply bg-gray-50;
+        }
+      }
+    }
+
+    &.u-btn--text {
+      @apply bg-transparent;
+
+      @include hover {
+        &:hover {
+          @apply bg-gray-50;
+        }
+      }
+    }
+  }
+
+  &--primary {
+    @apply bg-purple-500 text-white;
+
+    @include hover {
+      &:hover {
+        @apply bg-purple-400;
+      }
+    }
+
+    &.u-btn--outlined {
+      @apply border-purple-300 bg-transparent text-purple-500;
+
+      @include hover {
+        &:hover {
+          @apply bg-purple-50;
+        }
+      }
+    }
+
+    &.u-btn--text {
+      @apply bg-transparent text-purple-500;
+
+      @include hover {
+        &:hover {
+          @apply bg-purple-50;
+        }
+      }
+    }
+  }
+
+  &--success {
+    @apply bg-green-400 text-white;
+
+    @include hover {
+      &:hover {
+        @apply bg-green-300;
+      }
+    }
+
+    &.u-btn--outlined {
+      @apply border-green-300 bg-transparent text-green-500;
+
+      @include hover {
+        &:hover {
+          @apply bg-green-50;
+        }
+      }
+    }
+
+    &.u-btn--text {
+      @apply bg-transparent text-green-500;
+
+      @include hover {
+        &:hover {
+          @apply bg-green-50;
+        }
+      }
+    }
+  }
+
+  &--error {
+    @apply bg-red-400 text-white;
+
+    @include hover {
+      &:hover {
+        @apply bg-red-300;
+      }
+    }
+
+    &.u-btn--outlined {
+      @apply border-red-300 bg-transparent text-red-500;
+
+      @include hover {
+        &:hover {
+          @apply bg-red-50;
+        }
+      }
+    }
+
+    &.u-btn--text {
+      @apply bg-transparent text-red-500;
+
+      @include hover {
+        &:hover {
+          @apply bg-red-50;
+        }
+      }
+    }
+  }
+
+  &--warning {
+    @apply bg-yellow-400 text-white;
+
+    @include hover {
+      &:hover {
+        @apply bg-yellow-300;
+      }
+    }
+
+    &.u-btn--outlined {
+      @apply border-yellow-300 bg-transparent text-yellow-500;
+
+      @include hover {
+        &:hover {
+          @apply bg-yellow-50;
+        }
+      }
+    }
+
+    &.u-btn--text {
+      @apply bg-transparent text-yellow-500;
+
+      @include hover {
+        &:hover {
+          @apply bg-yellow-50;
+        }
+      }
+    }
+  }
+
+  &--info {
+    @apply bg-blue-400 text-white;
+
+    @include hover {
+      &:hover {
+        @apply bg-blue-300;
+      }
+    }
+
+    &.u-btn--outlined {
+      @apply border-blue-300 bg-transparent text-blue-500;
+
+      @include hover {
+        &:hover {
+          @apply bg-blue-50;
+        }
+      }
+    }
+
+    &.u-btn--text {
+      @apply bg-transparent text-blue-500;
+
+      @include hover {
+        &:hover {
+          @apply bg-blue-50;
+        }
+      }
+    }
+  }
+
+  &--outlined {
+    &.u-btn--text {
+      @apply border-gray-200;
+    }
+  }
+
+  &--loading {
+    .u-btn__content {
+      @apply invisible
+    }
+  }
+
+  &[disabled] {
+    @apply opacity-40 pointer-events-none;
+  }
+}
