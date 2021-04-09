@@ -1,2 +1,2 @@
-import UProgressbar from "@/components/UProgressbar/UProgressbar";
+import UProgressbar from "./UProgressbar";
 export default UProgressbar;

@@ -32,7 +32,7 @@
     max-width: 2.5rem;
     min-height: 2.5rem;
     max-height: 2.5rem;
-    @apply p-0;
+    padding: 0 !important;
   }
 
   &--small {

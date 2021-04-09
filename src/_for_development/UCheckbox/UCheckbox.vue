@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import UIcon from "@/components/UIcon/UIcon";
+import UIcon from "@/components/UIcon";
 export default {
   name: "UCheckbox",
   components: { UIcon },

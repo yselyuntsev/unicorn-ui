@@ -1,5 +1,5 @@
 import "./UBtn.scss";
-import UIcon from "@/components/UIcon/UIcon";
+import UIcon from "@/components/UIcon";
 
 export default {
   name: "u-btn",

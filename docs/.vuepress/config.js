@@ -22,6 +22,12 @@ module.exports = {
           "/components/avatars",
           "/components/badges",
           "/components/buttons",
+          "/components/cards",
+          "/components/dialogs",
+          "/components/dividers",
+          "/components/icons",
+          "/components/lists",
+          "/components/progressbar",
         ]
       },
 

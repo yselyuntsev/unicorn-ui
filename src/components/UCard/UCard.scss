@@ -34,7 +34,7 @@
   }
 
   &--flat {
-    @apply shadow-none border-none;
+    @apply shadow-none;
 
     &.u-card--hover {
       @include hover {

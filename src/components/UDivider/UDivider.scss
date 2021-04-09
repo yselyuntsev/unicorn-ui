@@ -1,0 +1,19 @@
+.u-divider {
+  @apply w-full h-px bg-gray-200;
+  @apply my-8 relative;
+
+  &__content {
+    @apply bg-white px-4 absolute text-sm font-medium;
+    @apply text-gray-500 leading-none tracking-wide;
+    @apply transform-gpu left-1/2 -translate-x-1/2;
+    @apply top-1/2 -translate-y-1/2;
+  }
+
+  &--dense {
+    @apply my-4;
+  }
+
+  &--simple {
+    @apply my-0;
+  }
+}

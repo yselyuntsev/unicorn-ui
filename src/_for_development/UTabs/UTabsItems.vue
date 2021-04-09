@@ -1,5 +1,5 @@
 <script>
-import UTabsItem from "@/components/UTabs/UTabsItem";
+import UTabsItem from "@/_for_development/UTabs/UTabsItem";
 
 export default {
   name: "UTabsItems",

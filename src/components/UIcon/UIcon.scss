@@ -1,0 +1,23 @@
+.u-icon {
+  font-size: 1.5rem;
+  height: 1.5rem;
+  line-height: 1;
+
+  &--filled {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    @apply rounded-lg flex items-center justify-center;
+  }
+
+  &--left {
+    @apply -ml-2 mr-2;
+  }
+
+  &--right {
+    @apply -mr-2 ml-2;
+  }
+
+  &--small {
+    @apply text-base;
+  }
+}

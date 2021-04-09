@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import UCard from "../UCard/UCard.js";
+import UCard from "../../components/UCard/UCard.js";
 import UCardTitle from "../UCard/UCardTitle.vue";
 import UIcon from "../UIcon/UIcon.vue";
 

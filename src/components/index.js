@@ -3,7 +3,12 @@ export { default as UApp } from "./UApp";
 export { default as UAvatar } from "./UAvatar";
 export { default as UBadge } from "./UBadge";
 export { default as UBtn } from "./UBtn";
-export { UCard, UCardActions, UCardBody, UCardTitle } from "./UCard";
-
+export * from "./UCard";
+export { default as UDialog } from "./UDialog";
+export { default as UDivider } from "./UDivider";
 export { default as UHideAt } from "./UHideAt";
+export { default as UIcon } from "./UIcon";
+export * from "./UList";
+export { default as UProgressbar } from "./UProgressbar";
 export { default as UShowAt } from "./UShowAt";
+export { default as USimpleTable } from "./USimpleTable";
