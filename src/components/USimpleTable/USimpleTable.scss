@@ -8,7 +8,8 @@
       thead {
         tr {
           th {
-            @apply text-gray-700;
+            @apply text-gray-700 text-left;
+            border-bottom: thin solid #e5e7eb;
           }
         }
       }
@@ -20,13 +21,7 @@
           &:not(:last-child) {
             td,
             th {
-              &:not(.u-data-table__mobile-row) {
-                border-bottom: thin solid #e5e7eb;
-              }
-
-              &:last-child {
-                border-bottom: thin solid #e5e7eb;
-              }
+              border-bottom: thin solid #e5e7eb;
             }
           }
 
@@ -35,7 +30,7 @@
           }
 
           @include hover {
-            &:hover:not(.u-data-table__expanded__content):not(.u-data-table__empty-wrapper) {
+            &:hover {
               @apply bg-gray-50;
             }
           }
