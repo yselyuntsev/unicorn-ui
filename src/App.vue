@@ -1,85 +1,98 @@
 <template>
-  <div id="app" class="p-16 flex flex-col gap-2">
-    <div class="flex gap-2">
-      <u-button> ffjdks </u-button>
-      <u-button variant="primary">
-        <u-badge animated />
-        ffjdks
-      </u-button>
-      <u-button variant="danger"> ffjdks </u-button>
-      <u-button variant="success"> ffjdks </u-button>
-      <u-button variant="warning"> ffjdks </u-button>
-      <u-button variant="info"> ffjdks </u-button>
-    </div>
+  <!--  <div id="app" class="p-16 flex items-start flex-col gap-2">-->
+  <u-app>
+    <u-app-sidebar :adaptive="false" v-model="value" style="display: flex">
+      <template #prepend>
+        <u-icon filled icon="mdi-github" />
+      </template>
 
-    <div class="flex gap-2">
-      <u-button text> ffjdks </u-button>
-      <u-button text variant="primary"> ffjdks </u-button>
-      <u-button text variant="danger"> ffjdks </u-button>
-      <u-button text variant="success"> ffjdks </u-button>
-      <u-button text variant="warning"> ffjdks </u-button>
-      <u-button text variant="info"> ffjdks </u-button>
-    </div>
+      <u-divider dense />
 
-    <div class="flex flex-col gap-2">
-      <u-alert closable icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad ducimus
-        impedit minima mollitia pariatur tempore? Accusantium animi esse
-        possimus quod voluptate! Ab at cumque doloribus dolorum in, modi
-        ratione.
-      </u-alert>
+      <u-list dense nav>
+        <u-list-item active>
+          <u-list-item-icon>
+            <u-icon icon="mdi-apps"></u-icon>
+          </u-list-item-icon>
 
-      <u-alert closable variant="primary" icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus
-        accusantium animi beatae commodi deserunt dolores fugit id in incidunt
-        inventore, maxime minima nisi perspiciatis quae reprehenderit tempora ut
-        vero?
-      </u-alert>
+          <u-list-item-content> dfkjls </u-list-item-content>
+        </u-list-item>
+      </u-list>
+    </u-app-sidebar>
 
-      <u-alert closable variant="danger" icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at
-        delectus dicta dolorem dolorum fuga hic nam nobis obcaecati reiciendis.
-        Aspernatur dolorem explicabo laboriosam necessitatibus, pariatur quaerat
-        reiciendis velit vitae?
-      </u-alert>
+    <u-app-wrapper>
+      <u-app-bar>
+        <u-btn @click="value = !value" icon>
+          <u-icon icon="mdi-menu" />
+        </u-btn>
 
-      <u-alert closable variant="success" icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at
-        delectus dicta dolorem dolorum fuga hic nam nobis obcaecati reiciendis.
-        Aspernatur dolorem explicabo laboriosam necessitatibus, pariatur quaerat
-        reiciendis velit vitae?
-      </u-alert>
+        <u-app-bar-title>dsfklds</u-app-bar-title>
 
-      <u-alert closable variant="info" icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at
-        delectus dicta dolorem dolorum fuga hic nam nobis obcaecati reiciendis.
-        Aspernatur dolorem explicabo laboriosam necessitatibus, pariatur quaerat
-        reiciendis velit vitae?
-      </u-alert>
+        <u-spacer />
 
-      <u-alert closable variant="warning" icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at
-        delectus dicta dolorem dolorum fuga hic nam nobis obcaecati reiciendis.
-        Aspernatur dolorem explicabo laboriosam necessitatibus, pariatur quaerat
-        reiciendis velit vitae?
-      </u-alert>
-    </div>
-  </div>
+        <u-btn text>
+          Allow Jhonatan
+          <u-avatar right size="32">
+            <img src="https://randomuser.me/api/portraits/men/59.jpg" alt="" />
+          </u-avatar>
+        </u-btn>
+      </u-app-bar>
+
+      <u-app-main>
+        <u-container>
+          <h1 class="unicorn-h1">dskfjsdlk</h1>
+
+          <u-card> dsjfksd </u-card>
+        </u-container>
+      </u-app-main>
+    </u-app-wrapper>
+  </u-app>
 </template>
 
 <script>
-import UButton from "@/components/UButton/UButton";
-import UAlert from "@/components/UAlert/UAlert";
-import UAlertTitle from "@/components/UAlert/UAlertTitle";
-import UBadge from "@/components/UBadge/UBadge";
+import UAppSidebar from "@/components/UAppSidebar/UAppSidebar";
+import { UApp, UAppWrapper, UAppMain } from "@/components/UApp";
+import { UAppBar, UAppBarTitle } from "@/components/UAppBar";
+import UContainer from "@/components/UContainer/UContainer";
+import UBtn from "@/components/UBtn/UBtn";
+import UIcon from "@/components/UIcon";
+import { UList, UListItemContent, UListItemIcon } from "@/components/UList";
+import UListItem from "@/components/UList/UListItem";
+import UCard from "@/components/UCard/UCard";
+import UDivider from "@/components/UDivider/UDivider";
+import USpacer from "@/_for_development/USpacer/USpacer";
+import UAvatar from "@/components/UAvatar/UAvatar";
+
 export default {
   name: "App",
-  components: { UBadge, UAlertTitle, UAlert, UButton },
+  components: {
+    UAvatar,
+    USpacer,
+    UDivider,
+    UCard,
+    UAppBarTitle,
+    UListItem,
+    UList,
+    UIcon,
+    UBtn,
+    UContainer,
+    UAppBar,
+    UListItemContent,
+    UListItemIcon,
+    UAppWrapper,
+    UAppMain,
+    UApp,
+    UAppSidebar,
+  },
+  data() {
+    return {
+      value: true,
+      bar: 20,
+    };
+  },
+  methods: {
+    log() {
+      console.log(7489735983478);
+    },
+  },
 };
 </script>
