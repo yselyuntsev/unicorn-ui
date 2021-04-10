@@ -1,50 +1,84 @@
-const HANDLER = "_vue_click_outside_handler";
+function validate(binding) {
+  if (typeof binding.value !== "function") {
+    console.warn(
+      "[Vue-click-outside:] provided expression",
+      binding.expression,
+      "is not a function."
+    );
+    return false;
+  }
 
-function bind(el, binding, node) {
-  unbind(el);
+  return true;
+}
 
-  const vm = node.context;
+function isPopup(popupItem, elements) {
+  if (!popupItem || !elements) return false;
 
-  const callback = binding.value;
-
-  if (typeof callback !== "function") return;
-
-  let initialMacrotaskEnded = false;
-
-  setTimeout(function () {
-    initialMacrotaskEnded = true;
-  }, 0);
-
-  el[HANDLER] = function (ev) {
-    const path = ev.path || (ev.composedPath ? ev.composedPath() : undefined);
-
-    if (
-      initialMacrotaskEnded &&
-      (path ? path.indexOf(el) < 0 : !el.contains(ev.target))
-    ) {
-      return callback.call(vm, ev);
+  for (var i = 0, len = elements.length; i < len; i++) {
+    try {
+      if (popupItem.contains(elements[i])) {
+        return true;
+      }
+      if (elements[i].contains(popupItem)) {
+        return false;
+      }
+    } catch (e) {
+      return false;
     }
-  };
+  }
 
-  document.documentElement.addEventListener("click", el[HANDLER], false);
+  return false;
 }
 
-function unbind(el) {
-  document.documentElement.removeEventListener("click", el[HANDLER], false);
-  delete el[HANDLER];
+function isServer(vNode) {
+  return (
+    typeof vNode.componentInstance !== "undefined" &&
+    vNode.componentInstance.$isServer
+  );
 }
 
-const directive = {
-  bind,
-  update(el, binding) {
-    if (binding.value === binding.oldValue) return;
-    bind(el, binding);
+exports = module.exports = {
+  bind: function (el, binding, vNode) {
+    if (!validate(binding)) return;
+
+    // Define Handler and cache it on the element
+    function handler(e) {
+      if (!vNode.context) return;
+
+      // some components may have related popup item, on which we shall prevent the click outside event handler.
+      var elements = e.path || (e.composedPath && e.composedPath());
+      elements && elements.length > 0 && elements.unshift(e.target);
+
+      if (el.contains(e.target) || isPopup(vNode.context.popupItem, elements))
+        return;
+
+      el.__vueClickOutside__.callback(e);
+    }
+
+    // add Event Listeners
+    el.__vueClickOutside__ = {
+      handler: handler,
+      callback: binding.value,
+    };
+    const clickHandler =
+      "ontouchstart" in document.documentElement ? "touchstart" : "click";
+    !isServer(vNode) && document.addEventListener(clickHandler, handler);
   },
-  unbind,
-};
 
-export const mixin = {
-  directives: { onClickOutside: directive },
-};
+  update: function (el, binding) {
+    if (validate(binding)) el.__vueClickOutside__.callback = binding.value;
+  },
 
-export default directive;
+  unbind: function (el, binding, vNode) {
+    // Remove Event Listeners
+    const clickHandler =
+      "ontouchstart" in document.documentElement ? "touchstart" : "click";
+    !isServer(vNode) &&
+      el.__vueClickOutside__ &&
+      document.removeEventListener(
+        clickHandler,
+        el.__vueClickOutside__.handler
+      );
+    delete el.__vueClickOutside__;
+  },
+};

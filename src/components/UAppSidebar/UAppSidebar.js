@@ -1,28 +1,31 @@
+import "./UAppSidebar.scss";
+
 import { convertToUnit } from "../../utils/convertToUnit";
 import { getSlot } from "../../utils/getSlot";
 
-import Toggleable from "../../mixins/toggleable";
+import Overlayable from "../../mixins/overlayable";
+
+import Toggleable from "@/mixins/toggleable";
+import Adaptable from "@/mixins/adaptable";
 
 export default {
   name: "u-app-sidebar",
 
-  mixins: [Toggleable],
+  mixins: [Toggleable, Overlayable, Adaptable],
 
   props: {
     compact: Boolean,
     value: { default: true },
     temporary: Boolean,
+    adaptive: {
+      type: Boolean,
+      default: true,
+    },
     width: {
       type: [Number, String],
       default: 256,
     },
   },
-
-  // data() {
-  //   return {
-  //     isActive: !!this.value,
-  //   };
-  // },
 
   computed: {
     classes() {
@@ -36,11 +39,13 @@ export default {
     },
 
     computedWidth() {
-      return this.compact ? "56" : this.width;
-    },
-
-    showOverlay() {
-      return this.isActive && this.temporary;
+      return this.compact && this.isActive
+        ? "64"
+        : this.isActive && !this.temporary
+        ? this.width
+        : this.isActive && this.temporary
+        ? this.width
+        : 0;
     },
 
     computedTransform() {
@@ -53,19 +58,36 @@ export default {
           this.temporary &&
           `translateX(${convertToUnit(this.computedTransform, "%")})`,
         width: convertToUnit(this.computedWidth),
+        minWidth: convertToUnit(this.computedWidth),
       };
+    },
+
+    showOverlay() {
+      return this.isActive && this.temporary;
     },
   },
 
   watch: {
-    // showOverlay(val) {
-    //   if (val) this.generateOverlay();
-    //   else this.removeOverlay();
-    // },
+    showOverlay: {
+      handler(val) {
+        this.$nextTick(() => {
+          if (val) this.generateOverlay();
+          else this.removeOverlay();
+        });
+      },
+      immediate: true,
+    },
+
+    $lg() {
+      if (this.adaptive) {
+        this.isActive = !this.$lg && !this.temporary;
+      }
+    },
   },
 
   methods: {
     genContent() {
+      if (this.$sm) return;
       return this.$createElement(
         "div",
         {
@@ -100,8 +122,6 @@ export default {
 
   render(h) {
     const children = [this.genPrepend(), this.genContent(), this.genAppend()];
-
-    console.log(this);
 
     return h(
       "aside",

@@ -1,0 +1,28 @@
+.u-app-sidebar {
+  @apply bg-white h-screen flex flex-col;
+  @apply left-0 max-w-full overflow-hidden;
+  @apply pointer-events-auto top-0 transition-all;
+  @apply border-r border-gray-200 z-10;
+
+  &__prepend {
+    @apply px-4 pt-4;
+  }
+
+  &__content {
+
+  }
+
+  &--temporary {
+    @apply fixed;
+  }
+
+  &--compact {
+    .u-app-sidebar__prepend {
+      @apply px-3;
+    }
+  }
+}
+
+.u-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-40;
+}

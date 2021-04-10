@@ -1,0 +1,16 @@
+.u-app-bar {
+  @apply z-0;
+
+  &__title {
+    @apply truncate text-xl;
+
+    &:not(:first-child) {
+      @apply ml-8;
+    }
+  }
+
+  &__items {
+    @apply flex items-center;
+    height: inherit;
+  }
+}

@@ -1,10 +1,12 @@
 export { default as UAlert } from "./UAlert";
-export { default as UApp } from "./UApp";
+export { UApp, UAppWrapper } from "./UApp";
+export * from "./UAppBar";
 export { default as UAppSidebar } from "./UAppSidebar";
 export { default as UAvatar } from "./UAvatar";
 export { default as UBadge } from "./UBadge";
 export { default as UBtn } from "./UBtn";
 export * from "./UCard";
+export { default as UContainer } from "./UContainer";
 export { default as UDialog } from "./UDialog";
 export { default as UDivider } from "./UDivider";
 export { default as UHideAt } from "./UHideAt";
@@ -13,3 +15,4 @@ export * from "./UList";
 export { default as UProgressbar } from "./UProgressbar";
 export { default as UShowAt } from "./UShowAt";
 export { default as USimpleTable } from "./USimpleTable";
+export * from "./UToolbar";

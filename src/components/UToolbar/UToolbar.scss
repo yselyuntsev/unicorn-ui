@@ -1,0 +1,36 @@
+.u-toolbar {
+  @apply bg-white block flex-auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &__content {
+    @apply flex items-center relative z-0 h-14 px-4;
+  }
+
+  &__title {
+    @apply truncate text-xl;
+  }
+
+  &__items {
+    @apply flex items-center;
+    height: inherit;
+  }
+
+  &--dense {
+   .u-toolbar__content {
+     @apply h-12;
+   }
+  }
+
+  &--flat {
+    @apply shadow-none;
+  }
+
+  &--outlined {
+    @apply shadow-none rounded-lg border;
+  }
+
+  &--floating {
+    @apply rounded-lg;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}

@@ -118,15 +118,6 @@ export default {
   }
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  @apply transition-all;
-}
-.fade-enter,
-.fade-leave-to {
-  @apply opacity-0;
-}
-
 .zoom-enter-active,
 .zoom-leave-active {
   @apply transition-all;

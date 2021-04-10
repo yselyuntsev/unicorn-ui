@@ -1,3 +1,11 @@
 .u-app {
-  @apply flex flex-col md:flex-row;
+  @apply flex items-start;
+
+  &__wrapper {
+    @apply w-full;
+  }
+
+  &__main {
+    @apply py-8 px-2 md:px-4 lg:px-8;
+  }
 }
