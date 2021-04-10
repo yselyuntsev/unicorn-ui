@@ -17,7 +17,7 @@ export default {
     classes() {
       const classes = {
         "u-avatar--left": this.left,
-        "u-avatat--right": this.right,
+        "u-avatar--right": this.right,
       };
 
       return classes;
