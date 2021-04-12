@@ -1,13 +1,13 @@
 <template>
-  <div class="unicorn-dialog">
+  <div class="u-dialog" :class="{sheet}">
     <slot name="activator" :open="open"></slot>
 
     <transition name="fade" appear @before-enter="beforeEnter">
-      <div @click.self="close" class="unicorn-dialog__body" v-if="show">
+      <div @click.self="close" class="u-dialog__body" v-if="show">
         <transition name="zoom" @before-leave="beforeLeave">
           <div
             v-if="showContent"
-            class="unicorn-dialog__content"
+            class="u-dialog__content"
             :class="{ pulse: animatePersistent }"
             :style="{ width: width + 'px', maxWidth: width + 'px' }"
           >
@@ -32,6 +32,7 @@ export default {
     value: { type: Boolean, default: null },
     width: { type: [String, Number] },
     persistent: Boolean,
+    sheet: Boolean
   },
 
   data() {
@@ -100,7 +101,7 @@ export default {
   }
 }
 
-.unicorn-dialog {
+.u-dialog {
   @apply relative flex;
 
   &__body {
@@ -115,6 +116,12 @@ export default {
 
   & .pulse {
     animation: pulse 150ms ease-in-out;
+  }
+
+  &.sheet {
+    .u-dialog__body {
+      @apply items-end;
+    }
   }
 }
 

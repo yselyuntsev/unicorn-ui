@@ -5,6 +5,7 @@ export default {
 
   props: {
     dense: { type: Boolean },
+    flat: Boolean,
     simple: { type: Boolean },
   },
 
@@ -12,6 +13,7 @@ export default {
     classes() {
       return {
         "u-divider--dense": this.dense,
+        "u-divider--flat": this.dense,
         "u-divider--simple": this.simple,
       };
     },

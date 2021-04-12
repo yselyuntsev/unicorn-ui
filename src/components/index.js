@@ -1,5 +1,5 @@
 export { default as UAlert } from "./UAlert";
-export { UApp, UAppWrapper } from "./UApp";
+export * from "./UApp";
 export * from "./UAppBar";
 export { default as UAppSidebar } from "./UAppSidebar";
 export { default as UAvatar } from "./UAvatar";

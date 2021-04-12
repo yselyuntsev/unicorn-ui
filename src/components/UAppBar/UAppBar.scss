@@ -5,7 +5,7 @@
     @apply truncate text-xl;
 
     &:not(:first-child) {
-      @apply ml-8;
+      @apply mx-8;
     }
   }
 

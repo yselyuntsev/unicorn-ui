@@ -16,4 +16,8 @@
   &--simple {
     @apply my-0;
   }
+
+  &--flat {
+    @apply bg-transparent;
+  }
 }

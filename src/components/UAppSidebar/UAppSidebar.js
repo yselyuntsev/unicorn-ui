@@ -17,6 +17,7 @@ export default {
     compact: Boolean,
     value: { default: true },
     temporary: Boolean,
+    flat: Boolean,
     adaptive: {
       type: Boolean,
       default: true,
@@ -35,12 +36,13 @@ export default {
         "u-app-sidebar--compact": this.compact,
         "u-app-sidebar--open": this.isActive,
         "u-app-sidebar--temporary": this.temporary,
+        "u-app-sidebar--flat": this.flat,
       };
     },
 
     computedWidth() {
       return this.compact && this.isActive
-        ? "64"
+        ? "72"
         : this.isActive && !this.temporary
         ? this.width
         : this.isActive && this.temporary

@@ -6,7 +6,7 @@ export default {
   props: {
     filled: { type: Boolean },
     icon: { type: String },
-    background: { type: String, default: "bg-gray-200" },
+    background: { type: String, default: "bg-gray-100" },
     color: { type: String, default: "text-gray-700" },
     left: { type: Boolean },
     small: { type: Boolean },

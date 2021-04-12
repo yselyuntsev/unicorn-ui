@@ -68,7 +68,7 @@ export default {
   @apply relative inline-flex;
 
   &__body {
-    @apply top-12 absolute z-30;
+    @apply top-0 absolute z-30;
   }
 }
 

@@ -10,10 +10,6 @@
     @apply flex-1 flex flex-col items-start;
   }
 
-  &__close {
-    @apply absolute;
-  }
-
   &__icon {
     @apply mr-4;
   }
