@@ -11,7 +11,7 @@
   }
 
   &:active {
-    @apply transform-gpu scale-95;
+    //@apply transform-gpu translate-y-60;
   }
 
   &__content {

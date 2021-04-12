@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "UTextField",
+  name: "u-text-field",
 
   props: {
     disabled: { type: Boolean },

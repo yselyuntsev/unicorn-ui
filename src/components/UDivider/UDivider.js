@@ -13,7 +13,7 @@ export default {
     classes() {
       return {
         "u-divider--dense": this.dense,
-        "u-divider--flat": this.dense,
+        "u-divider--flat": this.flat,
         "u-divider--simple": this.simple,
       };
     },
