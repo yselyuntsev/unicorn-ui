@@ -4,12 +4,10 @@ export default {
   name: "u-app",
 
   render(h) {
-    return h(
-      "div",
-      {
-        staticClass: "u-app",
-      },
-      this.$slots.default
-    );
+    const data = {
+      staticClass: "u-app",
+    };
+
+    return h("div", data, this.$slots.default);
   },
 };

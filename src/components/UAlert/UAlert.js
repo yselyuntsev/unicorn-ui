@@ -1,12 +1,12 @@
 import "./UAlert.scss";
 
-import UIcon from "@/components/UIcon/UIcon";
-import UButton from "@/components/UBtn/UBtn";
+import UIcon from "../UIcon";
+import { UBtn } from "../UBtn";
 
 export default {
   name: "u-alert",
 
-  components: { UIcon, UButton },
+  components: { UIcon, UBtn },
 
   props: {
     dense: Boolean,
@@ -38,10 +38,10 @@ export default {
     classes() {
       let classes = {
         "u-alert--dense": this.dense,
-        "u-alert--dismissible": this.dismissible,
         "u-alert--outlined": this.outlined,
         "u-alert--prominent": this.prominent,
         "u-alert--text": this.text,
+        "u-alert--dismissible": this.dismissible,
       };
 
       if (this.variant) {
@@ -53,7 +53,7 @@ export default {
   },
 
   methods: {
-    generateContent() {
+    genContent() {
       return this.$createElement(
         "div",
         {
@@ -63,7 +63,7 @@ export default {
       );
     },
 
-    generateIcon() {
+    genIcon() {
       if (this.icon) {
         return this.$createElement(UIcon, {
           staticClass: "u-alert__icon",
@@ -72,7 +72,7 @@ export default {
       }
     },
 
-    generateDismissible() {
+    genDismissible() {
       if (this.dismissible) {
         const closeIcon = this.$createElement(UIcon, {
           props: {
@@ -81,7 +81,7 @@ export default {
         });
 
         return this.$createElement(
-          UButton,
+          UBtn,
           {
             staticClass: "u-alert__close",
             props: {
@@ -95,28 +95,23 @@ export default {
       }
     },
 
-    generateWrapper() {
+    genWrapper() {
       const children = [
-        this.generateIcon(),
-        this.generateContent(),
-        this.generateDismissible(),
+        this.genIcon(),
+        this.genContent(),
+        this.genDismissible(),
       ];
       const data = { staticClass: "u-alert__wrapper" };
       return this.$createElement("div", data, children);
     },
-
-    generateAlert() {
-      const data = {
-        staticClass: "u-alert",
-        attrs: { role: "alert" },
-        class: this.classes,
-      };
-
-      return this.$createElement("div", data, [this.generateWrapper()]);
-    },
   },
 
-  render() {
-    return this.generateAlert();
+  render(h) {
+    const data = {
+      staticClass: "u-alert",
+      class: this.classes,
+    };
+
+    return h("div", data, [this.genWrapper()]);
   },
 };

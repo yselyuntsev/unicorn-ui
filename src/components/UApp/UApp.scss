@@ -1,11 +1,15 @@
 .u-app {
-  @apply flex items-start;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 
   &__wrapper {
-    @apply w-full;
+    width: 100%;
+    height: 100vh;
+    overflow-x: auto;
   }
 
   &__main {
-    @apply py-8 px-4 lg:px-4;
+    padding: 2rem 1rem;
   }
 }

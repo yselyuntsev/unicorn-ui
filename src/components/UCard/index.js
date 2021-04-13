@@ -1,6 +1,6 @@
-import UCard from "./UCard";
 import { createFunctionalComponent } from "@/utils/createFunctionalComponent";
 
+import UCard from "./UCard";
 const UCardTitle = createFunctionalComponent("u-card__title");
 const UCardBody = createFunctionalComponent("u-card__body");
 const UCardActions = createFunctionalComponent("u-card__actions");

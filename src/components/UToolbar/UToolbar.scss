@@ -1,5 +1,5 @@
 .u-toolbar {
-  @apply bg-white block flex-auto rounded-lg;
+  @apply bg-white block flex-auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
   &__content {
@@ -22,7 +22,7 @@
   }
 
   &--flat {
-    @apply shadow-none;
+    @apply shadow-none bg-transparent;
   }
 
   &--outlined {

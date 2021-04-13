@@ -1,2 +1,2 @@
-import UAlert from "@/components/UAlert/UAlert";
-export default UAlert;
+import UAlert from "./UAlert";
+export { UAlert };

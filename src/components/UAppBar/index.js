@@ -1,6 +1,6 @@
-import UAppBar from "@/components/UAppBar/UAppBar";
 import { createFunctionalComponent } from "@/utils/createFunctionalComponent";
 
+import UAppBar from "./UAppBar";
 const UAppBarTitle = createFunctionalComponent("u-app-bar__title");
 const UAppBarItems = createFunctionalComponent("u-app-bar__items");
 

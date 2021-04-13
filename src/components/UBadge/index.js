@@ -1,2 +1,2 @@
-import UBadge from "@/components/UBadge/UBadge";
-export default UBadge;
+import UBadge from "./UBadge";
+export { UBadge };

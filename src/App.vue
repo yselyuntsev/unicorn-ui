@@ -1,7 +1,7 @@
 <template>
   <!--  <div id="app" class="p-16 flex items-start flex-col gap-2">-->
   <u-app>
-    <u-app-sidebar temporary v-model="value" style="display: flex">
+    <u-app-sidebar v-model="value" style="display: flex">
       <template #prepend>
         <u-icon filled icon="mdi-github" />
       </template>
@@ -24,7 +24,7 @@
     </u-app-sidebar>
 
     <u-app-wrapper>
-      <u-app-bar>
+      <u-app-bar v-if="false">
         <u-btn @click="value = !value" icon text>
           <u-icon icon="mdi-menu" />
         </u-btn>
@@ -43,7 +43,141 @@
 
       <u-app-main>
         <u-container>
-          <h1 class="unicorn-h1 mb-8">Demo</h1>
+          <u-toolbar class="-mx-4 mb-8" flat>
+            <u-spacer />
+            <u-btn @click="value = !value" text>
+              Allow Jhonatan
+              <u-avatar right size="32">
+                <img
+                  src="https://randomuser.me/api/portraits/men/59.jpg"
+                  alt=""
+                />
+              </u-avatar>
+            </u-btn>
+          </u-toolbar>
+
+          <h1 class="unicorn-h1 my-8">Lorem ipsum dolor</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium deleniti itaque iure nesciunt numquam quia quidem sint
+            sunt totam velit. Architecto, eum expedita maxime mollitia nihil
+            perferendis quod soluta suscipit!
+          </p>
 
           <u-demo />
         </u-container>
@@ -71,11 +205,13 @@ import USpacer from "@/_for_development/USpacer/USpacer";
 import UAvatar from "@/components/UAvatar/UAvatar";
 import adaptable from "./mixins/adaptable";
 import UDemo from "@/components/UDemo";
+import UToolbar from "@/components/UToolbar/UToolbar";
 
 export default {
   name: "App",
   mixins: [adaptable],
   components: {
+    UToolbar,
     UDemo,
     UAvatar,
     USpacer,

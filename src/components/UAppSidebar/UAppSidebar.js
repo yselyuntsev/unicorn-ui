@@ -41,11 +41,12 @@ export default {
     },
 
     computedWidth() {
+      if (this.temporary && this.compact) return 72;
+      if (this.temporary) return this.width;
+
       return this.compact && this.isActive
         ? "72"
         : this.isActive && !this.temporary
-        ? this.width
-        : this.isActive && this.temporary
         ? this.width
         : 0;
     },
