@@ -1,7 +1,5 @@
-import { createFunctionalComponent } from "@/utils/createFunctionalComponent";
-
 import UApp from "./UApp";
-const UAppWrapper = createFunctionalComponent("u-app__wrapper");
-const UAppMain = createFunctionalComponent("u-app__main");
+import UAppWrapper from "./UAppWrapper";
+import UAppMain from "./UAppMain";
 
 export { UApp, UAppWrapper, UAppMain };

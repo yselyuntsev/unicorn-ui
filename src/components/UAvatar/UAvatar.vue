@@ -1,3 +1,10 @@
+<template>
+  <div class="u-avatar" :class="classes" :style="styles">
+    <slot></slot>
+  </div>
+</template>
+
+<script>
 import "./UAvatar.scss";
 import { convertToUnit } from "../../utils/convertToUnit";
 
@@ -15,32 +22,19 @@ export default {
 
   computed: {
     classes() {
-      const classes = {
+      return {
         "u-avatar--left": this.left,
         "u-avatar--right": this.right,
       };
-
-      return classes;
     },
 
     styles() {
-      const styles = {
+      return {
         height: convertToUnit(this.size),
         width: convertToUnit(this.size),
         minWidth: convertToUnit(this.size),
       };
-
-      return styles;
     },
   },
-
-  render(h) {
-    const data = {
-      staticClass: "u-avatar",
-      class: this.classes,
-      style: this.styles,
-    };
-
-    return h("div", data, this.$slots.default);
-  },
 };
+</script>

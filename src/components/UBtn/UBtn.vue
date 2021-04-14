@@ -1,5 +1,25 @@
+<template>
+  <button
+    class="u-btn"
+    @click="click"
+    :class="classes"
+    :type="type"
+    :disabled="disabled"
+    :value="value"
+  >
+    <span class="u-btn__content">
+      <slot></slot>
+    </span>
+
+    <span class="u-btn__loader" v-if="loading">
+      <u-icon icon="mdi-loading mdi-spin"/>
+    </span>
+  </button>
+</template>
+
+<script>
 import "./UBtn.scss";
-import UIcon from "@/components/UIcon";
+import UIcon from "../UIcon";
 
 export default {
   name: "u-btn",
@@ -46,54 +66,9 @@ export default {
   },
 
   methods: {
-    generateLoader() {
-      if (this.loading) {
-        return this.$createElement(
-          "span",
-          {
-            staticClass: "u-btn__loader",
-          },
-          [
-            this.$createElement(UIcon, {
-              props: { icon: "mdi-loading mdi-spin" },
-            }),
-          ]
-        );
-      }
-    },
-
-    generateContent() {
-      return this.$createElement(
-        "span",
-        { staticClass: "u-btn__content" },
-        this.$slots.default
-      );
-    },
-
     click(e) {
       return this.$emit("click", e);
     },
   },
-
-  render(h) {
-    const children = [this.generateContent(), this.generateLoader()];
-
-    return h(
-      "button",
-      {
-        staticClass: "u-btn",
-        class: this.classes,
-        attrs: {
-          type: this.type,
-          disabled: this.disabled,
-          value: this.value,
-        },
-
-        on: {
-          click: this.click,
-        },
-      },
-      children
-    );
-  },
 };
+</script>

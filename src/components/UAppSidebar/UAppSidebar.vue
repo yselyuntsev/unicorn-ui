@@ -1,12 +1,28 @@
+<template>
+  <div class="u-app-sidebar" :class="classes" :style="styles">
+    <div class="u-app-sidebar__prepend">
+      <slot name="prepend"></slot>
+    </div>
+
+    <div class="u-app-sidebar__content">
+      <slot></slot>
+    </div>
+
+    <div class="u-app-sidebar__append">
+      <slot name="append"></slot>
+    </div>
+  </div>
+</template>
+
+<script>
 import "./UAppSidebar.scss";
 
 import { convertToUnit } from "../../utils/convertToUnit";
-import { getSlot } from "../../utils/getSlot";
 
 import Overlayable from "../../mixins/overlayable";
 
-import Toggleable from "@/mixins/toggleable";
-import Adaptable from "@/mixins/adaptable";
+import Toggleable from "../../mixins/toggleable";
+import Adaptable from "../../mixins/adaptable";
 
 export default {
   name: "u-app-sidebar",
@@ -32,7 +48,6 @@ export default {
     classes() {
       return {
         "u-app-sidebar": true,
-        "u-app-sidebar--is-mobile": this.isMobile,
         "u-app-sidebar--compact": this.compact,
         "u-app-sidebar--open": this.isActive,
         "u-app-sidebar--temporary": this.temporary,
@@ -87,52 +102,5 @@ export default {
       }
     },
   },
-
-  methods: {
-    genContent() {
-      if (this.$sm) return;
-      return this.$createElement(
-        "div",
-        {
-          staticClass: "u-app-sidebar__content",
-        },
-        this.$slots.default
-      );
-    },
-
-    genPosition(name) {
-      const slot = getSlot(this, name);
-
-      if (!slot) return slot;
-
-      return this.$createElement(
-        "div",
-        {
-          staticClass: `u-app-sidebar__${name}`,
-        },
-        slot
-      );
-    },
-
-    genPrepend() {
-      return this.genPosition("prepend");
-    },
-
-    genAppend() {
-      return this.genPosition("append");
-    },
-  },
-
-  render(h) {
-    const children = [this.genPrepend(), this.genContent(), this.genAppend()];
-
-    return h(
-      "aside",
-      {
-        class: this.classes,
-        style: this.styles,
-      },
-      children
-    );
-  },
 };
+</script>
