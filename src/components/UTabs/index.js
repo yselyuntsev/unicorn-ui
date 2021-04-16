@@ -1,6 +1,6 @@
-import UTab from "@/_for_development/UTabs/UTab";
-import UTabs from "@/_for_development/UTabs/UTabs";
-import UTabsItem from "@/_for_development/UTabs/UTabsItem";
-import UTabsItems from "@/_for_development/UTabs/UTabsItems";
+import UTab from "./UTab";
+import UTabs from "./UTabs";
+import UTabsItem from "./UTabsItem";
+import UTabsItems from "./UTabsItems";
 
 export { UTab, UTabs, UTabsItem, UTabsItems };

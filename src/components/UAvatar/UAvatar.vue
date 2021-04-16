@@ -14,6 +14,7 @@ export default {
   props: {
     left: Boolean,
     right: Boolean,
+    squared: Boolean,
     size: {
       type: [Number, String],
       default: 48,
@@ -25,6 +26,7 @@ export default {
       return {
         "u-avatar--left": this.left,
         "u-avatar--right": this.right,
+        "u-avatar--squared": this.squared,
       };
     },
 

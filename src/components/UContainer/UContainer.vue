@@ -1,4 +1,12 @@
+<template>
+  <div class="u-container" :class="classes">
+    <slot></slot>
+  </div>
+</template>
+
+<script>
 import "./UContainer.scss";
+
 export default {
   name: "u-container",
 
@@ -9,20 +17,10 @@ export default {
   computed: {
     classes() {
       return {
-        "u-container": true,
         "u-container--container": !this.fluid,
         "u-container--fluid": this.fluid,
       };
     },
   },
-
-  render(h) {
-    return h(
-      "div",
-      {
-        class: this.classes,
-      },
-      this.$slots.default
-    );
-  },
 };
+</script>

@@ -1,13 +1,13 @@
 <template>
-  <div class="u-tabs-item">
+  <div class="u-card__body">
     <slot></slot>
   </div>
 </template>
 
 <script>
-import "./UTabs.scss";
+import "./UCard.scss";
 
 export default {
-  name: "u-tabs-item",
+  name: "u-card-body",
 };
 </script>

@@ -1,0 +1,17 @@
+.u-menu {
+  @apply relative inline-flex;
+
+  &__body {
+    @apply top-0 absolute z-30;
+  }
+}
+
+.menu-enter-active,
+.menu-leave-active {
+  @apply transition-all;
+}
+.menu-enter,
+.menu-leave-to {
+  @apply opacity-0;
+  @apply transform-gpu -translate-y-2;
+}

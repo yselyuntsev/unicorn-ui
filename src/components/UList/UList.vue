@@ -1,14 +1,14 @@
+<template>
+  <div class="u-list" :class="classes">
+    <slot></slot>
+  </div>
+</template>
+
+<script>
 import "./UList.scss";
 
 export default {
   name: "u-list",
-
-  provide() {
-    return {
-      isInList: true,
-      list: this,
-    };
-  },
 
   props: {
     dense: Boolean,
@@ -27,14 +27,5 @@ export default {
       };
     },
   },
-
-  render(h) {
-    const data = {
-      staticClass: "u-list",
-      class: this.classes,
-      style: this.styles,
-    };
-
-    return h("div", data, [this.$slots.default]);
-  },
 };
+</script>

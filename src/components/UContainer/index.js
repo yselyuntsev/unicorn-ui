@@ -1,2 +1,3 @@
-import UContainer from "@/components/UContainer/UContainer.js";
+import UContainer from "./UContainer";
+
 export default UContainer;

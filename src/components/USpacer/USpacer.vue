@@ -1,15 +1,11 @@
 <template>
-  <div class="unicorn-spacer"></div>
+  <div class="u-spacer"></div>
 </template>
 
 <script>
+import "./USpacer.scss";
+
 export default {
-  name: "USpacer",
+  name: "u-spacer",
 };
 </script>
-
-<style lang="scss" scoped>
-.unicorn-spacer {
-  @apply flex-1;
-}
-</style>

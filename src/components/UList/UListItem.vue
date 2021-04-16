@@ -1,3 +1,10 @@
+<template>
+  <div class="u-list-item" @click="click" :class="classes">
+    <slot></slot>
+  </div>
+</template>
+
+<script>
 export default {
   name: "u-list-item",
 
@@ -23,15 +30,5 @@ export default {
       this.$emit("click", e);
     },
   },
-
-  render(h) {
-    return h(
-      "div",
-      {
-        staticClass: "u-list-item",
-        class: this.classes,
-      },
-      this.$slots.default
-    );
-  },
 };
+</script>

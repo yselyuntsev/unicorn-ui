@@ -1,3 +1,10 @@
+<template>
+  <div class="u-card" :class="classes">
+    <slot></slot>
+  </div>
+</template>
+
+<script>
 import "./UCard.scss";
 
 export default {
@@ -23,12 +30,5 @@ export default {
     // TODO: progressbar for loading
     generateProgress() {},
   },
-
-  render(h) {
-    return h(
-      "div",
-      { staticClass: "u-card", class: this.classes },
-      this.$slots.default
-    );
-  },
 };
+</script>

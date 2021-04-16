@@ -1,7 +1,7 @@
 <template>
   <button
     class="u-btn"
-    @click="click"
+    v-on="$listeners"
     :class="classes"
     :type="type"
     :disabled="disabled"
@@ -12,14 +12,14 @@
     </span>
 
     <span class="u-btn__loader" v-if="loading">
-      <u-icon icon="mdi-loading mdi-spin"/>
+      <u-icon icon="mdi-loading mdi-spin" />
     </span>
   </button>
 </template>
 
 <script>
 import "./UBtn.scss";
-import UIcon from "../UIcon";
+import { UIcon } from "../UIcon";
 
 export default {
   name: "u-btn",
@@ -62,12 +62,6 @@ export default {
         "u-btn--outlined": this.outlined,
         "u-btn--text": this.text,
       };
-    },
-  },
-
-  methods: {
-    click(e) {
-      return this.$emit("click", e);
     },
   },
 };

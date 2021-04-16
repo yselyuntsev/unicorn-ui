@@ -1,2 +1,2 @@
-import UDialog from "./UDialog.vue";
+import UDialog from "./UDialog";
 export default UDialog;

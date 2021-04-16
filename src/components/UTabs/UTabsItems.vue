@@ -1,16 +1,14 @@
 <script>
-import UTabsItem from "@/_for_development/UTabs/UTabsItem";
+import "./UTabs.scss";
+
+import UTabsItem from "./UTabsItem";
 
 export default {
-  name: "UTabsItems",
+  name: "u-tabs-items",
 
   model: {
     prop: "selectedTab",
     event: "update",
-  },
-
-  components: {
-    UTabsItem,
   },
 
   props: {
@@ -18,27 +16,9 @@ export default {
   },
 
   render(h) {
-    return h("div", { class: "unicorn-tabs-items" }, [
-      h("transition", { props: { name: "tabs", mode: "out-in" } }, [
-        h(UTabsItem, {}, [this.$slots.default[this.selectedTab]]),
-      ]),
+    return h("div", { class: "u-tabs-items" }, [
+      h(UTabsItem, {}, [this.$slots.default[this.selectedTab]]),
     ]);
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.unicorn-tabs-items {
-  @apply w-full mt-4;
-}
-
-.tabs-enter-active,
-.tabs-leave-active {
-  @apply transition-all;
-}
-.tabs-enter,
-.tabs-leave-to {
-  @apply opacity-0;
-  @apply transform-gpu -translate-y-2;
-}
-</style>

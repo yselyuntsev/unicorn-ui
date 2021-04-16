@@ -1,15 +1,13 @@
 <template>
-  <div v-click-outside="close" class="unicorn-menu">
-    <div class="d">
-      <slot name="activator" :toggle="toggle"></slot>
-    </div>
+  <div v-click-outside="close" class="u-menu">
+    <slot name="activator" :on="genActivatorListeners()"></slot>
 
     <transition name="menu">
       <div
         v-if="active"
-        class="unicorn-menu__body"
-        :class="{ 'left-0': left, 'right-0': right }"
-        :style="{ width: width + 'px', maxWidth: width + 'px' }"
+        class="u-menu__body"
+        :style="styles"
+        @mouseleave="openOnHover && close()"
       >
         <slot />
       </div>
@@ -18,7 +16,10 @@
 </template>
 
 <script>
+import "./UMenu.scss";
+
 import ClickOutside from "@/directives/click-outside";
+import { convertToUnit } from "@/utils/convertToUnit";
 
 export default {
   name: "UMenu",
@@ -29,14 +30,26 @@ export default {
 
   props: {
     width: { type: [String, Number], default: 196 },
-    left: { type: Boolean },
-    right: { type: Boolean },
+    left: Boolean,
+    right: Boolean,
+    openOnHover: Boolean,
   },
 
   data() {
     return {
       active: false,
     };
+  },
+
+  computed: {
+    styles() {
+      return {
+        left: Number(!this.left),
+        right: Number(!this.right),
+        width: convertToUnit(this.width),
+        maxWidth: convertToUnit(this.width),
+      };
+    },
   },
 
   watch: {
@@ -52,8 +65,20 @@ export default {
   },
 
   methods: {
-    toggle() {
-      this.active = !this.active;
+    genActivatorListeners() {
+      const listeners = {};
+
+      if (this.openOnHover) {
+        listeners.mouseenter = () => this.open();
+      } else {
+        listeners.click = () => this.open();
+      }
+
+      return listeners;
+    },
+
+    open() {
+      this.active = true;
     },
 
     close() {
@@ -62,23 +87,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.unicorn-menu {
-  @apply relative inline-flex;
-
-  &__body {
-    @apply top-0 absolute z-30;
-  }
-}
-
-.menu-enter-active,
-.menu-leave-active {
-  @apply transition-all;
-}
-.menu-enter,
-.menu-leave-to {
-  @apply opacity-0;
-  @apply transform-gpu -translate-y-2;
-}
-</style>

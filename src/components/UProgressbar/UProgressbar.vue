@@ -1,3 +1,10 @@
+<template>
+  <div class="u-progressbar" :class="classes" :style="styles">
+    <div class="u-progressbar__bar" :style="barStyles"></div>
+  </div>
+</template>
+
+<script>
 import "./UProgressbar.scss";
 import { convertToUnit } from "@/utils/convertToUnit";
 
@@ -58,25 +65,5 @@ export default {
       };
     },
   },
-
-  methods: {
-    generateBar() {
-      return this.$createElement("div", {
-        staticClass: "u-progressbar__bar",
-        style: this.barStyles,
-      });
-    },
-  },
-
-  render(h) {
-    return h(
-      "div",
-      {
-        staticClass: "u-progressbar",
-        class: this.classes,
-        style: this.styles,
-      },
-      [this.generateBar()]
-    );
-  },
 };
+</script>

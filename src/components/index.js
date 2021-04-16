@@ -12,7 +12,7 @@ export { default as UContainer } from "./UContainer";
 export { default as UDialog } from "./UDialog";
 export { default as UDivider } from "./UDivider";
 export { default as UHideAt } from "./UHideAt";
-export { default as UIcon } from "./UIcon";
+export { UIcon } from "./UIcon";
 export {
   UList,
   UListItem,

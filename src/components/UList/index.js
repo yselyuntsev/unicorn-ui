@@ -1,24 +1,12 @@
-import { createFunctionalComponent } from "@/utils/createFunctionalComponent";
-
-import UList from "@/components/UList/UList";
-import UListItem from "@/components/UList/UListItem";
-import UListItemIcon from "@/components/UList/UListItemIcon";
-import UListItemAction from "@/components/UList/UListItemAction";
-import UListItemAvatar from "@/components/UList/UListItemAvatar";
-
-const UListItemActionText = createFunctionalComponent(
-  "u-list-item__action-text",
-  "span"
-);
-const UListItemContent = createFunctionalComponent(
-  "u-list-item__content",
-  "div"
-);
-const UListItemTitle = createFunctionalComponent("u-list-item__title", "div");
-const UListItemSubtitle = createFunctionalComponent(
-  "u-list-item__subtitle",
-  "div"
-);
+import UList from "./UList";
+import UListItem from "./UListItem";
+import UListItemIcon from "./UListItemIcon";
+import UListItemAction from "./UListItemAction";
+import UListItemAvatar from "./UListItemAvatar";
+import UListItemActionText from "./UListItemActionText";
+import UListItemContent from "./UListItemContent";
+import UListItemSubtitle from "./UListItemSubtitle";
+import UListItemTitle from "./UListItemTitle";
 
 export {
   UList,
