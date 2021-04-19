@@ -20,20 +20,10 @@ export default {
   },
 
   computed: {
-    $sm() {
-      return this.appWidth < 640;
-    },
-
-    $md() {
-      return this.appWidth < 768;
-    },
-
-    $lg() {
-      return this.appWidth < 1024;
-    },
-
-    $xl() {
-      return this.appWidth >= 1024;
+    $breakpoints() {
+      return {
+        isMobile: this.appWidth < 640,
+      };
     },
   },
 

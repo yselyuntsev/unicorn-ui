@@ -1,6 +1,7 @@
 import "@/assets/index.css";
 
 import * as components from "@/components";
+import adaptable from "@/mixins/adaptable";
 
 const ComponentLibrary = {
   install(Vue) {
@@ -9,6 +10,8 @@ const ComponentLibrary = {
 
       Vue.component(component.name, component);
     }
+
+    Vue.mixin(adaptable);
   },
 };
 

@@ -24,7 +24,7 @@ export {
   UListItemSubtitle,
   UListItemTitle,
 } from "./UList";
-export * from "./UMBottomNav";
+export * from "./UBottomNav";
 export { default as UMenu } from "./UMenu";
 export { default as UProgressbar } from "./UProgressbar";
 export { default as UShowAt } from "./UShowAt";

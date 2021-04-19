@@ -7,7 +7,8 @@ import adaptable from "@/mixins/adaptable";
 
 Vue.config.productionTip = false;
 
+Vue.mixin(adaptable);
+
 new Vue({
   render: (h) => h(App),
-  mixins: [adaptable],
 }).$mount("#app");

@@ -43,8 +43,14 @@
           <u-tabs-item>dsfsd</u-tabs-item>
           <u-tabs-item>12</u-tabs-item>
         </u-tabs-items>
+
+        <p>{{ $breakpoints }}</p>
       </u-app-main>
     </u-app-wrapper>
+
+    <u-m-bottom-nav v-if="$breakpoints.isMobile">
+      <u-m-bottom-nav-item active> dklfsdjlkf </u-m-bottom-nav-item>
+    </u-m-bottom-nav>
   </u-app>
 </template>
 
@@ -63,12 +69,16 @@ import UCardBody from "@/components/UCard/UCardBody";
 import UAvatar from "@/components/UAvatar/UAvatar";
 import UDivider from "@/components/UDivider/UDivider";
 import UTabs from "./components/UTabs/UTabs";
-import UTab from "@/_for_development/UTabs/UTab";
-import UTabsItems from "@/_for_development/UTabs/UTabsItems";
-import UTabsItem from "@/_for_development/UTabs/UTabsItem";
+import UTab from "@/components/UTabs/UTab";
+import UTabsItems from "@/components/UTabs/UTabsItems";
+import UTabsItem from "@/components/UTabs/UTabsItem";
+import UMBottomNav from "@/components/UBottomNav/UBottomNav";
+import UMBottomNavItem from "@/components/UBottomNav/UBottomNavItem";
 export default {
   name: "app",
   components: {
+    UMBottomNavItem,
+    UMBottomNav,
     UTabsItem,
     UTabsItems,
     UTab,
