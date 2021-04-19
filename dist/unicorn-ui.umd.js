@@ -4801,6 +4801,7 @@ function getSlot(vm) {
 
 
 /* harmony default export */ var UToolbar_UToolbar = ({
+  name: "u-toolbar",
   props: {
     dense: Boolean,
     flat: Boolean,
@@ -7483,7 +7484,6 @@ var ComponentLibrary = {
   install: function install(Vue) {
     for (var componentName in components_namespaceObject) {
       var component = components_namespaceObject[componentName];
-      console.log(componentName, component);
       Vue.component(component.name, component);
     }
 
