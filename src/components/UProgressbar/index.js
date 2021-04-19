@@ -1,2 +1,2 @@
 import UProgressbar from "./UProgressbar";
-export default UProgressbar;
+export { UProgressbar };

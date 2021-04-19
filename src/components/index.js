@@ -6,12 +6,12 @@ export { UAvatar } from "./UAvatar";
 export { UBadge } from "./UBadge";
 export { UBtn } from "./UBtn";
 export { UCard, UCardTitle, UCardBody, UCardActions } from "./UCard";
-export { default as UCheckbox } from "./UCheckbox";
-export { default as UCollapse } from "./UCollapse";
-export { default as UContainer } from "./UContainer";
-export { default as UDialog } from "./UDialog";
-export { default as UDivider } from "./UDivider";
-export { default as UHideAt } from "./UHideAt";
+export { UCheckbox } from "./UCheckbox";
+export { UCollapse } from "./UCollapse";
+export { UContainer } from "./UContainer";
+export { UDialog } from "./UDialog";
+export { UDivider } from "./UDivider";
+// export { UHideAt } from "./UHideAt";
 export { UIcon } from "./UIcon";
 export {
   UList,
@@ -24,13 +24,13 @@ export {
   UListItemSubtitle,
   UListItemTitle,
 } from "./UList";
-export * from "./UBottomNav";
-export { default as UMenu } from "./UMenu";
-export { default as UProgressbar } from "./UProgressbar";
-export { default as UShowAt } from "./UShowAt";
-export { default as USimpleTable } from "./USimpleTable";
-export { default as USpacer } from "./USpacer";
-export { default as USwitch } from "./USwitch";
-export * from "./UTabs";
-export { default as UTextField } from "./UTextField";
-export * from "./UToolbar";
+export { UBottomNavItem, UBottomNav } from "./UBottomNav";
+export { UMenu } from "./UMenu";
+export { UProgressbar } from "./UProgressbar";
+// export { UShowAt } from "./UShowAt";
+export { USimpleTable } from "./USimpleTable";
+export { USpacer } from "./USpacer";
+export { USwitch } from "./USwitch";
+export { UTab, UTabs, UTabsItem, UTabsItems } from "./UTabs";
+export { UTextField } from "./UTextField";
+export { UToolbar, UToolbarTitle, UToolbarItems } from "./UToolbar";

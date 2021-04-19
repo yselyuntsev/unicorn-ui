@@ -1,2 +1,2 @@
-import USwitch from "@/_for_development/USwitch/USwitch";
-export default USwitch;
+import USwitch from "./USwitch";
+export { USwitch };

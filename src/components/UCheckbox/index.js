@@ -1,2 +1,2 @@
-import UCheckbox from "./UCheckbox.vue";
-export default UCheckbox;
+import UCheckbox from "./UCheckbox";
+export { UCheckbox };

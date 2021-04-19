@@ -1,4 +1,4 @@
-import UMBottomNav from "./UBottomNav.vue";
-import UMBottomNavItem from "./UBottomNavItem.vue";
+import UBottomNav from "./UBottomNav.vue";
+import UBottomNavItem from "./UBottomNavItem.vue";
 
-export { UMBottomNav, UMBottomNavItem };
+export { UBottomNav, UBottomNavItem };

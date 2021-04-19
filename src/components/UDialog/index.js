@@ -1,2 +1,2 @@
 import UDialog from "./UDialog";
-export default UDialog;
+export { UDialog };
