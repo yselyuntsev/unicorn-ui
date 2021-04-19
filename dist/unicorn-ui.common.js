@@ -7468,15 +7468,17 @@ var UTextField_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/lib.js
 
 
- // import adaptable from "@/mixins/adaptable";
+
 
 var ComponentLibrary = {
   install: function install(Vue) {
     for (var componentName in components_namespaceObject) {
       var component = components_namespaceObject[componentName];
+      console.log(componentName, component);
       Vue.component(component.name, component);
-    } // Vue.mixin(adaptable);
+    }
 
+    Vue.mixin(adaptable);
   }
 };
 /* harmony default export */ var lib = (ComponentLibrary);
