@@ -10,7 +10,7 @@
   }
 
   &--dense {
-    @apply -mx-2;
+    @apply -m-2;
 
     > .u-col, [class*='col-'] {
       @apply p-2;
