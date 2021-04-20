@@ -11,6 +11,7 @@ export { UCollapse } from "./UCollapse";
 export { UContainer } from "./UContainer";
 export { UDialog } from "./UDialog";
 export { UDivider } from "./UDivider";
+export { UCol, URow } from "./UGrid";
 // export { UHideAt } from "./UHideAt";
 export { UIcon } from "./UIcon";
 export {
