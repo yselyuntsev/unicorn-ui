@@ -2,6 +2,8 @@ import "./UToolbar.scss";
 import { getSlot } from "@/utils/getSlot";
 
 export default {
+  name: "u-toolbar",
+
   props: {
     dense: Boolean,
     flat: Boolean,

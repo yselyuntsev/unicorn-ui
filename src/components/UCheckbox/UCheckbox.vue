@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import UIcon from "@/components/UIcon";
+import { UIcon } from "../UIcon";
 export default {
-  name: "UCheckbox",
+  name: "u-checkbox",
   components: { UIcon },
   model: {
     prop: "modelValue",

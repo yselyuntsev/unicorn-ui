@@ -9,6 +9,10 @@ Vue.config.productionTip = false;
 
 Vue.mixin(adaptable);
 
+import * as components from "@/components";
+
+console.log(components);
+
 new Vue({
   render: (h) => h(App),
 }).$mount("#app");

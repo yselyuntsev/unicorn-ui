@@ -102,13 +102,12 @@ export default {
 }
 
 .u-dialog {
-  @apply flex;
+  @apply relative flex;
 
   &__body {
     @apply flex p-4 justify-center items-center;
     @apply fixed inset-0;
     @apply bg-black bg-opacity-60;
-    z-index: 9999;
   }
 
   &__content {

@@ -1,7 +1,7 @@
-import "@/assets/index.css";
+import "./assets/index.css";
 
-import * as components from "@/components";
-import adaptable from "@/mixins/adaptable";
+import * as components from "./components";
+import adaptable from "./mixins/adaptable";
 
 const ComponentLibrary = {
   install(Vue) {

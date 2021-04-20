@@ -23,8 +23,8 @@
 
 <script>
 import "./UAlert.scss";
-import UIcon from "../UIcon";
-import UBtn from "../UBtn/UBtn";
+import { UIcon } from "../UIcon";
+import { UBtn } from "../UBtn";
 
 export default {
   name: "UAlert",

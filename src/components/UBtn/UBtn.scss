@@ -4,7 +4,7 @@
   min-width: 5rem;
   @apply inline-flex px-4 h-10 rounded-lg;
   @apply outline-none transition-all relative;
-  @apply font-medium border border-transparent;
+  @apply font-medium border text-base border-transparent;
 
   &:focus {
     @apply outline-none;

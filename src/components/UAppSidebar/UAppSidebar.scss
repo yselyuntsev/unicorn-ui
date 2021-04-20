@@ -1,10 +1,9 @@
 .u-app-sidebar {
-  z-index: -1;
   @apply relative;
   @apply bg-white h-screen flex flex-col;
   @apply left-0 max-w-full overflow-hidden;
   @apply pointer-events-auto top-0 transition-all;
-  @apply border-r border-gray-200 z-10 py-4;
+  @apply border-r border-gray-200 py-4;
 
   &__prepend, &__append {
     @apply px-4;
@@ -15,7 +14,7 @@
   }
 
   &--temporary {
-    @apply fixed z-50 border-none;
+    @apply fixed z-10 border-none;
   }
 
   &--flat {

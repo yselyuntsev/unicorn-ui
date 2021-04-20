@@ -10,7 +10,6 @@
   @apply -translate-y-1/3 -translate-x-2;
 
   &__indicator {
-    z-index: -1;
     background: inherit;
     @apply animate-ping absolute inline-flex h-full w-full;
     @apply rounded-full  opacity-75;

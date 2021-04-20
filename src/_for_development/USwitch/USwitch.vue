@@ -101,8 +101,7 @@ export default {
   }
 
   &__icon {
-    z-index: 1;
-    @apply z-10 absolute left-2 transition-all;
+    @apply absolute left-2 transition-all;
   }
 
   &.primary {
