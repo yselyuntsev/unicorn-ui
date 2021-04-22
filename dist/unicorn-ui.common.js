@@ -4965,7 +4965,7 @@ __webpack_require__.d(components_namespaceObject, "UDialog", function() { return
 __webpack_require__.d(components_namespaceObject, "UDivider", function() { return UDivider_UDivider; });
 __webpack_require__.d(components_namespaceObject, "UCol", function() { return UCol; });
 __webpack_require__.d(components_namespaceObject, "URow", function() { return URow; });
-__webpack_require__.d(components_namespaceObject, "UHideAt", function() { return /* Cannot get final name for export "UHideAt" in "./src/components/UHideAt/index.js" (known exports: default, known reexports: ) */ undefined; });
+__webpack_require__.d(components_namespaceObject, "UHideAt", function() { return UHideAt; });
 __webpack_require__.d(components_namespaceObject, "UIcon", function() { return UIcon_UIcon; });
 __webpack_require__.d(components_namespaceObject, "UList", function() { return UList_UList; });
 __webpack_require__.d(components_namespaceObject, "UListItem", function() { return UListItem; });
@@ -4980,7 +4980,7 @@ __webpack_require__.d(components_namespaceObject, "UBottomNavItem", function() {
 __webpack_require__.d(components_namespaceObject, "UBottomNav", function() { return UBottomNav_UBottomNav; });
 __webpack_require__.d(components_namespaceObject, "UMenu", function() { return UMenu_UMenu; });
 __webpack_require__.d(components_namespaceObject, "UProgressbar", function() { return UProgressbar_UProgressbar; });
-__webpack_require__.d(components_namespaceObject, "UShowAt", function() { return /* Cannot get final name for export "UShowAt" in "./src/components/UShowAt/index.js" (known exports: default, known reexports: ) */ undefined; });
+__webpack_require__.d(components_namespaceObject, "UShowAt", function() { return UShowAt; });
 __webpack_require__.d(components_namespaceObject, "USimpleTable", function() { return USimpleTable_USimpleTable; });
 __webpack_require__.d(components_namespaceObject, "USpacer", function() { return USpacer_USpacer; });
 __webpack_require__.d(components_namespaceObject, "USwitch", function() { return USwitch; });
@@ -7175,7 +7175,7 @@ var propMap = {
 // CONCATENATED MODULE: ./src/components/UHideAt/UHideAt.js
 
 /* harmony default export */ var UHideAt = ({
-  name: "UHideAt",
+  name: "u-hide-at",
   props: {
     breakpoints: {
       type: Object,
@@ -7225,7 +7225,7 @@ var propMap = {
 });
 // CONCATENATED MODULE: ./src/components/UHideAt/index.js
 
-/* harmony default export */ var components_UHideAt = (UHideAt);
+
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"29e26fe8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UList/UList.vue?vue&type=template&id=0603abb2&
 var UListvue_type_template_id_0603abb2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"u-list",class:_vm.classes},[_vm._t("default")],2)}
 var UListvue_type_template_id_0603abb2_staticRenderFns = []
@@ -7974,7 +7974,7 @@ var UProgressbar_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/UShowAt/UShowAt.js
 
 /* harmony default export */ var UShowAt = ({
-  name: "UShowAt",
+  name: "u-show-at",
   props: {
     breakpoints: {
       type: Object,
@@ -8024,7 +8024,7 @@ var UProgressbar_component = normalizeComponent(
 });
 // CONCATENATED MODULE: ./src/components/UShowAt/index.js
 
-/* harmony default export */ var components_UShowAt = (UShowAt);
+
 // EXTERNAL MODULE: ./src/components/USimpleTable/USimpleTable.scss
 var USimpleTable = __webpack_require__("adfc");
 
