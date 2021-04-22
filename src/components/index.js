@@ -12,7 +12,7 @@ export { UContainer } from "./UContainer";
 export { UDialog } from "./UDialog";
 export { UDivider } from "./UDivider";
 export { UCol, URow } from "./UGrid";
-// export { UHideAt } from "./UHideAt";
+export { UHideAt } from "./UHideAt";
 export { UIcon } from "./UIcon";
 export {
   UList,
@@ -28,7 +28,7 @@ export {
 export { UBottomNavItem, UBottomNav } from "./UBottomNav";
 export { UMenu } from "./UMenu";
 export { UProgressbar } from "./UProgressbar";
-// export { UShowAt } from "./UShowAt";
+export { UShowAt } from "./UShowAt";
 export { USimpleTable } from "./USimpleTable";
 export { USpacer } from "./USpacer";
 export { USwitch } from "./USwitch";
