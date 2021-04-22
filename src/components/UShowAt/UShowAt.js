@@ -1,7 +1,7 @@
 import { throttle } from "../../utils/throttle";
 
 export default {
-  name: "UShowAt",
+  name: "u-show-at",
 
   props: {
     breakpoints: {

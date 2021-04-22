@@ -1,2 +1,2 @@
 import UHideAt from "./UHideAt";
-export default UHideAt;
+export { UHideAt };

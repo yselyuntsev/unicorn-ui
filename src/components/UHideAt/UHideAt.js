@@ -1,7 +1,7 @@
 import { throttle } from "../../utils/throttle";
 
 export default {
-  name: "UHideAt",
+  name: "u-hide-at",
 
   props: {
     breakpoints: {

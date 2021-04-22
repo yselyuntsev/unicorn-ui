@@ -1,2 +1,2 @@
 import UShowAt from "./UShowAt";
-export default UShowAt;
+export { UShowAt };
