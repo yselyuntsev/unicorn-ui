@@ -151,6 +151,7 @@
     @apply px-3 py-0;
 
     .u-list-item {
+      min-height: 2rem;
       @apply py-0 px-2;
 
       &:not(:last-child) {
@@ -162,9 +163,12 @@
       }
 
       &__icon {
-        @apply pl-2;
+        @apply pl-2 mr-4 my-2;
       }
+    }
 
+    .u-list-item__title {
+      @apply font-medium;
     }
 
     &.u-list--dense {
