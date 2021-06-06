@@ -122,7 +122,7 @@ export default {
 
   &__label ~ &__prepend,
   &__label ~ &__append {
-    @apply top-5;
+    @apply top-6;
   }
 
   &--with-prepend &__input {

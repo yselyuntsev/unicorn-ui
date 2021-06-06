@@ -52,6 +52,14 @@
         </p>
       </u-alert>
 
+      <u-group-header>
+        Group header
+
+        <template #actions>
+          <u-btn dense>Показать все</u-btn>
+        </template>
+      </u-group-header>
+
       <u-card wheel>
         <u-card>
           <u-dropdown>
@@ -114,10 +122,12 @@ import UBtn from "./new_components/UBtn";
 import USidebarItem from "./new_components/USidebarItem";
 import UDropdown from "./new_components/UDropdown";
 import UAlert from "./new_components/UAlert";
+import UGroupHeader from "./new_components/UGroupHeader";
 
 export default {
   name: "App",
   components: {
+    UGroupHeader,
     UAlert,
     UDropdown,
     USidebarItem,
