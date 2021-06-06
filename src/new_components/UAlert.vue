@@ -88,7 +88,7 @@ export default {
 
 <style lang="scss" scoped>
 .u-alert {
-  @apply bg-gray-100 rounded-lg p-4 relative;
+  @apply bg-gray-50 rounded-lg p-4 relative;
 
   &__icon {
     @apply absolute left-4 top-4;

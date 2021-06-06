@@ -87,7 +87,7 @@ export default {
   }
 
   &__label {
-    @apply text-xs text-gray-400 pl-4 mb-1;
+    @apply text-sm text-gray-400 pl-4 mb-1;
   }
 
   &__input {

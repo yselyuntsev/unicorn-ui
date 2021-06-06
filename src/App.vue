@@ -45,53 +45,10 @@
 
       <u-alert class="my-4">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-          magnam provident quibusdam tempore? Adipisci asperiores beatae cum
-          cupiditate eius esse eum laboriosam, quam, quod repellat sapiente,
-          sunt! Architecto, explicabo facere.
-        </p>
-      </u-alert>
-
-      <u-alert variant="success" class="my-4">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-          magnam provident quibusdam tempore? Adipisci asperiores beatae cum
-          cupiditate eius esse eum laboriosam, quam, quod repellat sapiente,
-          sunt! Architecto, explicabo facere.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
-          consequatur culpa cumque dicta distinctio esse excepturi inventore
-          itaque libero nam numquam obcaecati pariatur praesentium, saepe sint
-          temporibus vel voluptatibus.
-        </p>
-      </u-alert>
-
-      <u-alert variant="error" class="my-4">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-          magnam provident quibusdam tempore? Adipisci asperiores beatae cum
-          cupiditate eius esse eum laboriosam, quam, quod repellat sapiente,
-          sunt! Architecto, explicabo facere.
-        </p>
-      </u-alert>
-
-      <u-alert variant="warning" class="my-4">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-          magnam provident quibusdam tempore? Adipisci asperiores beatae cum
-          cupiditate eius esse eum laboriosam, quam, quod repellat sapiente,
-          sunt! Architecto, explicabo facere.
-        </p>
-      </u-alert>
-
-      <u-alert variant="info" class="my-4">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-          magnam provident quibusdam tempore? Adipisci asperiores beatae cum
-          cupiditate eius esse eum laboriosam, quam, quod repellat sapiente,
-          sunt! Architecto, explicabo facere.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eveniet
+          ipsa molestiae nemo veritatis. Adipisci, aliquam dolor doloribus eum
+          fugit maiores non nostrum repellat sapiente tempora velit, voluptas
+          voluptate voluptatibus.
         </p>
       </u-alert>
 
