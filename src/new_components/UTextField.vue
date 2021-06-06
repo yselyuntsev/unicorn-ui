@@ -1,0 +1,207 @@
+<template>
+  <label :class="classes">
+    <p v-if="label" class="u-text-field__label">{{ label }}</p>
+    <input
+      :value="value"
+      :type="type"
+      :placeholder="placeholder"
+      @input="handleInput"
+      class="u-text-field__input"
+    />
+    <p v-if="!disableHint" class="u-text-field__hint">{{ hint }}</p>
+
+    <span
+      v-if="$slots.prepend || $scopedSlots.prepend"
+      @click="handleClickPrepend"
+      class="u-text-field__prepend"
+    >
+      <slot name="prepend"></slot>
+    </span>
+
+    <span
+      v-if="$slots.append || $scopedSlots.append"
+      @click="handleClickAppend"
+      class="u-text-field__append"
+    >
+      <slot name="append"></slot>
+    </span>
+  </label>
+</template>
+
+<script>
+export default {
+  name: "u-text-field",
+
+  props: {
+    value: [String, Number],
+    type: {
+      type: String,
+      default: "text",
+    },
+    variant: {
+      type: String,
+      validator: (value) =>
+        ["success", "error", "warning", "info"].includes(value),
+    },
+    label: String,
+    placeholder: String,
+    hint: String,
+    disableHint: Boolean,
+  },
+
+  computed: {
+    classes() {
+      return {
+        "u-text-field": true,
+        [`u-text-field--${this.variant}`]: this.variant,
+        "u-text-field--with-prepend":
+          this.$slots.prepend || this.$scopedSlots.prepend,
+        "u-text-field--with-append":
+          this.$slots.append || this.$scopedSlots.append,
+      };
+    },
+  },
+
+  methods: {
+    handleInput(event) {
+      this.$emit("input", event.target.value);
+    },
+
+    handleClickPrepend(event) {
+      this.$emit("click:prepend", event);
+    },
+
+    handleClickAppend(event) {
+      this.$emit("click:append", event);
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.u-text-field {
+  @apply relative w-full;
+
+  &:not(:first-of-type) {
+    @apply mt-4;
+  }
+
+  &__label {
+    @apply text-xs text-gray-400 pl-4 mb-1;
+  }
+
+  &__input {
+    @apply border border-gray-100 text-base font-medium;
+    @apply w-full px-4 h-11 rounded-lg outline-none;
+    @apply transition-all;
+
+    &::placeholder {
+      @apply text-gray-400;
+    }
+
+    &:focus {
+      @apply border border-blue-400 ring;
+    }
+  }
+
+  &__hint {
+    @apply text-gray-400 mt-1 pl-4 text-xs;
+  }
+
+  &__prepend {
+    @apply text-gray-300;
+    @apply absolute top-0 left-0 h-11 w-11;
+    @apply inline-flex items-center justify-center;
+  }
+
+  &__append {
+    @apply text-gray-300;
+    @apply absolute top-0 right-0 h-11 w-11;
+    @apply inline-flex items-center justify-center;
+  }
+
+  &__label ~ &__prepend,
+  &__label ~ &__append {
+    @apply top-5;
+  }
+
+  &--with-prepend &__input {
+    @apply pl-12;
+  }
+  &--with-append &__input {
+    @apply pr-12;
+  }
+
+  // Success
+  &--success &__input {
+    @apply border-green-400;
+
+    &:focus {
+      @apply ring-green-200;
+    }
+  }
+
+  &--success &__hint {
+    @apply text-green-500;
+  }
+
+  &--success &__prepend,
+  &--success &__append {
+    @apply text-green-400;
+  }
+
+  //  Error
+  &--error &__input {
+    @apply border-red-400;
+
+    &:focus {
+      @apply ring-red-200;
+    }
+  }
+
+  &--error &__hint {
+    @apply text-red-500;
+  }
+
+  &--error &__prepend,
+  &--error &__append {
+    @apply text-red-400;
+  }
+
+  //  Warning
+  &--warning &__input {
+    @apply border-yellow-400;
+
+    &:focus {
+      @apply ring-yellow-200;
+    }
+  }
+
+  &--warning &__hint {
+    @apply text-yellow-500;
+  }
+
+  &--warning &__prepend,
+  &--warning &__append {
+    @apply text-yellow-400;
+  }
+
+  //  Info
+  &--info &__input {
+    @apply border-purple-400;
+
+    &:focus {
+      @apply ring-purple-200;
+    }
+  }
+
+  &--info &__hint {
+    @apply text-purple-500;
+  }
+
+  &--info &__prepend,
+  &--info &__append {
+    @apply text-purple-400;
+  }
+}
+</style>

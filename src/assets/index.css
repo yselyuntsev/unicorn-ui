@@ -2,9 +2,57 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import "typography.css";
-@import "colors.css";
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  @apply text-base leading-relaxed;
+
+}
+
+p:not(:first-of-type) {
+  margin-top: 1em;
+}
+
+h1, .u-heading-h1  {
+  @apply font-bold;
+  @apply text-4xl;
+  @apply md:text-5xl;
+}
+
+h2, .u-heading-h2  {
+  @apply font-bold;
+  @apply text-3xl;
+  @apply md:text-4xl;
+}
+
+h3, .u-heading-h3  {
+  @apply font-bold;
+  @apply text-2xl;
+  @apply md:text-3xl;
+}
+
+h4, .u-heading-h4  {
+  @apply font-medium;
+  @apply text-xl;
+  @apply md:text-2xl;
+}
+
+h5, .u-heading-h5  {
+  @apply font-medium;
+  @apply text-base;
+  @apply md:text-lg;
+}
+
+h6, .u-heading-h6  {
+  @apply font-medium;
+  @apply text-sm;
+  @apply md:text-base;
 }

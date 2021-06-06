@@ -1,85 +1,175 @@
 <template>
-  <div id="app" class="p-16 flex flex-col gap-2">
-    <div class="flex gap-2">
-      <u-button> ffjdks </u-button>
-      <u-button variant="primary">
-        <u-badge animated />
-        ffjdks
-      </u-button>
-      <u-button variant="danger"> ffjdks </u-button>
-      <u-button variant="success"> ffjdks </u-button>
-      <u-button variant="warning"> ffjdks </u-button>
-      <u-button variant="info"> ffjdks </u-button>
-    </div>
+  <u-app>
+    <u-sidebar>
+      <u-sidebar-item active>
+        <template #icon>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </template>
+        Sidebar Item
+      </u-sidebar-item>
 
-    <div class="flex gap-2">
-      <u-button text> ffjdks </u-button>
-      <u-button text variant="primary"> ffjdks </u-button>
-      <u-button text variant="danger"> ffjdks </u-button>
-      <u-button text variant="success"> ffjdks </u-button>
-      <u-button text variant="warning"> ffjdks </u-button>
-      <u-button text variant="info"> ffjdks </u-button>
-    </div>
+      <u-sidebar-item>Sidebar Item 2</u-sidebar-item>
+      <u-sidebar-item>Sidebar Item 2</u-sidebar-item>
+    </u-sidebar>
 
-    <div class="flex flex-col gap-2">
-      <u-alert closable icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad ducimus
-        impedit minima mollitia pariatur tempore? Accusantium animi esse
-        possimus quod voluptate! Ab at cumque doloribus dolorum in, modi
-        ratione.
+    <u-main>
+      <div class="flex justify-between">
+        <h1>fdfjdsk</h1>
+
+        <u-dropdown>
+          <template #activator="{ on }">
+            <u-btn v-on="on">Activator</u-btn>
+          </template>
+
+          <u-card>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Accusamus aspernatur assumenda at deleniti dolor dolorem doloribus
+              eveniet excepturi molestiae molestias nemo neque nisi nulla,
+              praesentium quas quidem quis totam voluptatem!
+            </p>
+          </u-card>
+        </u-dropdown>
+      </div>
+
+      <u-alert class="my-4">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+          magnam provident quibusdam tempore? Adipisci asperiores beatae cum
+          cupiditate eius esse eum laboriosam, quam, quod repellat sapiente,
+          sunt! Architecto, explicabo facere.
+        </p>
       </u-alert>
 
-      <u-alert closable variant="primary" icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus
-        accusantium animi beatae commodi deserunt dolores fugit id in incidunt
-        inventore, maxime minima nisi perspiciatis quae reprehenderit tempora ut
-        vero?
+      <u-alert variant="success" class="my-4">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+          magnam provident quibusdam tempore? Adipisci asperiores beatae cum
+          cupiditate eius esse eum laboriosam, quam, quod repellat sapiente,
+          sunt! Architecto, explicabo facere.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+          consequatur culpa cumque dicta distinctio esse excepturi inventore
+          itaque libero nam numquam obcaecati pariatur praesentium, saepe sint
+          temporibus vel voluptatibus.
+        </p>
       </u-alert>
 
-      <u-alert closable variant="danger" icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at
-        delectus dicta dolorem dolorum fuga hic nam nobis obcaecati reiciendis.
-        Aspernatur dolorem explicabo laboriosam necessitatibus, pariatur quaerat
-        reiciendis velit vitae?
+      <u-alert variant="error" class="my-4">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+          magnam provident quibusdam tempore? Adipisci asperiores beatae cum
+          cupiditate eius esse eum laboriosam, quam, quod repellat sapiente,
+          sunt! Architecto, explicabo facere.
+        </p>
       </u-alert>
 
-      <u-alert closable variant="success" icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at
-        delectus dicta dolorem dolorum fuga hic nam nobis obcaecati reiciendis.
-        Aspernatur dolorem explicabo laboriosam necessitatibus, pariatur quaerat
-        reiciendis velit vitae?
+      <u-alert variant="warning" class="my-4">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+          magnam provident quibusdam tempore? Adipisci asperiores beatae cum
+          cupiditate eius esse eum laboriosam, quam, quod repellat sapiente,
+          sunt! Architecto, explicabo facere.
+        </p>
       </u-alert>
 
-      <u-alert closable variant="info" icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at
-        delectus dicta dolorem dolorum fuga hic nam nobis obcaecati reiciendis.
-        Aspernatur dolorem explicabo laboriosam necessitatibus, pariatur quaerat
-        reiciendis velit vitae?
+      <u-alert variant="info" class="my-4">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+          magnam provident quibusdam tempore? Adipisci asperiores beatae cum
+          cupiditate eius esse eum laboriosam, quam, quod repellat sapiente,
+          sunt! Architecto, explicabo facere.
+        </p>
       </u-alert>
 
-      <u-alert closable variant="warning" icon="mdi-alert">
-        <u-alert-title>dkjfsld</u-alert-title>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at
-        delectus dicta dolorem dolorum fuga hic nam nobis obcaecati reiciendis.
-        Aspernatur dolorem explicabo laboriosam necessitatibus, pariatur quaerat
-        reiciendis velit vitae?
-      </u-alert>
-    </div>
-  </div>
+      <u-card wheel>
+        <u-card>
+          <u-dropdown>
+            <template #activator="{ on }">
+              <u-btn v-on="on">Activator</u-btn>
+            </template>
+
+            <u-card>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus aspernatur assumenda at deleniti dolor dolorem
+                doloribus eveniet excepturi molestiae molestias nemo neque nisi
+                nulla, praesentium quas quidem quis totam voluptatem!
+              </p>
+            </u-card>
+          </u-dropdown>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
+            ex id maiores maxime numquam praesentium repudiandae. Architecto
+            aspernatur deleniti fuga harum ipsa, iusto, molestiae officiis porro
+            quis quisquam, repudiandae voluptatem.
+          </p>
+
+          <br />
+
+          <u-text-field label="Датапикер" placeholder="Выберите дату" />
+          <u-text-field label="Датапикер" placeholder="Выберите дату">
+            <template #prepend>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </template>
+          </u-text-field>
+
+          <u-btn muted variant="primary"> Авторизоваться </u-btn>
+        </u-card>
+      </u-card>
+    </u-main>
+  </u-app>
 </template>
 
 <script>
-import UButton from "@/components/UButton/UButton";
-import UAlert from "@/components/UAlert/UAlert";
-import UAlertTitle from "@/components/UAlert/UAlertTitle";
-import UBadge from "@/components/UBadge/UBadge";
+import UApp from "./new_components/UApp";
+import USidebar from "./new_components/USidebar";
+import UMain from "./new_components/UMain";
+
+import UCard from "./new_components/UCard";
+import UTextField from "./new_components/UTextField";
+import UBtn from "./new_components/UBtn";
+import USidebarItem from "./new_components/USidebarItem";
+import UDropdown from "./new_components/UDropdown";
+import UAlert from "./new_components/UAlert";
+
 export default {
   name: "App",
-  components: { UBadge, UAlertTitle, UAlert, UButton },
+  components: {
+    UAlert,
+    UDropdown,
+    USidebarItem,
+    UBtn,
+    UTextField,
+    UCard,
+    UMain,
+    USidebar,
+    UApp,
+  },
 };
 </script>
