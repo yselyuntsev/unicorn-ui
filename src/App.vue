@@ -95,6 +95,10 @@
         </p>
       </u-alert>
 
+      <u-bottom-navigation>
+        <u-bottom-navigation-item> sdfsdkl </u-bottom-navigation-item>
+      </u-bottom-navigation>
+
       <u-group-header>
         Group header
 
@@ -237,10 +241,14 @@ import UDivider from "./new_components/UDivider";
 import UDialog from "./new_components/UDialog";
 import UAvatar from "./new_components/UAvatar";
 import USidebarGroup from "./new_components/USidebarGroup";
+import UBottomNavigation from "./new_components/UBottomNavigation";
+import UBottomNavigationItem from "./new_components/UBottomNavigationItem";
 
 export default {
   name: "App",
   components: {
+    UBottomNavigationItem,
+    UBottomNavigation,
     USidebarGroup,
     UAvatar,
     UDialog,
