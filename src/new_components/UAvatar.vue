@@ -39,6 +39,8 @@ export default {
 <style lang="scss" scoped>
 .u-avatar {
   @apply overflow-hidden rounded-full bg-gray-100;
+  @apply inline-flex items-center justify-center;
+  @apply font-medium text-lg text-gray-500;
 
   img,
   svg,

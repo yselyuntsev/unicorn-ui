@@ -58,12 +58,18 @@
     <div class="u-alert__title">Alert default title</div>
 
     <slot></slot>
+
+    <u-dismiss-button v-if="dismissible" @click="handleClose" />
   </div>
 </template>
 
 <script>
+import UDismissButton from "./UDismissButton";
+
 export default {
   name: "u-alert",
+
+  components: { UDismissButton },
 
   props: {
     dismissible: Boolean,
@@ -80,7 +86,14 @@ export default {
         "u-alert": true,
         "u-alert--with-icon": this.variant,
         [`u-alert--${this.variant}`]: this.variant,
+        "u-alert--dismissible": this.dismissible,
       };
+    },
+  },
+
+  methods: {
+    handleClose(event) {
+      this.$emit("click:close", event);
     },
   },
 };
@@ -100,6 +113,10 @@ export default {
 
   &--with-icon {
     @apply pl-14;
+  }
+
+  &--dismissible {
+    @apply pr-14;
   }
 
   &--success {

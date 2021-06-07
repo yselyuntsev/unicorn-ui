@@ -93,7 +93,7 @@ export default {
   &__input {
     @apply border border-gray-100 text-base font-medium;
     @apply w-full px-4 h-11 rounded-lg outline-none;
-    @apply transition-all;
+    @apply transition-all leading-none pb-0.5;
 
     &::placeholder {
       @apply text-gray-400;
@@ -109,15 +109,23 @@ export default {
   }
 
   &__prepend {
-    @apply text-gray-300;
+    @apply text-gray-400 leading-none;
     @apply absolute top-0 left-0 h-11 w-11;
     @apply inline-flex items-center justify-center;
+
+    svg {
+      @apply text-gray-300;
+    }
   }
 
   &__append {
-    @apply text-gray-300;
+    @apply text-gray-400 leading-none;
     @apply absolute top-0 right-0 h-11 w-11;
     @apply inline-flex items-center justify-center;
+
+    svg {
+      @apply text-gray-300;
+    }
   }
 
   &__label ~ &__prepend,

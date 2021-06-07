@@ -11,6 +11,7 @@ export default {
   props: {
     wheel: Boolean,
     gradient: Array,
+    flat: Boolean,
   },
 
   computed: {
@@ -19,6 +20,7 @@ export default {
         "u-card": true,
         "u-card--wheel": this.wheel,
         "u-card--gradient": !this.wheel && this.gradient,
+        "u-card--flat": this.flat,
       };
     },
 
@@ -40,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .u-card {
-  @apply flex flex-col items-start rounded-lg bg-white shadow-card p-4;
+  @apply flex w-full flex-col items-start rounded-lg bg-white shadow-card p-4;
 
   &--wheel {
     @apply border-transparent bg-gray-50 shadow-none;
@@ -48,6 +50,10 @@ export default {
 
   &--gradient {
     @apply border-transparent;
+  }
+
+  &--flat {
+    @apply bg-transparent border-none shadow-none;
   }
 }
 </style>
