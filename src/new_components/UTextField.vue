@@ -43,6 +43,7 @@ export default {
       validator: (value) =>
         ["success", "error", "warning", "info"].includes(value),
     },
+    dense: Boolean,
     label: String,
     placeholder: String,
     hint: String,
@@ -54,10 +55,15 @@ export default {
       return {
         "u-text-field": true,
         [`u-text-field--${this.variant}`]: this.variant,
+        "u-text-field--dense": this.dense,
         "u-text-field--with-prepend":
-          this.$slots.prepend || this.$scopedSlots.prepend,
+          (this.$slots.prepend || this.$scopedSlots.prepend) && !this.dense,
         "u-text-field--with-append":
-          this.$slots.append || this.$scopedSlots.append,
+          (this.$slots.append || this.$scopedSlots.append) && !this.dense,
+        "u-text-field--with-prepend-dense":
+          (this.$slots.prepend || this.$scopedSlots.prepend) && this.dense,
+        "u-text-field--with-append-dense":
+          (this.$slots.append || this.$scopedSlots.append) && this.dense,
       };
     },
   },
@@ -138,6 +144,23 @@ export default {
   }
   &--with-append &__input {
     @apply pr-12;
+  }
+
+  &--with-prepend-dense &__input {
+    @apply pl-9;
+  }
+  &--with-append-dense &__input {
+    @apply pr-9;
+  }
+
+  // Dense
+  &--dense &__input {
+    @apply h-8;
+  }
+
+  &--dense &__prepend,
+  &--dense &__append {
+    @apply h-8 w-8;
   }
 
   // Success

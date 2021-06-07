@@ -42,7 +42,7 @@ export default {
 .u-btn {
   @apply inline-flex items-center;
   @apply rounded-lg border border-gray-100 shadow-sm;
-  @apply px-4 h-11 font-medium bg-white;
+  @apply px-4 h-11 font-medium bg-white whitespace-nowrap;
 
   @apply transition-all outline-none ring-gray-50;
 
