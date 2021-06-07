@@ -3,7 +3,12 @@
     <slot name="activator" :on="genListeners()"></slot>
 
     <transition @enter="openContent" appear name="splash">
-      <div v-if="show" @click.self="closeContent" class="u-dialog__body">
+      <div
+        ref="dialog"
+        v-if="show"
+        @click.self="closeContent"
+        class="u-dialog__body"
+      >
         <transition @leave="close" name="dialog">
           <div v-if="showContent" :style="styles" class="u-dialog__content">
             <u-dismiss-button @click="closeContent" class="u-dialog__dismiss" />
@@ -60,6 +65,10 @@ export default {
   methods: {
     open() {
       this.show = true;
+
+      this.$nextTick(() => {
+        this.$root.$el.append(this.$refs.dialog);
+      });
     },
 
     openContent() {

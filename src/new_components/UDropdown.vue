@@ -1,5 +1,5 @@
 <template>
-  <div class="u-dropdown">
+  <div ref="container" class="u-dropdown">
     <slot name="activator" :on="genListeners()"></slot>
 
     <transition name="slide-t">
@@ -37,7 +37,11 @@ export default {
   data() {
     return {
       show: false,
-      right: false,
+      // right: false,
+      pos: {
+        top: 0,
+        left: 0,
+      },
     };
   },
 
@@ -46,7 +50,10 @@ export default {
       return {
         maxWidth: this.width + "px",
         minWidth: this.width + "px",
-        right: this.right && "0",
+        // right: this.right && "0",
+        // top: this.top + "px",
+        top: this.pos.top + "px",
+        left: this.pos.left + "px",
       };
     },
   },
@@ -59,6 +66,15 @@ export default {
     },
   },
 
+  mounted() {
+    this.calcPos();
+    window.addEventListener("resize", this.calcPos);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener("resize", this.calcPos);
+  },
+
   methods: {
     genListeners() {
       const listeners = {};
@@ -68,6 +84,9 @@ export default {
 
     open() {
       this.show = true;
+      this.$nextTick(() => {
+        this.$root.$el.append(this.$refs.dropdown);
+      });
     },
 
     close() {
@@ -75,8 +94,8 @@ export default {
     },
 
     calcPos() {
-      const { left } = this.$refs.dropdown.getBoundingClientRect();
-      this.right = this.width + left > window.innerWidth - 16;
+      const { top, left } = this.$refs.container.getBoundingClientRect();
+      this.pos = { top, left };
     },
   },
 };
@@ -84,10 +103,8 @@ export default {
 
 <style lang="scss" scoped>
 .u-dropdown {
-  @apply relative z-10;
-
   &__body {
-    @apply absolute min-h-full top-0;
+    @apply absolute z-10;
   }
 }
 
