@@ -63,31 +63,20 @@ export default {
 <style lang="scss" scoped>
 .u-sidebar-group {
   @apply my-1 rounded-lg overflow-hidden;
-  @apply transition-all duration-700;
+  @apply transition-all;
 
   &__activator {
     @apply -mt-1;
   }
 
   &__items {
-    @apply -mb-1 px-2;
+    @apply -mb-1 pl-8;
     @apply transition-all;
-
-    .u-sidebar-item {
-      &:hover {
-        @apply bg-transparent;
-      }
-
-      &--active {
-        &:hover {
-          @apply bg-blue-50;
-        }
-      }
-    }
   }
 
   &--show {
-    @apply bg-gray-50;
+    //@apply bg-gray-50;
+    @apply pt-2;
   }
 
   &--show &__items {

@@ -25,18 +25,37 @@ export default {
 
 <style lang="scss" scoped>
 .u-sidebar {
-  @apply w-64 flex flex-col h-screen;
+  @apply w-80 flex flex-col h-screen;
   @apply border-r border-gray-100;
-  @apply bg-white shadow-sm;
+  @apply bg-white shadow-sm overflow-y-scroll;
+
+  &::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply border-2 border-white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-white;
+    border: 4px solid #ffffff;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      @apply bg-gray-200;
+    }
+  }
 
   &__prepend,
   &__append,
   &__body {
-    @apply p-4;
+    @apply p-8;
   }
 
   &__body {
-    @apply flex-1 flex flex-col my-4;
+    @apply flex-1 flex flex-col;
   }
 }
 </style>

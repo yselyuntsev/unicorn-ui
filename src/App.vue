@@ -1,34 +1,53 @@
 <template>
   <u-app>
     <u-sidebar>
-      <u-sidebar-item active>
-        <template #icon>
+      <template #prepend>
+        <div class="text-4xl flex items-baseline">
+          unicorn
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
+            class="h-6 w-6 pt-1 mx-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
             <path
-              fill-rule="evenodd"
-              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-              clip-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
             />
           </svg>
-        </template>
-        Sidebar Item
-      </u-sidebar-item>
+          ui
+        </div>
+      </template>
 
-      <u-sidebar-item>Sidebar Item 2</u-sidebar-item>
+      <u-sidebar-item active> Цвета </u-sidebar-item>
+      <u-sidebar-item> Типографика </u-sidebar-item>
+      <u-sidebar-item> Иконографика </u-sidebar-item>
+      <u-sidebar-item> Структура и сетка </u-sidebar-item>
 
       <u-sidebar-group>
         <template #activator="{ on }">
-          <u-sidebar-item v-on="on">Trigger</u-sidebar-item>
+          <u-sidebar-item v-on="on"> Редполитика </u-sidebar-item>
         </template>
 
-        <u-sidebar-item>Sidebar Item 2</u-sidebar-item>
-        <u-sidebar-item active>Sidebar Item 2</u-sidebar-item>
-        <u-sidebar-item>Sidebar Item 2</u-sidebar-item>
+        <u-sidebar-item> Общие принципы </u-sidebar-item>
+        <u-sidebar-item> Предложение </u-sidebar-item>
+        <u-sidebar-item> Слово </u-sidebar-item>
+        <u-sidebar-item> Знак </u-sidebar-item>
+        <u-sidebar-item> Оформление </u-sidebar-item>
+        <u-sidebar-item> Глоссарий </u-sidebar-item>
+      </u-sidebar-group>
+
+      <u-sidebar-group>
+        <template #activator="{ on }">
+          <u-sidebar-item v-on="on">Компоненты</u-sidebar-item>
+        </template>
+
+        <u-sidebar-item>Alerts</u-sidebar-item>
+        <u-sidebar-item active>Buttons</u-sidebar-item>
+        <u-sidebar-item>Cards</u-sidebar-item>
       </u-sidebar-group>
 
       <u-sidebar-item>Sidebar Item 2</u-sidebar-item>

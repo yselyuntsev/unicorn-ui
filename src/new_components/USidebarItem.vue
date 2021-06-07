@@ -1,10 +1,15 @@
 <template>
   <div @click="handleClick" :class="classes">
-    <span v-if="$slots.icon || $scopedSlots.icon" class="u-sidebar-item__icon">
-      <slot name="icon"></slot>
-    </span>
+    <div class="u-sidebar-item__inner">
+      <span
+        v-if="$slots.icon || $scopedSlots.icon"
+        class="u-sidebar-item__icon"
+      >
+        <slot name="icon"></slot>
+      </span>
 
-    <slot></slot>
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -35,12 +40,12 @@ export default {
 
 <style lang="scss" scoped>
 .u-sidebar-item {
-  @apply flex items-center rounded-lg;
-  @apply px-4 text-base font-medium h-11 text-gray-500;
-  @apply transition-all my-1 truncate;
-
   &:hover {
-    @apply bg-gray-50 cursor-pointer text-black;
+    @apply cursor-pointer text-black;
+  }
+
+  &:hover &__inner {
+    @apply bg-gray-50;
   }
 
   &__icon {
@@ -48,8 +53,14 @@ export default {
     @apply mr-2 -ml-4;
   }
 
-  &--active,
-  &--active:hover {
+  &__inner {
+    @apply text-base font-medium text-gray-700;
+    @apply transition-all my-1 truncate;
+    @apply px-4 inline-flex h-11 items-center rounded-lg;
+  }
+
+  &--active &__inner,
+  &--active:hover &__inner {
     @apply bg-blue-50 text-blue-500;
   }
 }
