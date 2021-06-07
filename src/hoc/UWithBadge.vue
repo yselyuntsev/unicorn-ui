@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "UWithBadge",
+  name: "u-with-badge",
 };
 </script>
 
