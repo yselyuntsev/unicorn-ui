@@ -20,6 +20,17 @@
       </u-sidebar-item>
 
       <u-sidebar-item>Sidebar Item 2</u-sidebar-item>
+
+      <u-sidebar-group>
+        <template #activator="{ on }">
+          <u-sidebar-item v-on="on">Trigger</u-sidebar-item>
+        </template>
+
+        <u-sidebar-item>Sidebar Item 2</u-sidebar-item>
+        <u-sidebar-item active>Sidebar Item 2</u-sidebar-item>
+        <u-sidebar-item>Sidebar Item 2</u-sidebar-item>
+      </u-sidebar-group>
+
       <u-sidebar-item>Sidebar Item 2</u-sidebar-item>
     </u-sidebar>
 
@@ -208,10 +219,12 @@ import UCol from "./new_components/UCol";
 import UDivider from "./new_components/UDivider";
 import UDialog from "./new_components/UDialog";
 import UAvatar from "./new_components/UAvatar";
+import USidebarGroup from "./new_components/USidebarGroup";
 
 export default {
   name: "App",
   components: {
+    USidebarGroup,
     UAvatar,
     UDialog,
     UDivider,

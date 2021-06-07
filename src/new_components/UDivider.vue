@@ -39,7 +39,7 @@ export default {
   &:before,
   &:after {
     content: "";
-    @apply h-px bg-gray-100 w-full;
+    @apply h-px bg-black bg-opacity-5 w-full;
   }
 
   &__title {

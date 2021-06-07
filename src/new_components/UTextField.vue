@@ -106,7 +106,7 @@ export default {
     }
 
     &:focus {
-      @apply border border-blue-400 ring;
+      @apply border border-blue-400 ring ring-blue-200;
     }
   }
 

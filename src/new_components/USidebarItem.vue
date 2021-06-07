@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes">
+  <div @click="handleClick" :class="classes">
     <span v-if="$slots.icon || $scopedSlots.icon" class="u-sidebar-item__icon">
       <slot name="icon"></slot>
     </span>
@@ -24,6 +24,12 @@ export default {
       };
     },
   },
+
+  methods: {
+    handleClick(event) {
+      this.$emit("click", event);
+    },
+  },
 };
 </script>
 
@@ -31,7 +37,7 @@ export default {
 .u-sidebar-item {
   @apply flex items-center rounded-lg;
   @apply px-4 text-base font-medium h-11 text-gray-500;
-  @apply transition-all my-1;
+  @apply transition-all my-1 truncate;
 
   &:hover {
     @apply bg-gray-50 cursor-pointer text-black;
