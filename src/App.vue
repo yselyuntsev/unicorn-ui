@@ -22,7 +22,20 @@
         </div>
       </template>
 
-      <u-sidebar-item active> Цвета </u-sidebar-item>
+      <u-sidebar-group>
+        <template #activator="{ on }">
+          <u-sidebar-item v-on="on"> Перед началом работы </u-sidebar-item>
+        </template>
+
+        <u-sidebar-item> Общие принципы </u-sidebar-item>
+        <u-sidebar-item> Предложение </u-sidebar-item>
+        <u-sidebar-item> Слово </u-sidebar-item>
+        <u-sidebar-item> Знак </u-sidebar-item>
+        <u-sidebar-item> Оформление </u-sidebar-item>
+        <u-sidebar-item> Глоссарий </u-sidebar-item>
+      </u-sidebar-group>
+
+      <u-sidebar-item> Цвета </u-sidebar-item>
       <u-sidebar-item> Типографика </u-sidebar-item>
       <u-sidebar-item> Иконографика </u-sidebar-item>
       <u-sidebar-item> Структура и сетка </u-sidebar-item>

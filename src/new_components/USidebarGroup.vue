@@ -75,8 +75,10 @@ export default {
   }
 
   &--show {
+    &:not(&:first-child) {
+      @apply pt-2;
+    }
     //@apply bg-gray-50;
-    @apply pt-2;
   }
 
   &--show &__items {
