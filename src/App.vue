@@ -70,20 +70,20 @@
       <div class="flex justify-between">
         <h1>fdfjdsk</h1>
 
-        <u-dropdown>
-          <template #activator="{ on }">
-            <u-btn v-on="on">Activator</u-btn>
-          </template>
+        <!--        <u-dropdown>-->
+        <!--          <template #activator="{ on }">-->
+        <!--            <u-btn v-on="on">Activator</u-btn>-->
+        <!--          </template>-->
 
-          <u-card>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Accusamus aspernatur assumenda at deleniti dolor dolorem doloribus
-              eveniet excepturi molestiae molestias nemo neque nisi nulla,
-              praesentium quas quidem quis totam voluptatem!
-            </p>
-          </u-card>
-        </u-dropdown>
+        <!--          <u-card>-->
+        <!--            <p>-->
+        <!--              Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+        <!--              Accusamus aspernatur assumenda at deleniti dolor dolorem doloribus-->
+        <!--              eveniet excepturi molestiae molestias nemo neque nisi nulla,-->
+        <!--              praesentium quas quidem quis totam voluptatem!-->
+        <!--            </p>-->
+        <!--          </u-card>-->
+        <!--        </u-dropdown>-->
       </div>
 
       <u-alert dismissible class="my-4">
@@ -137,24 +137,9 @@
                 </u-card>
               </u-dropdown>
 
-              <u-dialog :width="320">
-                <template #activator="{ on }">
-                  <u-btn v-on="on">Trigger modal</u-btn>
-                </template>
-
-                <u-card>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Amet aperiam atque commodi, cumque deserunt doloremque earum
-                    eum id, iusto modi molestias, necessitatibus nesciunt non
-                    pariatur possimus quasi ratione rem voluptatibus.
-                  </p>
-                </u-card>
-              </u-dialog>
-
               <u-dialog v-model="show" :width="640">
                 <template #activator="{ on }">
-                  <u-btn v-on="on">Trigger modal</u-btn>
+                  <u-btn v-on="on" class="mt-4">Trigger modal</u-btn>
                 </template>
 
                 <u-card>
