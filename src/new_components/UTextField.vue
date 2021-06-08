@@ -2,10 +2,11 @@
   <label :class="classes">
     <p v-if="label" class="u-text-field__label">{{ label }}</p>
     <input
+      @input="handleInput"
       :value="value"
       :type="type"
       :placeholder="placeholder"
-      @input="handleInput"
+      :readonly="readonly"
       class="u-text-field__input"
     />
     <p v-if="!disableHint" class="u-text-field__hint">{{ hint }}</p>
@@ -44,6 +45,7 @@ export default {
         ["success", "error", "warning", "info"].includes(value),
     },
     dense: Boolean,
+    readonly: Boolean,
     label: String,
     placeholder: String,
     hint: String,

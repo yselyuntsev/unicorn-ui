@@ -54,7 +54,7 @@ export default {
   }
 
   &__inner {
-    @apply text-base font-medium text-gray-700;
+    @apply text-base font-medium;
     @apply transition-all my-1 truncate;
     @apply px-4 inline-flex h-11 items-center rounded-lg;
   }
