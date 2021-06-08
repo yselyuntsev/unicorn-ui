@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes">
+  <div @click="handleClick" :class="classes">
     <div
       v-if="$slots.icon || $scopedSlots.icon"
       class="u-bottom-navigation-item__icon"
@@ -27,6 +27,12 @@ export default {
         "u-bottom-navigation-item": true,
         "u-bottom-navigation-item--active": this.active,
       };
+    },
+  },
+
+  methods: {
+    handleClick(event) {
+      this.$emit("click", event);
     },
   },
 };
