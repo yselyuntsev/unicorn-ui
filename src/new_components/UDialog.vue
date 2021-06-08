@@ -6,7 +6,7 @@
       <div
         ref="dialog"
         v-if="show"
-        @click.self="closeContent"
+        @click.self.prevent="closeContent"
         class="u-dialog__body"
       >
         <transition @leave="close" name="dialog">
@@ -67,7 +67,7 @@ export default {
       this.show = true;
 
       this.$nextTick(() => {
-        this.$root.$el.append(this.$refs.dialog);
+        this.$parent.$el.append(this.$refs.dialog);
       });
     },
 

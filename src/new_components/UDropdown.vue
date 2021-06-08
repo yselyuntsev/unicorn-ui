@@ -7,7 +7,6 @@
         ref="dropdown"
         v-if="show"
         v-click-outside="close"
-        @click="close"
         :style="styles"
         class="u-dropdown__body"
       >

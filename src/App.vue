@@ -194,6 +194,23 @@
                 </template>
 
                 <u-card>
+                  <u-dialog v-model="show" :width="640">
+                    <template #activator="{ on: gg }">
+                      <u-btn v-on="gg" class="mt-4">Trigger modal</u-btn>
+                    </template>
+
+                    <u-card>
+                      <u-avatar> ST </u-avatar>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Amet aperiam atque commodi, cumque deserunt
+                        doloremque earum eum id, iusto modi molestias,
+                        necessitatibus nesciunt non pariatur possimus quasi
+                        ratione rem voluptatibus.
+                      </p>
+                    </u-card>
+                  </u-dialog>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
                     asperiores autem deserunt distinctio eaque enim ex facilis
@@ -210,6 +227,24 @@
 
                 <u-card>
                   <u-avatar> ST </u-avatar>
+
+                  <u-dialog v-model="show" :width="640">
+                    <template #activator="{ on: gg }">
+                      <u-btn v-on="gg" class="mt-4">Trigger modal</u-btn>
+                    </template>
+
+                    <u-card>
+                      <u-avatar> ST </u-avatar>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Amet aperiam atque commodi, cumque deserunt
+                        doloremque earum eum id, iusto modi molestias,
+                        necessitatibus nesciunt non pariatur possimus quasi
+                        ratione rem voluptatibus.
+                      </p>
+                    </u-card>
+                  </u-dialog>
 
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
