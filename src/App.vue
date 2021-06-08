@@ -67,6 +67,10 @@
     </u-sidebar>
 
     <u-main>
+      <template #prepend>
+        <u-app-bar> dsf </u-app-bar>
+      </template>
+
       <div class="flex justify-between">
         <h1>fdfjdsk</h1>
 
@@ -301,10 +305,12 @@ import UAvatar from "./new_components/UAvatar";
 import USidebarGroup from "./new_components/USidebarGroup";
 import UBottomNavigation from "./new_components/UBottomNavigation";
 import UBottomNavigationItem from "./new_components/UBottomNavigationItem";
+import UAppBar from "./new_components/UAppBar";
 
 export default {
   name: "App",
   components: {
+    UAppBar,
     UBottomNavigationItem,
     UBottomNavigation,
     USidebarGroup,

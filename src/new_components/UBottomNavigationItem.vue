@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 .u-bottom-navigation-item {
-  @apply flex flex-1 justify-center items-center flex-col;
+  @apply flex flex-1 justify-center items-center flex-col cursor-pointer;
 
   &__icon {
     @apply text-gray-500;

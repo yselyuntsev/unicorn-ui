@@ -1,5 +1,7 @@
 <template>
   <div class="u-main">
+    <slot name="prepend"></slot>
+
     <div class="u-main__container">
       <slot></slot>
     </div>
