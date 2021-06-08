@@ -91,6 +91,29 @@
       </div>
 
       <u-alert dismissible class="my-4">
+        <u-row>
+          <u-col cols="12">
+            <u-select
+              v-model="selected"
+              label="Select"
+              :items="[
+                { text: 'GGGG', value: 'dsfds' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+                { text: 'sdjfsdjfk', value: 'wer534534' },
+              ]"
+            />
+          </u-col>
+        </u-row>
+
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eveniet
           ipsa molestiae nemo veritatis. Adipisci, aliquam dolor doloribus eum
@@ -341,10 +364,12 @@ import USidebarGroup from "./new_components/USidebarGroup";
 import UBottomNavigation from "./new_components/UBottomNavigation";
 import UBottomNavigationItem from "./new_components/UBottomNavigationItem";
 import UAppBar from "./new_components/UAppBar";
+import USelect from "./new_components/USelect";
 
 export default {
   name: "App",
   components: {
+    USelect,
     UAppBar,
     UBottomNavigationItem,
     UBottomNavigation,
@@ -369,6 +394,7 @@ export default {
   data() {
     return {
       show: false,
+      selected: null,
     };
   },
 };
