@@ -10,7 +10,7 @@
         readonly
         class="u-select-field__input"
       />
-      <p v-if="!disableHint" class="u-select__hint">{{ hint }}</p>
+      <p v-if="!disableHint" class="u-select-field__hint">{{ hint }}</p>
     </label>
 
     <transition name="slide-t">
@@ -159,7 +159,7 @@ export default {
   }
 
   &__items {
-    @apply py-1 px-2 bg-white top-full mt-2 flex flex-col rounded-lg shadow-card;
+    @apply py-1 px-2 bg-white mt-2 flex flex-col rounded-lg shadow-card;
     @apply absolute min-w-full z-10 max-h-64 overflow-y-auto;
 
     &::-webkit-scrollbar {
