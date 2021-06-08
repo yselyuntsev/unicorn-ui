@@ -1,6 +1,6 @@
-import "@/assets/index.css";
+import "./assets/index.css";
 
-import * as components from "@/components";
+import * as components from "./components";
 
 const ComponentLibrary = {
   install(Vue) {
