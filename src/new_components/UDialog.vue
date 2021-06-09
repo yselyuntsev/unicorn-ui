@@ -54,9 +54,9 @@ export default {
     value: {
       handler(value) {
         if (value) {
-          this.show = true;
+          this.open();
         } else {
-          this.showContent = false;
+          this.closeContent();
         }
       },
     },

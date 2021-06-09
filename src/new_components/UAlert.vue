@@ -101,10 +101,15 @@ export default {
 
 <style lang="scss" scoped>
 .u-alert {
-  @apply bg-gray-50 rounded-lg p-4 relative;
+  @apply bg-gray-50 rounded-lg p-4 relative shadow-card;
 
   &__icon {
-    @apply absolute left-4 top-4;
+    @apply absolute left-4 top-4 inline-flex items-center justify-center;
+
+    &:before {
+      content: "";
+      @apply inline-block absolute w-8 h-8 rounded-full bg-white bg-opacity-20;
+    }
   }
 
   &__title {
@@ -120,19 +125,19 @@ export default {
   }
 
   &--success {
-    @apply bg-green-100 text-green-700;
+    @apply bg-green-400 text-white;
   }
 
   &--error {
-    @apply bg-red-100 text-red-700;
+    @apply bg-red-400 text-white;
   }
 
   &--warning {
-    @apply bg-yellow-100 text-yellow-700;
+    @apply bg-yellow-400 text-white;
   }
 
   &--info {
-    @apply bg-purple-100 text-purple-700;
+    @apply bg-purple-400 text-white;
   }
 }
 </style>
