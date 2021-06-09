@@ -22,7 +22,7 @@
         </div>
       </template>
 
-      <u-sidebar-group>
+      <u-sidebar-group manual>
         <template #activator="{ on }">
           <u-sidebar-item v-on="on"> Перед началом работы </u-sidebar-item>
         </template>

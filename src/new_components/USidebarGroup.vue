@@ -14,7 +14,10 @@
 export default {
   name: "u-sidebar-group",
 
-  props: {},
+  props: {
+    manual: Boolean,
+    active: Boolean,
+  },
 
   data() {
     return {
@@ -24,16 +27,20 @@ export default {
   },
 
   computed: {
+    expanded() {
+      return this.manual ? this.active : this.show;
+    },
+
     styles() {
       return {
-        maxHeight: this.show ? this.maxHeight + "px" : 0,
+        maxHeight: this.expanded ? this.maxHeight + "px" : 0,
       };
     },
 
     classes() {
       return {
         "u-sidebar-group": true,
-        "u-sidebar-group--show": this.show,
+        "u-sidebar-group--show": this.expanded,
       };
     },
   },
@@ -53,7 +60,11 @@ export default {
 
     genListeners() {
       const listeners = {};
-      listeners.click = () => this.toggle();
+
+      if (!this.manual) {
+        listeners.click = () => this.toggle();
+      }
+
       return listeners;
     },
   },
