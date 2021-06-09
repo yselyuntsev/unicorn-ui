@@ -69,7 +69,7 @@ export default {
     <slot name="activator" :on="genListeners()"></slot>
 
     <div ref="dialog">
-      <transition c @enter="openContent" appear name="splash">
+      <transition @enter="openContent" appear name="splash">
         <div
           v-if="show"
           @click.self.prevent="closeContent"
