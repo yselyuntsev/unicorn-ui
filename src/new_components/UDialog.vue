@@ -2,21 +2,25 @@
   <div class="u-dialog">
     <slot name="activator" :on="genListeners()"></slot>
 
-    <transition @enter="openContent" appear name="splash">
-      <div
-        ref="dialog"
-        v-if="show"
-        @click.self.prevent="closeContent"
-        class="u-dialog__body"
-      >
-        <transition @leave="close" name="dialog">
-          <div v-if="showContent" :style="styles" class="u-dialog__content">
-            <u-dismiss-button @click="closeContent" class="u-dialog__dismiss" />
-            <slot></slot>
-          </div>
-        </transition>
-      </div>
-    </transition>
+    <div ref="dialog">
+      <transition c @enter="openContent" appear name="splash">
+        <div
+          v-if="show"
+          @click.self.prevent="closeContent"
+          class="u-dialog__body"
+        >
+          <transition @leave="close" name="dialog">
+            <div v-if="showContent" :style="styles" class="u-dialog__content">
+              <u-dismiss-button
+                @click="closeContent"
+                class="u-dialog__dismiss"
+              />
+              <slot></slot>
+            </div>
+          </transition>
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -65,10 +69,7 @@ export default {
   methods: {
     open() {
       this.show = true;
-
-      this.$nextTick(() => {
-        this.$parent.$el.append(this.$refs.dialog);
-      });
+      this.$root.$el.append(this.$refs.dialog);
     },
 
     openContent() {
@@ -112,6 +113,7 @@ export default {
 .splash-enter-active,
 .splash-leave-active {
   @apply transition-all;
+  will-change: transform;
 }
 .splash-enter,
 .splash-leave-to {
@@ -121,6 +123,7 @@ export default {
 .dialog-enter-active,
 .dialog-leave-active {
   @apply transition-all;
+  will-change: transform;
 }
 .dialog-enter,
 .dialog-leave-to {
