@@ -1,6 +1,14 @@
 <template>
   <div :class="classes" :style="styles">
+    <div v-if="$slots.prepend || $scopedSlots.prepend" class="u-btn__prepend">
+      <slot name="prepend"></slot>
+    </div>
+
     <slot></slot>
+
+    <div v-if="$slots.append || $scopedSlots.append" class="u-btn__append">
+      <slot name="append"></slot>
+    </div>
   </div>
 </template>
 
@@ -54,6 +62,14 @@ export default {
 
   &--flat {
     @apply bg-transparent border-none shadow-none;
+  }
+
+  &__prepend {
+    @apply mr-2;
+  }
+
+  &__append {
+    @apply ml-2;
   }
 }
 </style>
