@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 .u-app-bar {
-  @apply flex w-full h-14 items-center shadow-sm bg-white;
+  @apply flex w-full h-14 items-center shadow-sm bg-white sticky top-0 z-40;
 
   &__left {
     @apply inline-flex items-center h-12 p-1;

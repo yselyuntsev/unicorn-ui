@@ -61,8 +61,8 @@ export default {
     styles() {
       return {
         transform: `translateX(${this.transform}%)`,
-        maxWidth: this.width + "px",
-        minWidth: this.width + "px",
+        maxWidth: this.temporary ? "280px" : this.width + "px",
+        minWidth: this.temporary ? "280px" : this.width + "px",
       };
     },
   },
@@ -118,6 +118,12 @@ export default {
 
   &--temporary {
     @apply fixed h-screen z-50 left-0 top-0;
+  }
+
+  &--temporary &__prepend,
+  &--temporary &__append,
+  &--temporary &__body {
+    @apply px-4 py-8;
   }
 }
 </style>
