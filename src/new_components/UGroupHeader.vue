@@ -1,7 +1,9 @@
 <template>
   <div class="u-group-header">
     <div class="u-group-header__title">
-      <slot></slot>
+      <span class="truncate">
+        <slot></slot>
+      </span>
     </div>
 
     <div class="u-group-header__actions">
@@ -22,12 +24,12 @@ export default {
   @apply pt-8 pb-4;
 
   &__title {
-    @apply flex flex-1 h-11 items-center mr-4;
-    @apply text-xl font-bold;
+    @apply flex h-11 items-center mr-2;
+    @apply text-xl font-bold truncate;
   }
 
   &__actions {
-    @apply inline-flex items-center ml-4;
+    @apply inline-flex items-center ml-2;
   }
 }
 </style>

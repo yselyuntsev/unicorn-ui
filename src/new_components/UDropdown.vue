@@ -84,7 +84,7 @@ export default {
     open() {
       this.show = true;
       this.$nextTick(() => {
-        this.$root.$el.append(this.$refs.dropdown);
+        this.$parent.$el.append(this.$refs.dropdown);
       });
     },
 

@@ -1,32 +1,23 @@
-import Vue from "vue";
+export default {
+  name: "toggleable",
 
-export function toggleableFactory(prop = "value", event = "input") {
-  return Vue.extend({
-    name: "toggleable",
+  props: {
+    value: { required: false },
+  },
 
-    model: { prop, event },
+  data() {
+    return {
+      isActive: !!this.value,
+    };
+  },
 
-    props: {
-      [prop]: { required: false },
+  watch: {
+    value(value) {
+      this.isActive = !!value;
     },
 
-    data() {
-      return {
-        isActive: !!this[prop],
-      };
+    isActive(value) {
+      !!value !== this.value && this.$emit("input", value);
     },
-
-    watch: {
-      [prop](value) {
-        this.isActive = !!value;
-      },
-
-      isActive(value) {
-        !!value !== this[prop] && this.$emit(event, value);
-      },
-    },
-  });
-}
-
-const Toggleable = toggleableFactory();
-export default Toggleable;
+  },
+};

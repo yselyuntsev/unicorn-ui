@@ -1,7 +1,5 @@
 <template>
   <div :class="classes" :style="styles">
-    <div class="u-sidebar-splash"></div>
-
     <div
       v-if="$slots.prepend || $scopedSlots.prepend"
       class="u-sidebar__prepend"
@@ -20,14 +18,15 @@
 </template>
 
 <script>
-import Toggleable from "../mixins/toggleable";
+import toggleable from "../mixins/toggleable";
 import overlayable from "../mixins/overlayable";
 
 export default {
   name: "u-sidebar",
 
   inject: ["breakpoints"],
-  mixins: [Toggleable, overlayable],
+
+  mixins: [toggleable, overlayable],
 
   props: {
     width: {
@@ -42,8 +41,7 @@ export default {
     },
 
     transform() {
-      if (!this.temporary) return 0;
-      return this.isActive ? 0 : -100;
+      return !this.temporary || this.isActive ? 0 : -100;
     },
 
     showOverlay() {

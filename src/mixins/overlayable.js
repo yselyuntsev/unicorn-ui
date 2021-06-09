@@ -1,5 +1,5 @@
 import Vue from "vue";
-import UOverlay from "../new_components/UOverlay";
+import UOverlay from "../helpers/UOverlay";
 import { addOnceEventListener } from "../utils/addOnceEventListener";
 
 export default {
