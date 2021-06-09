@@ -1,0 +1,7 @@
+.u-app-main {
+  @apply flex-1 overflow-y-auto flex flex-col;
+
+  &__container {
+    @apply max-w-4xl w-full mx-auto px-4 flex flex-1 flex-col;
+  }
+}

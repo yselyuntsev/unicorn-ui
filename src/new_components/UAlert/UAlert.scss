@@ -1,0 +1,40 @@
+.u-alert {
+  @apply bg-gray-50 rounded-lg p-4 relative shadow-card;
+
+  &__icon {
+    @apply absolute left-4 top-4 inline-flex items-center justify-center;
+
+    &:before {
+      content: "";
+      @apply inline-block absolute w-8 h-8 rounded-full bg-white bg-opacity-10;
+    }
+  }
+
+  &__title {
+    @apply text-lg font-bold mb-2;
+  }
+
+  &--with-icon {
+    @apply pl-14;
+  }
+
+  &--dismissible {
+    @apply pr-14;
+  }
+
+  &--success {
+    @apply bg-green-400 text-white;
+  }
+
+  &--error {
+    @apply bg-red-400 text-white;
+  }
+
+  &--warning {
+    @apply bg-yellow-400 text-white;
+  }
+
+  &--info {
+    @apply bg-purple-400 text-white;
+  }
+}

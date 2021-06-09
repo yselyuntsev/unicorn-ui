@@ -1,0 +1,16 @@
+.u-bottom-nav-item {
+  @apply flex flex-1 justify-center items-center flex-col cursor-pointer;
+
+  &__icon {
+    @apply text-gray-500;
+  }
+
+  &__text {
+    @apply text-xs font-medium text-gray-400;
+  }
+
+  &--active &__icon,
+  &--active &__text {
+    @apply text-blue-500;
+  }
+}

@@ -347,26 +347,26 @@
 </template>
 
 <script>
-import UApp from "./new_components/UApp";
+import UApp from "./new_components/UApp/UApp";
 import USidebar from "./new_components/USidebar";
-import UMain from "./new_components/UMain";
+import UMain from "./new_components/UApp/UAppMain";
 
 import UCard from "./new_components/UCard";
 import UTextField from "./new_components/UTextField";
 import UBtn from "./new_components/UBtn";
 import USidebarItem from "./new_components/USidebarItem";
 import UDropdown from "./new_components/UDropdown";
-import UAlert from "./new_components/UAlert";
+import UAlert from "./new_components/UAlert/UAlert";
 import UGroupHeader from "./new_components/UGroupHeader";
 import URow from "./new_components/URow";
 import UCol from "./new_components/UCol";
 import UDivider from "./new_components/UDivider";
 import UDialog from "./new_components/UDialog";
-import UAvatar from "./new_components/UAvatar";
+import { UAvatar } from "./new_components/UAvatar";
 import USidebarGroup from "./new_components/USidebarGroup";
-import UBottomNavigation from "./new_components/UBottomNavigation";
-import UBottomNavigationItem from "./new_components/UBottomNavigationItem";
-import UAppBar from "./new_components/UAppBar";
+import UBottomNavigation from "./new_components/UBottomNav/UBottomNav";
+import UBottomNavigationItem from "./new_components/UBottomNav/UBottomNavItem";
+import UAppBar from "./new_components/UApp/UAppBar";
 import USelect from "./new_components/USelect";
 
 export default {

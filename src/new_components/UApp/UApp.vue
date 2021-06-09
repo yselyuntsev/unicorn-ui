@@ -1,10 +1,6 @@
-<template>
-  <div class="u-app">
-    <slot></slot>
-  </div>
-</template>
-
 <script>
+import "./UApp.scss";
+
 export default {
   name: "u-app",
 
@@ -37,7 +33,6 @@ export default {
   data() {
     return {
       appWidth: window.innerWidth,
-      showSidebar: true,
     };
   },
 
@@ -72,11 +67,9 @@ export default {
       this.appWidth = window.innerWidth;
     },
   },
+
+  render(h) {
+    return h("div", { staticClass: "u-app" }, this.$slots.default);
+  },
 };
 </script>
-
-<style lang="scss" scoped>
-.u-app {
-  @apply overflow-hidden h-screen flex;
-}
-</style>

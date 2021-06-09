@@ -1,10 +1,6 @@
-<template>
-  <div :class="classes" :style="styles">
-    <slot></slot>
-  </div>
-</template>
-
 <script>
+import "./UAvatar.scss";
+
 export default {
   name: "u-avatar",
 
@@ -36,23 +32,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.u-avatar {
-  @apply overflow-hidden rounded-full bg-gray-100;
-  @apply inline-flex items-center justify-center;
-  @apply font-medium text-lg text-gray-500;
-
-  img,
-  svg,
-  .u-image {
-    display: inline-flex;
-    border-radius: inherit;
-    width: inherit;
-    height: inherit;
-  }
-
-  &--squared {
-    @apply rounded-lg;
-  }
-}
-</style>
+<template>
+  <div :class="classes" :style="styles">
+    <slot></slot>
+  </div>
+</template>

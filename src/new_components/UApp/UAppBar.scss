@@ -1,0 +1,15 @@
+.u-app-bar {
+  @apply flex w-full h-14 mb-4 items-center shadow-sm bg-white sticky top-0 z-40;
+
+  &__left {
+    @apply inline-flex items-center h-12 p-1;
+  }
+
+  &__body {
+    @apply flex flex-1 items-center py-1 px-4 h-12;
+  }
+
+  &__right {
+    @apply inline-flex items-center h-12 p-1 flex-row-reverse;
+  }
+}
