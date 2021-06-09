@@ -1,29 +1,3 @@
-<template>
-  <div class="u-dialog">
-    <slot name="activator" :on="genListeners()"></slot>
-
-    <div ref="dialog">
-      <transition c @enter="openContent" appear name="splash">
-        <div
-          v-if="show"
-          @click.self.prevent="closeContent"
-          class="u-dialog__body"
-        >
-          <transition @leave="close" name="dialog">
-            <div v-if="showContent" :style="styles" class="u-dialog__content">
-              <u-dismiss-button
-                @click="closeContent"
-                class="u-dialog__dismiss"
-              />
-              <slot></slot>
-            </div>
-          </transition>
-        </div>
-      </transition>
-    </div>
-  </div>
-</template>
-
 <script>
 import UDismissButton from "./UDismissButton";
 
@@ -57,11 +31,7 @@ export default {
   watch: {
     value: {
       handler(value) {
-        if (value) {
-          this.open();
-        } else {
-          this.closeContent();
-        }
+        value ? this.open() : this.closeContent();
       },
     },
   },
@@ -93,6 +63,32 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div class="u-dialog">
+    <slot name="activator" :on="genListeners()"></slot>
+
+    <div ref="dialog">
+      <transition c @enter="openContent" appear name="splash">
+        <div
+          v-if="show"
+          @click.self.prevent="closeContent"
+          class="u-dialog__body"
+        >
+          <transition @leave="close" name="dialog">
+            <div v-if="showContent" :style="styles" class="u-dialog__content">
+              <u-dismiss-button
+                @click="closeContent"
+                class="u-dialog__dismiss"
+              />
+              <slot></slot>
+            </div>
+          </transition>
+        </div>
+      </transition>
+    </div>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .u-dialog {

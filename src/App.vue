@@ -90,7 +90,7 @@
         <!--        </u-dropdown>-->
       </div>
 
-      <u-alert variant="error" dismissible class="my-4">
+      <u-alert variant="success" dismissible class="my-4">
         <u-row>
           <u-col cols="12">
             <u-select
