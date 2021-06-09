@@ -22,19 +22,19 @@ p:not(:first-of-type) {
 }
 
 h1, .u-heading-h1  {
-  @apply font-bold;
+  @apply font-medium;
   @apply text-4xl;
   @apply md:text-5xl;
 }
 
 h2, .u-heading-h2  {
-  @apply font-bold;
+  @apply font-medium;
   @apply text-3xl;
   @apply md:text-4xl;
 }
 
 h3, .u-heading-h3  {
-  @apply font-bold;
+  @apply font-medium;
   @apply text-2xl;
   @apply md:text-3xl;
 }

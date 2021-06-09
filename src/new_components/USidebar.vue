@@ -1,5 +1,7 @@
 <template>
-  <div class="u-sidebar">
+  <div :class="classes" :style="styles">
+    <div class="u-sidebar-splash"></div>
+
     <div
       v-if="$slots.prepend || $scopedSlots.prepend"
       class="u-sidebar__prepend"
@@ -18,16 +20,72 @@
 </template>
 
 <script>
+import Toggleable from "../mixins/toggleable";
+import overlayable from "../mixins/overlayable";
+
 export default {
   name: "u-sidebar",
+
+  inject: ["breakpoints"],
+  mixins: [Toggleable, overlayable],
+
+  props: {
+    width: {
+      type: Number,
+      default: 320,
+    },
+  },
+
+  computed: {
+    temporary() {
+      return !this.breakpoints.lg;
+    },
+
+    transform() {
+      if (!this.temporary) return 0;
+      return this.isActive ? 0 : -100;
+    },
+
+    showOverlay() {
+      return this.isActive && this.temporary;
+    },
+
+    classes() {
+      return {
+        "u-sidebar": true,
+        "u-sidebar--open": this.isActive,
+        "u-sidebar--temporary": this.temporary,
+      };
+    },
+
+    styles() {
+      return {
+        transform: `translateX(${this.transform}%)`,
+        maxWidth: this.width + "px",
+        minWidth: this.width + "px",
+      };
+    },
+  },
+
+  watch: {
+    showOverlay: {
+      handler(value) {
+        this.$nextTick(() => {
+          value ? this.generateOverlay() : this.removeOverlay();
+        });
+      },
+      immediate: true,
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .u-sidebar {
-  @apply w-80 flex flex-col h-screen;
+  @apply flex flex-col h-screen;
   @apply border-r border-gray-100;
   @apply bg-white shadow-sm overflow-y-scroll;
+  @apply transition-all;
 
   &::-webkit-scrollbar {
     @apply w-3;
@@ -56,6 +114,10 @@ export default {
 
   &__body {
     @apply flex-1 flex flex-col;
+  }
+
+  &--temporary {
+    @apply fixed h-screen z-50 left-0 top-0;
   }
 }
 </style>

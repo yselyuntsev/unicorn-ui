@@ -1,6 +1,6 @@
 <template>
   <u-app>
-    <u-sidebar>
+    <u-sidebar v-model="show">
       <template #prepend>
         <div class="text-4xl flex items-baseline">
           unicorn
@@ -203,7 +203,7 @@
                 /></svg
             ></template>
           </u-text-field>
-          <u-btn dense>Показать все</u-btn>
+          <u-btn @click="show = !show" dense>Показать все</u-btn>
         </template>
       </u-group-header>
 
@@ -217,7 +217,7 @@
                 </template>
 
                 <u-card>
-                  <u-dialog v-model="show" :width="640">
+                  <u-dialog :width="640">
                     <template #activator="{ on: gg }">
                       <u-btn v-on="gg" class="mt-4">Trigger modal</u-btn>
                     </template>
@@ -243,7 +243,7 @@
                 </u-card>
               </u-dropdown>
 
-              <u-dialog v-model="show" :width="640">
+              <u-dialog :width="640">
                 <template #activator="{ on }">
                   <u-btn v-on="on" class="mt-4">Trigger modal</u-btn>
                 </template>

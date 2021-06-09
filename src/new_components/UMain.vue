@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 .u-main {
-  @apply flex-1  overflow-y-auto;
+  @apply flex-1  overflow-y-auto mb-20;
 
   &__container {
     @apply max-w-4xl mx-auto p-4;
