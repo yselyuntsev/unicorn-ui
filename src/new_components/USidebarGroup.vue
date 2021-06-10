@@ -28,7 +28,11 @@ export default {
 
   computed: {
     expanded() {
-      return this.manual ? this.active : this.show;
+      return !this.$slots.default.length
+        ? false
+        : this.manual
+        ? this.active
+        : this.show;
     },
 
     styles() {
