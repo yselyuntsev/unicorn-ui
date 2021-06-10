@@ -19,7 +19,7 @@ export { default as UShowAt } from "./UShowAt";
 export { USidebar, USidebarSubtitle, USidebarItem } from "./USidebar";
 export { default as USimpleTable } from "./USimpleTable";
 export { default as USpacer } from "./USpacer";
-export { default as USwitch } from "./USwitch";
+export { default as USwitch } from "../new_components/USwitch";
 export { UTab, UTabs, UTabsItem, UTabsItems } from "./UTabs";
 export { default as UTextField } from "./UTextField";
 export { default as UApp } from "./UApp";

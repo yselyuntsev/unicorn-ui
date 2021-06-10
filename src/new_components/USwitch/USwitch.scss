@@ -1,0 +1,34 @@
+.u-switch {
+  @apply cursor-pointer inline-flex self-start items-center;
+
+  &__checkbox {
+    @apply absolute invisible;
+  }
+
+  &__switch {
+    @apply rounded-full inline-flex items-center w-12 h-6;
+    @apply relative align-middle transition-all;
+    @apply bg-gray-100;
+
+    &:before {
+      content: "";
+      @apply inline-block absolute left-0.5;
+      @apply w-5 h-5 bg-white rounded-full;
+      @apply transition-all shadow;
+    }
+  }
+
+  &__label {
+    @apply ml-2 relative text-sm;
+  }
+
+  &.checked {
+    .u-switch__switch {
+      @apply bg-blue-500;
+
+      &:before {
+        @apply transform-gpu translate-x-6 bg-white;
+      }
+    }
+  }
+}

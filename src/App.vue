@@ -1,6 +1,6 @@
 <template>
   <u-app>
-    <u-sidebar v-model="show">
+    <u-sidebar>
       <template #prepend>
         <div class="text-4xl flex items-baseline">
           unicorn
@@ -73,6 +73,8 @@
 
       <div class="flex justify-between">
         <h1>fdfjdsk</h1>
+
+        <u-switch v-model="show" />
 
         <!--        <u-dropdown>-->
         <!--          <template #activator="{ on }">-->
@@ -369,10 +371,12 @@ import {
   UGroupHeader,
   USelect,
 } from "./new_components";
+import USwitch from "./new_components/USwitch/USwitch";
 
 export default {
   name: "App",
   components: {
+    USwitch,
     USelect,
     UAppBar,
     UBottomNavItem,
