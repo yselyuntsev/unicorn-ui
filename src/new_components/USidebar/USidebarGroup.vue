@@ -1,16 +1,6 @@
-<template>
-  <div ref="group" :class="classes">
-    <div class="u-sidebar-group__activator">
-      <slot name="activator" :on="genListeners()"></slot>
-    </div>
-
-    <div :style="styles" class="u-sidebar-group__items">
-      <slot></slot>
-    </div>
-  </div>
-</template>
-
 <script>
+import "./USidebarGroup.scss";
+
 export default {
   name: "u-sidebar-group",
 
@@ -75,29 +65,14 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.u-sidebar-group {
-  @apply my-1 rounded-lg overflow-hidden;
-  @apply transition-all;
+<template>
+  <div ref="group" :class="classes">
+    <div class="u-sidebar-group__activator">
+      <slot name="activator" :on="genListeners()"></slot>
+    </div>
 
-  &__activator {
-    @apply -mt-1;
-  }
-
-  &__items {
-    @apply -mb-1 pl-8;
-    @apply transition-all;
-  }
-
-  &--show {
-    &:not(&:first-child) {
-      @apply pt-2;
-    }
-    //@apply bg-gray-50;
-  }
-
-  &--show &__items {
-    @apply pb-2;
-  }
-}
-</style>
+    <div :style="styles" class="u-sidebar-group__items">
+      <slot></slot>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,24 @@
+.u-sidebar-group {
+  @apply my-1 rounded-lg overflow-hidden;
+  @apply transition-all;
+
+  &__activator {
+    @apply -mt-1;
+  }
+
+  &__items {
+    @apply -mb-1 pl-8;
+    @apply transition-all;
+  }
+
+  &--show {
+    &:not(&:first-child) {
+      @apply pt-2;
+    }
+    //@apply bg-gray-50;
+  }
+
+  &--show &__items {
+    @apply pb-2;
+  }
+}

@@ -1,0 +1,18 @@
+.u-dismiss-button {
+  @apply h-12 w-12 inline-flex items-center justify-center;
+  @apply absolute top-0 right-0 cursor-pointer;
+
+  &:hover &__icon {
+    @apply transform-gpu scale-110;
+  }
+
+  &:active &__icon {
+    @apply transform-gpu scale-100;
+  }
+
+  &__icon {
+    @apply w-5 h-5 inline-flex items-center justify-center;
+    @apply bg-gray-800 bg-opacity-20 text-white rounded-full;
+    @apply transition-all;
+  }
+}

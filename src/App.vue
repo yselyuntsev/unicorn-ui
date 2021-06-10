@@ -66,7 +66,7 @@
       <u-sidebar-item>Sidebar Item 2</u-sidebar-item>
     </u-sidebar>
 
-    <u-main>
+    <u-app-main>
       <template #prepend>
         <u-app-bar> dsf </u-app-bar>
       </template>
@@ -280,8 +280,8 @@
       </u-card>
 
       <template #append>
-        <u-bottom-navigation>
-          <u-bottom-navigation-item>
+        <u-bottom-nav>
+          <u-bottom-nav-item>
             <template #icon>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -299,9 +299,9 @@
               </svg>
             </template>
             Главная
-          </u-bottom-navigation-item>
+          </u-bottom-nav-item>
 
-          <u-bottom-navigation-item>
+          <u-bottom-nav-item>
             <template #icon>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -319,9 +319,9 @@
               </svg>
             </template>
             Главная
-          </u-bottom-navigation-item>
+          </u-bottom-nav-item>
 
-          <u-bottom-navigation-item active>
+          <u-bottom-nav-item active>
             <template #icon>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -339,43 +339,44 @@
               </svg>
             </template>
             Главная
-          </u-bottom-navigation-item>
-        </u-bottom-navigation>
+          </u-bottom-nav-item>
+        </u-bottom-nav>
       </template>
-    </u-main>
+    </u-app-main>
   </u-app>
 </template>
 
 <script>
-import UApp from "./new_components/UApp/UApp";
-import USidebar from "./new_components/USidebar";
-import UMain from "./new_components/UApp/UAppMain";
-
-import UCard from "./new_components/UCard";
-import UTextField from "./new_components/UTextField";
-import UBtn from "./new_components/UBtn";
-import USidebarItem from "./new_components/USidebarItem";
-import UDropdown from "./new_components/UDropdown";
-import UAlert from "./new_components/UAlert/UAlert";
-import UGroupHeader from "./new_components/UGroupHeader";
-import URow from "./new_components/URow";
-import UCol from "./new_components/UCol";
-import UDivider from "./new_components/UDivider";
-import UDialog from "./new_components/UDialog";
-import { UAvatar } from "./new_components/UAvatar";
-import USidebarGroup from "./new_components/USidebarGroup";
-import UBottomNavigation from "./new_components/UBottomNav/UBottomNav";
-import UBottomNavigationItem from "./new_components/UBottomNav/UBottomNavItem";
-import UAppBar from "./new_components/UApp/UAppBar";
-import USelect from "./new_components/USelect";
+import {
+  UApp,
+  UAlert,
+  UBottomNav,
+  UAppBar,
+  UAppMain,
+  UBottomNavItem,
+  USidebarItem,
+  USidebar,
+  UTextField,
+  UBtn,
+  UAvatar,
+  UCard,
+  UCol,
+  UDialog,
+  UDivider,
+  URow,
+  UDropdown,
+  USidebarGroup,
+  UGroupHeader,
+  USelect,
+} from "./new_components";
 
 export default {
   name: "App",
   components: {
     USelect,
     UAppBar,
-    UBottomNavigationItem,
-    UBottomNavigation,
+    UBottomNavItem,
+    UBottomNav,
     USidebarGroup,
     UAvatar,
     UDialog,
@@ -389,7 +390,7 @@ export default {
     UBtn,
     UTextField,
     UCard,
-    UMain,
+    UAppMain,
     USidebar,
     UApp,
   },

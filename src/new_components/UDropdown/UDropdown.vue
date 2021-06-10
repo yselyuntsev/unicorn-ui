@@ -1,23 +1,7 @@
-<template>
-  <div ref="container" class="u-dropdown">
-    <slot name="activator" :on="genListeners()"></slot>
-
-    <transition name="slide-t">
-      <div
-        ref="dropdown"
-        v-if="show"
-        v-click-outside="close"
-        :style="styles"
-        class="u-dropdown__body"
-      >
-        <slot></slot>
-      </div>
-    </transition>
-  </div>
-</template>
-
 <script>
-import ClickOutside from "../directives/click-outside";
+import "./UDropdown.scss";
+
+import ClickOutside from "../../directives/click-outside";
 
 export default {
   name: "u-dropdown",
@@ -100,20 +84,20 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.u-dropdown {
-  &__body {
-    @apply absolute z-10;
-  }
-}
+<template>
+  <div ref="container" class="u-dropdown">
+    <slot name="activator" :on="genListeners()"></slot>
 
-.slide-t-enter-active,
-.slide-t-leave-active {
-  @apply transition-all;
-}
-.slide-t-enter,
-.slide-t-leave-to {
-  @apply opacity-0;
-  @apply transform-gpu -translate-y-2;
-}
-</style>
+    <transition name="slide-t">
+      <div
+        ref="dropdown"
+        v-if="show"
+        v-click-outside="close"
+        :style="styles"
+        class="u-dropdown__body"
+      >
+        <slot></slot>
+      </div>
+    </transition>
+  </div>
+</template>

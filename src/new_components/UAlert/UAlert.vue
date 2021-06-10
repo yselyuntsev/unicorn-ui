@@ -1,7 +1,7 @@
 <script>
 import "./UAlert.scss";
 
-import UDismissButton from "../UDismissButton";
+import UDismissButton from "../UDismissButton/UDismissButton";
 
 export default {
   name: "u-alert",
