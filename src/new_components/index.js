@@ -2,10 +2,12 @@
 export { UAlert } from "./UAlert";
 export { UApp, UAppBar, UAppMain } from "./UApp";
 export { UAvatar } from "./UAvatar";
+export { UBadge } from "./UBadge";
 export { UBottomNav, UBottomNavItem } from "./UBottomNav";
 export { UBtn } from "./UBtn";
 export { UCard } from "./UCard/";
 export { UCol } from "./UCol";
+export { UCollapse } from "./UCollapse";
 export { UDialog } from "./UDialog";
 export { UDismissButton } from "./UDismissButton";
 export { UDivider } from "./UDivider";

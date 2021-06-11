@@ -1,0 +1,14 @@
+.u-badge {
+  min-width: 0.5rem;
+  min-height: 0.5rem;
+  max-height: 1rem;
+
+  @apply p-1 inline-flex relative items-center justify-center;
+  @apply text-xs font-medium text-white;
+  @apply rounded-full bg-red-400;
+
+  &__ping {
+    @apply animate-ping absolute inline-flex h-full w-full;
+    @apply rounded-full bg-red-400 opacity-75;
+  }
+}

@@ -1,8 +1,8 @@
 export { UAlertTitle, UAlert } from "./UAlert";
 export { default as UButton } from "./UButton";
 export { UCard, UCardActions, UCardBody, UCardTitle } from "./UCard";
-export { default as UCheckbox } from "./UCheckbox";
-export { default as UCollapse } from "./UCollapse";
+export { default as UCheckbox } from "../new_components/UCheckbox";
+export { default as UCollapse } from "../new_components/UCollapse";
 export { default as UDialog } from "./UDialog";
 export { default as UDivider } from "./UDivider";
 export { default as UFragment } from "./UFragment";

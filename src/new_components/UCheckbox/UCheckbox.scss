@@ -1,0 +1,39 @@
+.u-checkbox {
+  @apply inline-flex items-center relative cursor-pointer;
+  @apply text-gray-700 transition-all text-base leading-none;
+  @apply mb-4;
+
+  &__input {
+    @apply absolute opacity-0 h-0 w-0;
+  }
+
+  &:active &__checkmark {
+    @apply transform-gpu scale-90;
+  }
+
+  &__checkmark {
+    min-width: 1.25rem;
+    max-width: 1.25rem;
+    min-height: 1.25rem;
+    max-height: 1.25rem;
+    @apply border-2 mr-4 rounded-md;
+    @apply flex items-center justify-center;
+    @apply transition-all relative text-white;
+  }
+
+  &__input:checked ~ &__checkmark {
+    @apply border-transparent bg-blue-500;
+  }
+
+  & input:checked ~ .u-checkbox__checkmark:after {
+    @apply visible w-2 h-4;
+  }
+
+  &.bordered {
+    @apply p-2 rounded-md bg-white border border-gray-100;
+  }
+
+  &.disabled {
+    @apply opacity-80 cursor-not-allowed;
+  }
+}

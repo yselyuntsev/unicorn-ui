@@ -1,15 +1,21 @@
 .u-app-bar {
-  @apply flex w-full h-16 mb-4 items-center shadow-sm bg-white sticky top-0 z-40;
+  @apply flex w-full mb-4 items-center shadow-sm bg-white sticky top-0 z-40;
+
+  min-height: 3.5rem;
+
+  @media screen and (min-width: 1024px) {
+    min-height: 4rem;
+  }
 
   &__left {
-    @apply inline-flex items-center h-14 p-1;
+    @apply inline-flex items-center h-full p-1;
   }
 
   &__body {
-    @apply flex flex-1 items-center py-1 px-4 h-14;
+    @apply flex flex-1 items-center py-1 px-4 h-full;
   }
 
   &__right {
-    @apply inline-flex items-center h-14 p-1 flex-row-reverse;
+    @apply inline-flex items-center h-full p-1 flex-row-reverse;
   }
 }

@@ -34,7 +34,7 @@ export default {
 
   &__track {
     @apply absolute left-0 top-0 bottom-0 rounded-lg;
-    @apply bg-purple-500 transition-all;
+    @apply bg-blue-500 transition-all;
   }
 }
 </style>

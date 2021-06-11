@@ -117,6 +117,8 @@
           </u-col>
         </u-row>
 
+        <u-badge animated> </u-badge>
+
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eveniet
           ipsa molestiae nemo veritatis. Adipisci, aliquam dolor doloribus eum
@@ -124,6 +126,62 @@
           voluptate voluptatibus.
         </p>
       </u-alert>
+
+      <u-collapse>
+        <template #header>sdfsd</template>
+        sdkfjsdlkfjk
+      </u-collapse>
+
+      <u-group-header>
+        New group
+
+        <template #actions>
+          <u-text-field dense disable-hint placeholder="Search..." class="mr-2">
+            <template #prepend>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                  clip-rule="evenodd"
+                /></svg
+            ></template>
+          </u-text-field>
+          <u-btn @click="show = !show" dense>Показать все</u-btn>
+        </template>
+      </u-group-header>
+
+      <u-checkbox label="Тут какой-то чекбокс" />
+
+      <u-tabs>
+        <u-tab>sdfsdfdsfdfs</u-tab>
+        <u-tab>rtetertre</u-tab>
+        <u-tab>bvnbnvnvbnv</u-tab>
+      </u-tabs>
+
+      <u-tabs-items>
+        <u-tabs-item>sdfsk</u-tabs-item>
+      </u-tabs-items>
+
+      <u-list>
+        <u-list-item>
+          <u-list-item-content> sdfs </u-list-item-content>
+        </u-list-item>
+        <u-list-item>
+          <u-list-item-content> sdfs </u-list-item-content>
+        </u-list-item>
+        <u-list-item>
+          <u-list-item-content> sdfs </u-list-item-content>
+        </u-list-item>
+      </u-list>
+
+      <u-card class="my-4">
+        <u-progressbar :value="30" />
+      </u-card>
 
       <u-simple-table>
         <thead>
@@ -426,10 +484,32 @@ import {
 } from "./new_components";
 import USwitch from "./new_components/USwitch/USwitch";
 import USimpleTable from "./new_components/USimpleTable/USimpleTable";
+import UBadge from "./new_components/UBadge/UBadge";
+import UCollapse from "./new_components/UCollapse/UCollapse";
+import UCheckbox from "./new_components/UCheckbox/UCheckbox";
+import UList from "./components/UList/UList";
+import UListItem from "./components/UList/UListItem";
+import UListItemContent from "./components/UList/UListItemContent";
+import UProgressbar from "./components/UProgressbar/UProgressbar";
+import UTabs from "./components/UTabs/UTabs";
+import UTab from "./components/UTabs/UTab";
+import UTabsItems from "./components/UTabs/UTabsItems";
+import UTabsItem from "./components/UTabs/UTabsItem";
 
 export default {
   name: "App",
   components: {
+    UTabsItem,
+    UTabsItems,
+    UTab,
+    UTabs,
+    UProgressbar,
+    UListItemContent,
+    UListItem,
+    UList,
+    UCheckbox,
+    UCollapse,
+    UBadge,
     USimpleTable,
     USwitch,
     USelect,

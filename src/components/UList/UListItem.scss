@@ -1,0 +1,24 @@
+.u-list-item {
+  @apply flex w-full relative items-center px-4 rounded-lg;
+  @apply transition-all text-base origin-left text-gray-700;
+
+  min-height: 2.75rem;
+
+  &:not(&:first-child) {
+    @apply mt-1;
+  }
+
+  &:hover {
+    @apply bg-gray-50;
+  }
+
+  &.clickable {
+    &:hover {
+      @apply bg-gray-50 cursor-pointer;
+    }
+
+    &:active {
+      @apply bg-gray-100 shadow-inner;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.u-collapse {
+  @apply border-gray-100;
+  @apply transition-all border-t border-b border-transparent;
+
+  &__header {
+    @apply cursor-pointer;
+  }
+
+  &__body {
+    @apply pt-6;
+  }
+
+  &.expanded {
+    @apply py-4 border-gray-100;
+  }
+}
