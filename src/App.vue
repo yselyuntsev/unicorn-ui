@@ -125,6 +125,54 @@
         </p>
       </u-alert>
 
+      <u-simple-table>
+        <thead>
+          <th>dskjflk</th>
+          <th>kdlsfjlksd</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>fsdljflksds</td>
+            <td>fsdljflksds</td>
+          </tr>
+
+          <tr>
+            <td>2389472398</td>
+            <td>3243728</td>
+          </tr>
+
+          <tr>
+            <td>fsdljflksds</td>
+            <td>fsdljflksds</td>
+          </tr>
+
+          <tr>
+            <td>2389472398</td>
+            <td>3243728</td>
+          </tr>
+
+          <tr>
+            <td>fsdljflksds</td>
+            <td>fsdljflksds</td>
+          </tr>
+
+          <tr>
+            <td>2389472398</td>
+            <td>3243728</td>
+          </tr>
+
+          <tr>
+            <td>fsdljflksds</td>
+            <td>fsdljflksds</td>
+          </tr>
+
+          <tr>
+            <td>2389472398</td>
+            <td>3243728</td>
+          </tr>
+        </tbody>
+      </u-simple-table>
+
       <u-group-header>
         Group header
 
@@ -372,10 +420,12 @@ import {
   USelect,
 } from "./new_components";
 import USwitch from "./new_components/USwitch/USwitch";
+import USimpleTable from "./new_components/USimpleTable/USimpleTable";
 
 export default {
   name: "App",
   components: {
+    USimpleTable,
     USwitch,
     USelect,
     UAppBar,

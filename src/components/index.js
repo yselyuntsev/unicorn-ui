@@ -17,7 +17,7 @@ export { default as UMenu } from "./UMenu";
 export { default as UProgressbar } from "./UProgressbar";
 export { default as UShowAt } from "./UShowAt";
 export { USidebar, USidebarSubtitle, USidebarItem } from "./USidebar";
-export { default as USimpleTable } from "./USimpleTable";
+export { default as USimpleTable } from "../new_components/USimpleTable";
 export { default as USpacer } from "./USpacer";
 export { default as USwitch } from "../new_components/USwitch";
 export { UTab, UTabs, UTabsItem, UTabsItems } from "./UTabs";

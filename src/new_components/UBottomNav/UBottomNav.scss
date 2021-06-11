@@ -2,6 +2,7 @@
   @apply flex items-start;
   @apply h-20 bg-white  border-t border-gray-100;
   @apply sticky bottom-0 mt-4;
+  min-height: 5rem;
 
   &__inner {
     @apply h-14 flex w-full;

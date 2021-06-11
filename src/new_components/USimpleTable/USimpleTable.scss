@@ -1,0 +1,24 @@
+.u-simple-table {
+  @apply table w-full text-base;
+
+  thead {
+    @apply border-b border-gray-100;
+  }
+
+  th {
+    @apply py-2 px-4 text-left font-medium text-xs uppercase;
+    @apply text-gray-500;
+  }
+
+  tr {
+    @apply transition-all;
+
+    &:nth-child(2n) {
+      @apply bg-gray-50;
+    }
+  }
+
+  td {
+    @apply px-4 py-4;
+  }
+}
