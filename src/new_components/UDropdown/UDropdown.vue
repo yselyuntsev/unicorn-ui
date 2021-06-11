@@ -35,8 +35,8 @@ export default {
         minWidth: this.width + "px",
         // right: this.right && "0",
         // top: this.top + "px",
-        top: this.pos.top + "px",
-        left: this.pos.left + "px",
+        // top: this.pos.top + "px",
+        // left: this.pos.left + "px",
       };
     },
   },
@@ -67,9 +67,9 @@ export default {
 
     open() {
       this.show = true;
-      this.$nextTick(() => {
-        this.$parent.$el.append(this.$refs.dropdown);
-      });
+      // this.$nextTick(() => {
+      //   this.$parent.$el.append(this.$refs.dropdown);
+      // });
     },
 
     close() {

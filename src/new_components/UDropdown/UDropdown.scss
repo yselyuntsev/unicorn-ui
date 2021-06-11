@@ -1,6 +1,8 @@
 .u-dropdown {
+  @apply relative;
+
   &__body {
-    @apply absolute z-10;
+    @apply absolute z-10 left-0 top-0;
   }
 }
 
