@@ -171,6 +171,11 @@
             <td>3243728</td>
           </tr>
         </tbody>
+
+        <tfoot>
+          <th>fdfs</th>
+          <th>fdfs</th>
+        </tfoot>
       </u-simple-table>
 
       <u-group-header>

@@ -5,6 +5,10 @@
     @apply border-b border-gray-100;
   }
 
+  tfoot {
+    @apply border-t border-gray-100;
+  }
+
   th {
     @apply py-2 px-4 text-left font-medium text-xs uppercase;
     @apply text-gray-500;
