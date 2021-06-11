@@ -17,7 +17,7 @@ export default {
 <style lang="scss" scoped>
 .u-tab {
   @apply inline-flex h-11 text-base relative items-center px-4;
-  @apply rounded-lg font-medium;
+  @apply rounded-lg font-medium text-gray-700;
   @apply transition-all mr-2;
 
   &:last-child {
