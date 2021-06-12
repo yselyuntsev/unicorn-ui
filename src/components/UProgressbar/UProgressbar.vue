@@ -1,12 +1,8 @@
-<template>
-  <div class="unicorn-progressbar">
-    <div class="unicorn-progressbar__track" :style="{ width }"></div>
-  </div>
-</template>
-
 <script>
+import "./UProgressbar.scss";
+
 export default {
-  name: "UProgressbar",
+  name: "u-progressbar",
 
   props: {
     value: { type: Number },
@@ -27,14 +23,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.unicorn-progressbar {
-  @apply flex w-full relative h-1 bg-gray-100;
-  @apply rounded-lg;
-
-  &__track {
-    @apply absolute left-0 top-0 bottom-0 rounded-lg;
-    @apply bg-blue-500 transition-all;
-  }
-}
-</style>
+<template>
+  <div class="u-progressbar">
+    <div class="u-progressbar__track" :style="{ width }"></div>
+  </div>
+</template>

@@ -1,10 +1,6 @@
-<template>
-  <div class="u-tab" :class="{ active }" v-bind="$attrs" v-on="$listeners">
-    <slot></slot>
-  </div>
-</template>
-
 <script>
+import "./UTab.scss";
+
 export default {
   name: "u-tab",
 
@@ -14,22 +10,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.u-tab {
-  @apply inline-flex h-11 text-base relative items-center px-4;
-  @apply rounded-lg font-medium text-gray-700;
-  @apply transition-all mr-2;
-
-  &:last-child {
-    @apply mr-0;
-  }
-
-  &:hover {
-    @apply text-black cursor-pointer;
-  }
-
-  &.active {
-    @apply bg-gray-50 text-blue-500;
-  }
-}
-</style>
+<template>
+  <div v-on="$listeners" v-bind="$attrs" :class="{ active }" class="u-tab">
+    <slot></slot>
+  </div>
+</template>

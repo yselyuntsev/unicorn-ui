@@ -1,2 +1,2 @@
-import UProgressbar from "@/components/UProgressbar/UProgressbar";
-export default UProgressbar;
+import UProgressbar from "./UProgressbar.vue";
+export { UProgressbar };

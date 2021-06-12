@@ -1,0 +1,9 @@
+.u-progressbar {
+  @apply flex w-full relative h-1 bg-gray-100;
+  @apply rounded-lg;
+
+  &__track {
+    @apply absolute left-0 top-0 bottom-0 rounded-lg;
+    @apply bg-blue-500 transition-all;
+  }
+}

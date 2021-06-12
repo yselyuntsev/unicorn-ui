@@ -1,8 +1,10 @@
 <script>
-import UTab from "@/components/UTabs/UTab";
+import "./UTabs.scss";
+
+import UTab from "./UTab.vue";
 
 export default {
-  name: "UTabs",
+  name: "u-tab",
 
   components: { UTab },
 
@@ -59,13 +61,7 @@ export default {
       )
     );
 
-    return h("div", { attrs: { class: "unicorn-tabs" } }, [children]);
+    return h("div", { attrs: { class: "u-tabs" } }, [children]);
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.unicorn-tabs {
-  @apply flex w-full;
-}
-</style>

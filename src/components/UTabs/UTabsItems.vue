@@ -1,17 +1,17 @@
 <script>
-import UTabsItem from "@/components/UTabs/UTabsItem";
+import "./UTabsItems.scss";
+
+import UTabsItem from "./UTabsItem.vue";
 
 export default {
-  name: "UTabsItems",
+  name: "u-tabs-items",
 
   model: {
     prop: "selectedTab",
     event: "update",
   },
 
-  components: {
-    UTabsItem,
-  },
+  components: { UTabsItem },
 
   props: {
     selectedTab: { type: Number },
@@ -26,19 +26,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.unicorn-tabs-items {
-  @apply w-full mt-4;
-}
-
-.tabs-enter-active,
-.tabs-leave-active {
-  @apply transition-all;
-}
-.tabs-enter,
-.tabs-leave-to {
-  @apply opacity-0;
-  @apply transform-gpu -translate-y-2;
-}
-</style>

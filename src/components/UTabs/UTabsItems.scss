@@ -1,0 +1,13 @@
+.u-tabs-items {
+  @apply w-full mt-4;
+}
+
+.tabs-enter-active,
+.tabs-leave-active {
+  @apply transition-all;
+}
+.tabs-enter,
+.tabs-leave-to {
+  @apply opacity-0;
+  @apply transform-gpu -translate-y-2;
+}

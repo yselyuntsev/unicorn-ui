@@ -1,0 +1,17 @@
+.u-tab {
+  @apply inline-flex h-11 text-base relative items-center px-4;
+  @apply rounded-lg font-medium text-gray-700;
+  @apply transition-all mr-2;
+
+  &:last-child {
+    @apply mr-0;
+  }
+
+  &:hover {
+    @apply text-black cursor-pointer;
+  }
+
+  &.active {
+    @apply bg-gray-50 text-blue-500;
+  }
+}
