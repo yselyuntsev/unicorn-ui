@@ -17,6 +17,7 @@ export default {
     disabled: Boolean,
     muted: Boolean,
     text: Boolean,
+    block: Boolean,
     icon: Boolean,
     rippleEffect: {
       type: Boolean,
@@ -32,6 +33,7 @@ export default {
         "is-dense": this.dense,
         "is-muted": this.muted,
         "is-text": this.text,
+        "is-block": this.block,
         "is-disabled": this.disabled,
         "is-icon": this.icon,
       };

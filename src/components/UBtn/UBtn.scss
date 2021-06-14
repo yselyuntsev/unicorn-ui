@@ -104,6 +104,10 @@
     }
   }
 
+  &.is-block {
+    @apply min-w-full max-w-full justify-center text-center;
+  }
+
   &.is-icon {
     min-height: 2.5rem;
     max-height: 2.5rem;

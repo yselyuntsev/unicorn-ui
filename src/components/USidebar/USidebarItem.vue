@@ -1,9 +1,11 @@
 <script>
 import "./USidebarItem.scss";
 
+import { URippleEffect } from "../URippleEffect";
+
 export default {
   name: "u-sidebar-item",
-
+  components: { URippleEffect },
   props: {
     active: Boolean,
   },
@@ -36,6 +38,8 @@ export default {
       </span>
 
       <slot></slot>
+
+      <u-ripple-effect />
     </div>
   </div>
 </template>

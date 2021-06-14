@@ -58,7 +58,7 @@ export default {
 </script>
 
 <template>
-  <label :class="classes">
+  <div :class="classes">
     <p v-if="label" class="u-text-field__label">{{ label }}</p>
     <input
       @input="handleInput"
@@ -85,5 +85,5 @@ export default {
     >
       <slot name="append"></slot>
     </span>
-  </label>
+  </div>
 </template>
