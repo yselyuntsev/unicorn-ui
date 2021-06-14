@@ -8,7 +8,7 @@
   &__input {
     @apply border border-gray-100 text-base font-medium;
     @apply w-full px-4 h-11 rounded-lg outline-none;
-    @apply transition-all leading-none pb-0.5;
+    @apply transition-all leading-none pb-0.5 shadow-sm;
 
     &::placeholder {
       @apply text-gray-400;

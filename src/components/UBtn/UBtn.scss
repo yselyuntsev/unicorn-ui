@@ -1,7 +1,7 @@
 .u-btn {
   @apply inline-flex items-center relative;
-  @apply rounded shadow-sm;
-  @apply px-4 h-10 font-medium bg-white whitespace-nowrap;
+  @apply rounded-lg shadow-sm;
+  @apply px-4 h-11 font-medium bg-white whitespace-nowrap;
   @apply border-black border-opacity-5 border;
   @apply transition-all outline-none text-gray-700;
 
@@ -109,10 +109,10 @@
   }
 
   &.is-icon {
-    min-height: 2.5rem;
-    max-height: 2.5rem;
-    min-width: 2.5rem;
-    max-width: 2.5rem;
+    min-height: 2.75rem;
+    max-height: 2.75rem;
+    min-width: 2.75rem;
+    max-width: 2.75rem;
 
     @apply p-0 justify-center rounded-full;
 
