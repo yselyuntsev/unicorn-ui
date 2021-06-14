@@ -2,16 +2,16 @@
   @apply relative;
 
   &__body {
-    @apply absolute z-10 left-0 top-0;
+    @apply absolute z-10;
   }
 }
 
 .slide-t-enter-active,
 .slide-t-leave-active {
-  @apply transition-all;
+  @apply transition;
 }
 .slide-t-enter,
 .slide-t-leave-to {
   @apply opacity-0;
-  @apply transform-gpu -translate-y-2;
+  @apply transform-gpu -translate-y-1;
 }

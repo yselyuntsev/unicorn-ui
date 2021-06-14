@@ -20,11 +20,8 @@ export default {
   data() {
     return {
       show: false,
-      // right: false,
-      pos: {
-        top: 0,
-        left: 0,
-      },
+      top: 0,
+      left: 0,
     };
   },
 
@@ -33,10 +30,8 @@ export default {
       return {
         maxWidth: this.width + "px",
         minWidth: this.width + "px",
-        // right: this.right && "0",
-        // top: this.top + "px",
-        // top: this.pos.top + "px",
-        // left: this.pos.left + "px",
+        left: this.left + "px",
+        top: this.top + "px",
       };
     },
   },
@@ -50,7 +45,7 @@ export default {
   },
 
   mounted() {
-    this.calcPos();
+    // this.calcPos();
     window.addEventListener("resize", this.calcPos);
   },
 
@@ -67,9 +62,6 @@ export default {
 
     open() {
       this.show = true;
-      // this.$nextTick(() => {
-      //   this.$parent.$el.append(this.$refs.dropdown);
-      // });
     },
 
     close() {
@@ -77,8 +69,15 @@ export default {
     },
 
     calcPos() {
-      const { top, left } = this.$refs.container.getBoundingClientRect();
-      this.pos = { top, left };
+      const {
+        left,
+        height,
+        width,
+      } = this.$refs.container.getBoundingClientRect();
+
+      this.top = height + 4;
+      this.left =
+        left + this.width > window.innerWidth ? -this.width + width : 0;
     },
   },
 };
