@@ -1,95 +1,103 @@
 .u-btn {
   @apply inline-flex items-center relative;
-  @apply rounded-lg shadow-sm;
+  @apply rounded shadow-sm;
   @apply px-4 h-11 font-medium bg-white whitespace-nowrap;
+  @apply border-black border-opacity-5 border;
+  @apply transition-all outline-none text-gray-700;
 
-  @apply transition-all outline-none;
 
-  @apply focus:outline-none;
+  &:focus {
+    @apply outline-none;
+  }
 
   &:after {
     content: "";
     border-radius: inherit;
     background: currentColor;
+
     @apply absolute inset-0;
     @apply transition-all opacity-0;
   }
 
   &:hover {
     &:after {
-      @apply opacity-10;
+      @apply opacity-5;
     }
   }
 
-  &--primary {
-    @apply bg-blue-500 text-white;
+  &.primary {
+    @apply bg-blue-500 border-none text-white;
   }
 
-  &--success {
-    @apply bg-green-500 text-white;
+  &.success {
+    @apply bg-green-500 border-none text-white;
   }
 
-  &--error {
-    @apply bg-red-500 text-white;
+  &.error {
+    @apply bg-red-500 border-none text-white;
   }
 
-  &--warning {
-    @apply bg-yellow-500 text-white;
+  &.warning {
+    @apply bg-yellow-500 border-none text-white;
   }
 
-  &--info {
-    @apply bg-purple-500 text-white;
+  &.info {
+    @apply bg-purple-500 border-none text-white;
   }
 
-  &--dense {
+  &.is-dense {
     @apply h-8 px-3 text-sm;
   }
 
-  &--muted {
-    @apply shadow-none bg-gray-50 text-gray-700;
+  &.is-muted {
+    @apply shadow-none border-none bg-gray-50 text-gray-700;
+
+    &.primary {
+      @apply bg-blue-50 text-blue-500;
+    }
+
+    &.success {
+      @apply bg-green-50 text-green-500;
+    }
+
+    &.error {
+      @apply bg-red-50 text-red-500;
+    }
+
+    &.warning {
+      @apply bg-yellow-50 text-yellow-500;
+    }
+
+    &.info {
+      @apply bg-purple-50 text-purple-500;
+    }
   }
 
-  &--muted.u-btn--primary {
-    @apply bg-blue-50 text-blue-500;
+  &.is-text {
+    @apply bg-transparent border-none shadow-none text-gray-700;
+
+    &.primary {
+      @apply text-blue-500;
+    }
+
+    &.success {
+      @apply text-green-500;
+    }
+
+    &.error {
+      @apply text-red-500;
+    }
+
+    &.warning {
+      @apply text-yellow-500;
+    }
+
+    &.info {
+      @apply text-purple-500;
+    }
   }
 
-  &--muted.u-btn--success {
-    @apply bg-green-50 text-green-500;
-  }
-
-  &--muted.u-btn--error {
-    @apply bg-red-50 text-red-500;
-  }
-
-  &--muted.u-btn--warning {
-    @apply bg-yellow-50 text-yellow-500;
-  }
-
-  &--muted.u-btn--info {
-    @apply bg-purple-50 text-purple-500;
-  }
-
-  &--text {
-    @apply bg-transparent shadow-none text-gray-500;
-  }
-
-  &--text.u-btn--primary {
-    @apply text-blue-500;
-  }
-
-  &--text.u-btn--success {
-    @apply text-green-500;
-  }
-
-  &--text.u-btn--error {
-    @apply text-red-500;
-  }
-
-  &--text.u-btn--warning {
-    @apply text-yellow-500;
-  }
-
-  &--text.u-btn--info {
-    @apply text-purple-500;
+  &.is-disabled {
+    @apply opacity-40 pointer-events-none;
   }
 }
