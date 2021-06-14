@@ -1,5 +1,5 @@
 .u-card {
-  @apply flex w-full flex-col items-start rounded-lg bg-white shadow-card p-4;
+  @apply flex relative w-full flex-col items-start rounded-lg bg-white shadow-card p-4;
 
   &--wheel {
     @apply border-transparent bg-gray-50 shadow-none;
